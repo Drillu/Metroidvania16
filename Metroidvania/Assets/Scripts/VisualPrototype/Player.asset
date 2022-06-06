@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":"Player
-      Actions","summary":null,"pan":{"x":0.0,"y":0.0},"zoom":1.0,"elements":[{"nest":{"source":"Macro","macro":0,"embed":null},"defaultValues":{},"position":{"x":-288.0,"y":-80.0},"guid":"4a8168b7-2e00-4321-bf12-0ef9afda6ddb","$version":"A","$type":"Unity.VisualScripting.SubgraphUnit"},{"nest":{"source":"Macro","macro":1,"embed":null},"defaultValues":{},"position":{"x":-280.0,"y":55.0},"guid":"2d6df970-4250-4372-ac8c-91fea1a187e9","$version":"A","$type":"Unity.VisualScripting.SubgraphUnit"}],"$version":"A"}}'
+      Actions","summary":null,"pan":{"x":-132.0,"y":13.0},"zoom":1.0,"elements":[{"nest":{"source":"Macro","macro":0,"embed":null},"defaultValues":{},"position":{"x":-288.0,"y":-80.0},"guid":"4a8168b7-2e00-4321-bf12-0ef9afda6ddb","$version":"A","$type":"Unity.VisualScripting.SubgraphUnit"},{"nest":{"source":"Macro","macro":1,"embed":null},"defaultValues":{},"position":{"x":-280.0,"y":55.0},"guid":"2d6df970-4250-4372-ac8c-91fea1a187e9","$version":"A","$type":"Unity.VisualScripting.SubgraphUnit"}],"$version":"A"}}'
     _objectReferences:
     - {fileID: 11400000, guid: b9365a5a3f84b654280da06bfab3751d, type: 2}
     - {fileID: 11400000, guid: d31bbe4451d3be144a093b54b1924d6e, type: 2}

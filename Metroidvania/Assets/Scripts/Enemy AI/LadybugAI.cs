@@ -13,6 +13,9 @@ public class LadybugAI : MonoBehaviour
     [SerializeField] private float distanceRequieredToTriggerChase = 12f;
 
     public GameObject bulletPrefab;
+    public Transform Center;
+    public Transform firePoint;
+
     
     void Start()
     {
@@ -20,10 +23,13 @@ public class LadybugAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    
     void Update()
     {
-        if(inChase)
+        Vector3 lookDir = player.transform.position - Center.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+        Center.rotation = Quaternion.Euler(0f, 0f, angle);
+
+        if (inChase)
         {
             if(fireRate>0)
             {
@@ -31,10 +37,11 @@ public class LadybugAI : MonoBehaviour
             }
             else
             {
-                GameObject bullet = Instantiate(bulletPrefab,transform.position,Quaternion.identity);
-                bullet.GetComponent<Rigidbody2D>().AddForce(player.transform.position - transform.position, ForceMode2D.Impulse);
+                GameObject bullet = Instantiate(bulletPrefab,firePoint.position, firePoint.rotation);
+                bullet.GetComponent<Rigidbody2D>().AddForce(lookDir * 3f, ForceMode2D.Impulse);
                 fireRate = 30f;
             }
+            return;
         }
 
         if(Vector2.Distance(transform.position,player.transform.position)<=distanceRequieredToTriggerChase)
@@ -45,7 +52,7 @@ public class LadybugAI : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(inChase)
+        if (inChase)
         {
             rb.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
         }

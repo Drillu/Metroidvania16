@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{6e0bd57c-2a2a-40aa-8ccd-7081c1152ffe}">
+		<property name="assetPath">
+			<value>Skate 4.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.0525850340136054</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{74847e29-222c-4246-8e01-ddec005aac00}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{893a7d20-b2a5-4854-b44e-8f616345b898}">
+		<property name="assetPath">
+			<value>Jump Car 4.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.0910204081632653</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{74847e29-222c-4246-8e01-ddec005aac00}</destination>
+		</relationship>
+	</object>
+</objects>

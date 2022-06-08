@@ -23,6 +23,12 @@ public class PlayerMovement : MonoBehaviour
     private enum MovementState { idle, running, jumping, falling }
 
     private SpriteRenderer sprite;
+    private TrailRenderer _trailRenderer;
+    [SerializeField] private float _dashingVelocity = 14f;
+    [SerializeField] private float _dashingTime = 0.5f;
+    private Vector2 _dashingDir;
+    private bool _isDashing;
+    private bool _canDash = true;
 
 
     private void Start()
@@ -31,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        _trailRenderer = GetComponent<TrailRenderer>();
     }
 
     private void Update()
@@ -49,6 +56,34 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
             }
             //UpdateAnimations();
+        }
+        var dashInput = Input.GetButtonDown("Dash");
+        
+        if (dashInput && _canDash)
+        {
+            _isDashing = true;
+            _canDash = false;
+            _trailRenderer.emitting = true;
+            _dashingDir = new Vector2(directionX, Input.GetAxisRaw("Vertical"));
+            if (_dashingDir == Vector2.zero)
+            {
+                _dashingDir = new Vector2(transform.localScale.x, 0);
+            }
+            StartCoroutine(StopDashing());
+
+        }
+        //This part is hopefully gonna get used when we make an animation state for dashing - Ersan (08.06.2022)
+        //anim.SetBool("IsDashing", _isDashing);
+
+        if (_isDashing)
+        {
+            rb.velocity = _dashingDir.normalized * _dashingVelocity;
+            return;
+        }
+
+        if (isGrounded())
+        {
+            _canDash = true;
         }
     }
 
@@ -90,6 +125,12 @@ public class PlayerMovement : MonoBehaviour
 
     //}
 
+    private IEnumerator StopDashing()
+    {
+        yield return new WaitForSeconds(_dashingTime);
+        _trailRenderer.emitting = false;
+        _isDashing = false;
+    }
     private bool isGrounded()
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);

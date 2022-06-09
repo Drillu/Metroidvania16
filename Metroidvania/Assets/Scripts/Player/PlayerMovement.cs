@@ -20,7 +20,8 @@ public class PlayerMovement : MonoBehaviour
 
     private BoxCollider2D coll;
 
-    private enum MovementState { idle, running, jumping, falling }
+    //private enum MovementState { idle, running, jumping, falling }
+    //currently unused because there are no animation states yet
 
     private SpriteRenderer sprite;
     private TrailRenderer _trailRenderer;
@@ -43,20 +44,19 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
      
-        directionX = Input.GetAxisRaw("Horizontal");
+        directionX = Input.GetAxis("Horizontal");
+        //Changed GetAxisRaw into GetAxis to give that slippery acceleration movement - Ersan (09.06.2022)
 
-        if ((this.name == "PlayerTest"))
+        rb.velocity = new Vector2(directionX * moveSpeed, rb.velocity.y);
+
+
+        if (Input.GetButtonDown("Jump") && isGrounded())
         {
-            rb.velocity = new Vector2(directionX * moveSpeed, rb.velocity.y);
-
-
-            if (Input.GetButtonDown("Jump") && isGrounded())
-            {
-                //jumpingSoundFX.Play();
-                rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
-            }
-            //UpdateAnimations();
+            //jumpingSoundFX.Play();
+            rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
         }
+            //UpdateAnimations();
+        
         var dashInput = Input.GetButtonDown("Dash");
         
         if (dashInput && _canDash)
@@ -85,6 +85,12 @@ public class PlayerMovement : MonoBehaviour
         {
             _canDash = true;
         }
+        //Uncomment the part below if they want the player to not be able to dash mid air
+
+        //else
+        //{
+        //    _canDash = false;
+        //}
     }
 
     //UpdateAnimations function is unused for now

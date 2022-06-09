@@ -102,7 +102,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Kirei_idle_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 7131
+        width: 805
+        height: 1225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27594e16a27fc2743b82cffc16ace6eb
+      internalID: -38302122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirei_idle_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 2909
+        y: 7131
+        width: 805
+        height: 1225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f55a62e2a21f34a9ec8eecc4b7a748
+      internalID: -1529036873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirei_idle_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 5149
+        y: 7131
+        width: 805
+        height: 1225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735df31bc4dcac143b3d3952592c313e
+      internalID: 484114909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirei_idle_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 4891
+        width: 805
+        height: 1225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30d75ea4086dbe46bad9f882100fa72
+      internalID: 578998414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirei_idle_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 2909
+        y: 4891
+        width: 805
+        height: 1225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc3e5b1127e088b4c958aecd41c7ca04
+      internalID: -2034029127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirei_idle_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 5149
+        y: 4891
+        width: 871
+        height: 1160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d7599a0249cc448ac377b5631b57e1
+      internalID: 526344589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirei_idle_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 2651
+        width: 840
+        height: 1160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8c9306ba18b0543b090997cb64e717
+      internalID: -2050081413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirei_idle_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 2909
+        y: 2651
+        width: 805
+        height: 1160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58dc9bce756760469d222338ea41bdb
+      internalID: 1107783383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirei_idle_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 5149
+        y: 2651
+        width: 805
+        height: 1160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f0cd0ded0df6c24da0c7a9874edb3f2
+      internalID: 243245734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirei_idle_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 411
+        width: 805
+        height: 1160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a710824c38ec3fe4e8df96a5aa08ee2e
+      internalID: -1772783747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -113,7 +323,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Kirei_idle_spritesheet_7: 1107783383
+      Kirei_idle_spritesheet_5: 526344589
+      Kirei_idle_spritesheet_0: -38302122
+      Kirei_idle_spritesheet_2: 484114909
+      Kirei_idle_spritesheet_1: -1529036873
+      Kirei_idle_spritesheet_8: 243245734
+      Kirei_idle_spritesheet_3: 578998414
+      Kirei_idle_spritesheet_9: -1772783747
+      Kirei_idle_spritesheet_4: -2034029127
+      Kirei_idle_spritesheet_6: -2050081413
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

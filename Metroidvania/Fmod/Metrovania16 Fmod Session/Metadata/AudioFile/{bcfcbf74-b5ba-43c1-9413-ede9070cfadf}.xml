@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{62d154b7-4c53-4956-8abd-14bc6aca5f9c}">
+	<object class="AudioFile" id="{bcfcbf74-b5ba-43c1-9413-ede9070cfadf}">
 		<property name="assetPath">
-			<value>Land Road 3.wav</value>
+			<value>Kirei Jump 2.wav</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>48</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.67070294784580498</value>
+			<value>0.18397916666666667</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{74847e29-222c-4246-8e01-ddec005aac00}</destination>

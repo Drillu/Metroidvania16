@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{d4202af6-5176-466a-b3be-e2e035af6ee1}">
+	<object class="AudioFile" id="{9b3cc208-519a-450d-a223-6993219e7001}">
 		<property name="assetPath">
-			<value>Jump Car 3.wav</value>
+			<value>Kirei Jump 3.wav</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>48</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.89160997732426306</value>
+			<value>0.219</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{74847e29-222c-4246-8e01-ddec005aac00}</destination>

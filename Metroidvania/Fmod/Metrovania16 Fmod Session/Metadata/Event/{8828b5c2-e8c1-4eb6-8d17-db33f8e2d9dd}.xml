@@ -158,11 +158,14 @@
 	</object>
 	<object class="EventMixerGroup" id="{7d3264d0-c1bf-404a-b152-8c9626479cbe}">
 		<property name="volume">
-			<value>7</value>
+			<value>6</value>
 		</property>
 		<property name="name">
 			<value>Inner Forest Music</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{437f2cf7-24e7-4e11-b732-6b8a81108149}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{e133a683-0fb5-4d2f-b0f0-1b2ca4782b32}</destination>
 		</relationship>
@@ -253,6 +256,29 @@
 	</object>
 	<object class="MixerBusPanner" id="{309d39e7-7118-49c3-a7ec-774ebf60f7b2}" />
 	<object class="MixerBusFader" id="{7e69f39d-1328-4e1a-8556-2afbf80b2f41}" />
+	<object class="ADSRModulator" id="{437f2cf7-24e7-4e11-b732-6b8a81108149}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="attackTime">
+			<value>0</value>
+		</property>
+		<property name="holdTime">
+			<value>0</value>
+		</property>
+		<property name="decayTime">
+			<value>0</value>
+		</property>
+		<property name="releaseTime">
+			<value>2200</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
+	</object>
 	<object class="MixerBusEffectChain" id="{e133a683-0fb5-4d2f-b0f0-1b2ca4782b32}">
 		<relationship name="effects">
 			<destination>{548dab27-7019-453b-ba97-c26d6e6ff98d}</destination>

@@ -188,9 +188,6 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{4ba091cd-a25c-4681-9068-1737a6c59505}">
-		<property name="isAsync">
-			<value>true</value>
-		</property>
 		<property name="start">
 			<value>0.375</value>
 		</property>

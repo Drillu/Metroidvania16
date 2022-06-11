@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{b5b5c34a-1320-4a62-b584-4fedb11799d5}">
+	<object class="AudioFile" id="{e38d0263-8a7b-488b-b37d-430a2e6bd695}">
 		<property name="assetPath">
-			<value>Brake Road 2.wav</value>
+			<value>Extra_Impact 6.wav</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>48</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.86414965986394554</value>
+			<value>0.51558333333333328</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{74847e29-222c-4246-8e01-ddec005aac00}</destination>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{c2d31ed1-fa4b-4e17-aba8-0365df045ab5}">
+	<object class="AudioFile" id="{26073ed9-3034-4154-9fb3-bcad19c99e3b}">
 		<property name="assetPath">
-			<value>Extra_Impact 7.wav</value>
+			<value>Whoosh 1.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.62029166666666669</value>
+			<value>1.7859583333333333</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{74847e29-222c-4246-8e01-ddec005aac00}</destination>

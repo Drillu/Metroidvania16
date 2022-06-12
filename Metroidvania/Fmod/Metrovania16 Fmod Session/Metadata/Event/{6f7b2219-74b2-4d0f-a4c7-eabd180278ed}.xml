@@ -110,7 +110,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{186636c3-0cfb-4e66-bf52-eb7374b436cf}">
 		<property name="name">
-			<value>Audio 1</value>
+			<value>Kirei Jumping</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{15b65129-3b19-406c-999b-63654607f195}</destination>

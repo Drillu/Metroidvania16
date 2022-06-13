@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,7 +102,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Kirei_skating_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 4988
+        width: 1256
+        height: 1255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6401870eaabde824d86efb08f1c4b1f7
+      internalID: 399458842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirei_skating_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 2874
+        y: 4988
+        width: 1352
+        height: 1225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a4373678eca984491414ad44f0b6d1
+      internalID: 831306198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirei_skating_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 5149
+        y: 4988
+        width: 1221
+        height: 1286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f5874a1904c544495c0efa7475b865
+      internalID: 1247095012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirei_skating_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 7389
+        y: 4988
+        width: 1256
+        height: 1255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458acbf1f7dcdec4aa3fe461bbce23f3
+      internalID: -498210838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirei_skating_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 3093
+        width: 1255
+        height: 1190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda75aec53caba94dadddf94cf4e9325
+      internalID: -1156579137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirei_skating_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 2914
+        y: 3093
+        width: 1225
+        height: 1286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd23f6b95f49ebc4280a00c756e813e7
+      internalID: -1129462247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirei_skating_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 5154
+        y: 3093
+        width: 1225
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faefe7f99a114ac40902358a22383e29
+      internalID: 763514248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirei_skating_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 7394
+        y: 3093
+        width: 1290
+        height: 1221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 656799d6527f7ad42aa549d98d7eaee0
+      internalID: -1032772831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirei_skating_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 788
+        width: 1382
+        height: 1225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f3066671fb3a1498d4f8e885f316a3
+      internalID: -1007782955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirei_skating_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 2958
+        y: 788
+        width: 1286
+        height: 1190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec383af5c799180408f9d9c85c54ed5f
+      internalID: 556448223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirei_skating_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 5198
+        y: 788
+        width: 1286
+        height: 1225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d5fd18d09bce5f42b07effce3871957
+      internalID: 840720865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirei_skating_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 7438
+        y: 788
+        width: 1220
+        height: 1255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a12766689bcfc5440805924ce0657660
+      internalID: 2064476845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -113,7 +365,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Kirei_skating_spritesheet_6: 763514248
+      Kirei_skating_spritesheet_3: -498210838
+      Kirei_skating_spritesheet_11: 2064476845
+      Kirei_skating_spritesheet_10: 840720865
+      Kirei_skating_spritesheet_5: -1129462247
+      Kirei_skating_spritesheet_0: 399458842
+      Kirei_skating_spritesheet_4: -1156579137
+      Kirei_skating_spritesheet_2: 1247095012
+      Kirei_skating_spritesheet_9: 556448223
+      Kirei_skating_spritesheet_8: -1007782955
+      Kirei_skating_spritesheet_7: -1032772831
+      Kirei_skating_spritesheet_1: 831306198
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -20,9 +20,8 @@ public class PlayerMovement : MonoBehaviour
 
     private BoxCollider2D coll;
 
-    //private enum MovementState { idle, running, jumping, falling }
-    //currently unused because there are no animation states yet
-
+    private enum MovementState { idle, running, jumping, falling, gliding }
+   
     private SpriteRenderer sprite;
     private TrailRenderer _trailRenderer;
     [SerializeField] private float _dashingVelocity = 14f;
@@ -55,8 +54,8 @@ public class PlayerMovement : MonoBehaviour
             //jumpingSoundFX.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
         }
-            //UpdateAnimations();
-        
+        UpdateAnimations();
+
         var dashInput = Input.GetButtonDown("Dash");
         
         if (dashInput && _canDash)
@@ -64,11 +63,13 @@ public class PlayerMovement : MonoBehaviour
             _isDashing = true;
             _canDash = false;
             _trailRenderer.emitting = true;
-            _dashingDir = new Vector2(directionX, Input.GetAxisRaw("Vertical"));
+            _dashingDir = new Vector2(directionX, 0);
+            // changed Input.GetAxisRaw("Vertical") to 0 so that player can only dash horizontally 
             if (_dashingDir == Vector2.zero)
             {
                 _dashingDir = new Vector2(transform.localScale.x, 0);
             }
+            rb.gravityScale = 0;
             StartCoroutine(StopDashing());
 
         }
@@ -95,47 +96,48 @@ public class PlayerMovement : MonoBehaviour
 
     //UpdateAnimations function is unused for now
 
-    //private void UpdateAnimations()
-    //{
-    //    MovementState state;
+    private void UpdateAnimations()
+    {
+        MovementState state;
 
-    //    if (directionX > 0f)
-    //    {
+        if (directionX > 0f)
+        {
 
-    //        state = MovementState.running;
+            state = MovementState.running;
 
-    //        sprite.flipX = false;
-    //    }
-    //    else if (directionX < 0f)
-    //    {
-    //        state = MovementState.running;
-    //        sprite.flipX = true;
+            sprite.flipX = true;
+        }
+        else if (directionX < 0f)
+        {
+            state = MovementState.running;
+            sprite.flipX = false;
 
-    //    }
-    //    else
-    //    {
-    //        state = MovementState.idle;
-    //    }
+        }
+        else
+        {
+            state = MovementState.idle;
+        }
 
-    //    if (rb.velocity.y > .1f)
-    //    {
-    //        state = MovementState.jumping;
-    //    }
+        if (rb.velocity.y > .1f)
+        {
+            state = MovementState.jumping;
+        }
 
-    //    else if (rb.velocity.y < -.1f)
-    //    {
-    //        state = MovementState.falling;
-    //    }
+        else if (rb.velocity.y < -.1f)
+        {
+            state = MovementState.falling;
+        }
 
-    //    anim.SetInteger("State", (int)state);
+        anim.SetInteger("State", (int)state);
 
-    //}
+    }
 
     private IEnumerator StopDashing()
     {
         yield return new WaitForSeconds(_dashingTime);
         _trailRenderer.emitting = false;
         _isDashing = false;
+        rb.gravityScale = 1;
     }
     private bool isGrounded()
     {

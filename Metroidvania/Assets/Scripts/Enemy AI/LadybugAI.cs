@@ -10,6 +10,7 @@ public class LadybugAI : MonoBehaviour
 
     [SerializeField] private float moveSpeed=2f;
     [SerializeField] private float fireRate=30f;
+    [SerializeField] private float shotSpeed=5f;
     [SerializeField] private float distanceRequieredToTriggerChase = 12f;
 
     public GameObject bulletPrefab;
@@ -25,7 +26,7 @@ public class LadybugAI : MonoBehaviour
 
     void Update()
     {
-        Vector3 lookDir = player.transform.position - Center.position;
+        Vector3 lookDir = (player.transform.position - Center.position).normalized;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
         Center.rotation = Quaternion.Euler(0f, 0f, angle);
 
@@ -38,7 +39,7 @@ public class LadybugAI : MonoBehaviour
             else
             {
                 GameObject bullet = Instantiate(bulletPrefab,firePoint.position, firePoint.rotation);
-                bullet.GetComponent<Rigidbody2D>().AddForce(lookDir * 3f, ForceMode2D.Impulse);
+                bullet.GetComponent<Rigidbody2D>().AddForce(lookDir * shotSpeed, ForceMode2D.Impulse);
                 fireRate = 30f;
             }
             return;

@@ -7,10 +7,12 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayButton()
     {
-        SceneManager.LoadScene(1);
+        Debug.Log("Play Button CLicked");
+        //SceneManager.LoadScene(1);
     }
     public void QuitButton()
     {
-        Application.Quit();
+        Debug.Log("Quit Button CLicked");
+        //Application.Quit();
     }
 }

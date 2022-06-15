@@ -6,6 +6,7 @@ public class WaterGun : MonoBehaviour
 {
     private Vector2 mousePos;
 
+
     [SerializeField] private Transform gunCenter;
     [SerializeField] private Animator gunAnimator;
     

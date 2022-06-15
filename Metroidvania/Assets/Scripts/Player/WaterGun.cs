@@ -10,6 +10,7 @@ public class WaterGun : MonoBehaviour
 
     [SerializeField] private Transform gunCenter;
     [SerializeField] private Animator gunAnimator;
+    [SerializeField] private SpriteRenderer gunSprite;
     
     void Start()
     {
@@ -19,6 +20,17 @@ public class WaterGun : MonoBehaviour
     private void Update()
     {
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+       //Debug.Log(gunCenter.rotation.eulerAngles.z);
+        if (gunCenter.rotation.eulerAngles.z > 90f && gunCenter.rotation.eulerAngles.z < 270f)
+        {
+            gunSprite.flipY = true;
+        }
+        else
+        {
+            gunSprite.flipY = false;
+        }
+            
 
         if (Input.GetMouseButton(0))
         {

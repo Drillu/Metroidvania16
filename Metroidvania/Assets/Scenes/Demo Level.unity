@@ -1983,6 +1983,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!212 &1549471072 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3199040148041038647, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
+  m_PrefabInstance: {fileID: 8993176293074503561}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1613902967
 GameObject:
   m_ObjectHideFlags: 0
@@ -2652,6 +2657,10 @@ PrefabInstance:
       propertyPath: gunCenter
       value: 
       objectReference: {fileID: 262107562}
+    - target: {fileID: 1753769860720951165, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
+      propertyPath: gunSprite
+      value: 
+      objectReference: {fileID: 1549471072}
     - target: {fileID: 1753769860720951165, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
       propertyPath: gunAnimator
       value: 

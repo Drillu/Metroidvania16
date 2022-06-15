@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public Animator animator;
 
+
     public void PlayButton()
     {
         Debug.Log("Play Button CLicked");

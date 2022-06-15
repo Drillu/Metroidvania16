@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
     public void QuitButton()
     {
         Debug.Log("Quit Button CLicked");
-        //Application.Quit();
+        Application.Quit();
     }
     IEnumerator LoadScene(int sceneIndex)
     {

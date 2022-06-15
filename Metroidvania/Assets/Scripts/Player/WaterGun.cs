@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaterGun : MonoBehaviour
 {
-    private Vector2 mousePos;
+    private Vector3 mousePos;
 
     
 
@@ -18,7 +18,9 @@ public class WaterGun : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButton(0))
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        if (Input.GetMouseButton(0))
         {
             gunAnimator.SetBool("StillShooting", true);
         }
@@ -30,8 +32,8 @@ public class WaterGun : MonoBehaviour
 
     void FixedUpdate()
     {
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg - 180f;
+        Vector2 lookDir = mousePos - gunCenter.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 180f;
         gunCenter.rotation = Quaternion.Euler(0f,0f,angle);
     }
 

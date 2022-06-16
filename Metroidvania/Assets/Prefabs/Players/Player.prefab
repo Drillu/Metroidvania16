@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 678217372573592732}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -470,6 +470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunCenter: {fileID: 5806021568226666720}
   gunAnimator: {fileID: 352289037}
+  gunSprite: {fileID: 0}
 --- !u!212 &3199040148041038647
 SpriteRenderer:
   m_ObjectHideFlags: 0

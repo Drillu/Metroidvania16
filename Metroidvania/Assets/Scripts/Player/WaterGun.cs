@@ -7,7 +7,6 @@ public class WaterGun : MonoBehaviour
     private Vector3 mousePos;
 
     
-
     [SerializeField] private Transform gunCenter;
     [SerializeField] private Animator gunAnimator;
     [SerializeField] private SpriteRenderer gunSprite;
@@ -49,4 +48,11 @@ public class WaterGun : MonoBehaviour
         gunCenter.rotation = Quaternion.Euler(0f,0f,angle);
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Enemy"))
+        {
+            Debug.Log("shooting enenmy");
+        }
+    }
 }

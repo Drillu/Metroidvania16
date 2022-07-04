@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 116
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -107,10 +107,10 @@ TextureImporter:
       name: Kirei_falling_0
       rect:
         serializedVersion: 2
-        x: 239
-        y: 167
-        width: 891
-        height: 1130
+        x: 240
+        y: 168
+        width: 888
+        height: 1128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,10 +128,10 @@ TextureImporter:
       name: Kirei_falling_1
       rect:
         serializedVersion: 2
-        x: 1439
-        y: 167
-        width: 795
-        height: 1060
+        x: 1440
+        y: 168
+        width: 792
+        height: 1056
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,10 +149,10 @@ TextureImporter:
       name: Kirei_falling_2
       rect:
         serializedVersion: 2
-        x: 2639
-        y: 167
-        width: 795
-        height: 1106
+        x: 2640
+        y: 168
+        width: 792
+        height: 1104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,10 +170,10 @@ TextureImporter:
       name: Kirei_falling_3
       rect:
         serializedVersion: 2
-        x: 3839
-        y: 167
-        width: 844
-        height: 1130
+        x: 3840
+        y: 168
+        width: 840
+        height: 1128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

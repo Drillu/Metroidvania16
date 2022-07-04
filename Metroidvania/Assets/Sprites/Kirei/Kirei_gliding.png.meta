@@ -107,10 +107,10 @@ TextureImporter:
       name: Kirei_gliding_0
       rect:
         serializedVersion: 2
-        x: 669
-        y: 508
-        width: 1221
-        height: 1225
+        x: 672
+        y: 512
+        width: 1216
+        height: 1216
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,10 +128,10 @@ TextureImporter:
       name: Kirei_gliding_1
       rect:
         serializedVersion: 2
-        x: 2909
-        y: 508
-        width: 1317
-        height: 1225
+        x: 2912
+        y: 512
+        width: 1312
+        height: 1216
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,10 +149,10 @@ TextureImporter:
       name: Kirei_gliding_2
       rect:
         serializedVersion: 2
-        x: 5149
-        y: 508
-        width: 1221
-        height: 1286
+        x: 5152
+        y: 512
+        width: 1216
+        height: 1280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,10 +170,10 @@ TextureImporter:
       name: Kirei_gliding_3
       rect:
         serializedVersion: 2
-        x: 7389
-        y: 508
-        width: 1256
-        height: 1286
+        x: 7392
+        y: 512
+        width: 1248
+        height: 1280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -48,7 +48,13 @@ public class BunnyAI : MonoBehaviour
         }
         else
         {
-            if(timer<=0)
+
+            if (player.transform.position.x > transform.position.x && !isFacingRight)
+                Flip();
+            else if (player.transform.position.x < transform.position.x && isFacingRight)
+                Flip();
+
+            if (timer<=0)
             {
                 if(isAbleToJump)
                 {
@@ -61,6 +67,7 @@ public class BunnyAI : MonoBehaviour
             }
             else
             {
+                rb.velocity = new Vector2(0, rb.velocity.y);
                 //Go timer down
                 timer -= 0.2f;
             }
@@ -74,10 +81,7 @@ public class BunnyAI : MonoBehaviour
         {
             isAbleToJump = true;
             timer = timeRequiered;
-            if (player.transform.position.x > transform.position.x && !isFacingRight)
-                Flip();
-            else if (player.transform.position.x < transform.position.x && isFacingRight)
-                Flip();
+            
         }
     }
 

@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 116
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -107,10 +107,10 @@ TextureImporter:
       name: Kirei_jumping_0
       rect:
         serializedVersion: 2
-        x: 239
-        y: 239
-        width: 771
-        height: 1107
+        x: 240
+        y: 238
+        width: 768
+        height: 1104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,10 +128,10 @@ TextureImporter:
       name: Kirei_jumping_1
       rect:
         serializedVersion: 2
-        x: 1439
-        y: 239
-        width: 722
-        height: 1107
+        x: 1440
+        y: 238
+        width: 720
+        height: 1104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,10 +149,10 @@ TextureImporter:
       name: Kirei_jumping_2
       rect:
         serializedVersion: 2
-        x: 2639
-        y: 239
-        width: 748
-        height: 1107
+        x: 2640
+        y: 238
+        width: 744
+        height: 1104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,10 +170,10 @@ TextureImporter:
       name: Kirei_jumping_3
       rect:
         serializedVersion: 2
-        x: 3839
-        y: 239
-        width: 795
-        height: 1107
+        x: 3840
+        y: 238
+        width: 792
+        height: 1104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

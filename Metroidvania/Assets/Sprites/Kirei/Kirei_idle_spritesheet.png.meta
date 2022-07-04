@@ -107,10 +107,10 @@ TextureImporter:
       name: Kirei_idle_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 669
-        y: 7131
-        width: 805
-        height: 1225
+        x: 672
+        y: 7136
+        width: 800
+        height: 1216
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,10 +128,10 @@ TextureImporter:
       name: Kirei_idle_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 2909
-        y: 7131
-        width: 805
-        height: 1225
+        x: 2912
+        y: 7136
+        width: 800
+        height: 1216
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,10 +149,10 @@ TextureImporter:
       name: Kirei_idle_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 5149
-        y: 7131
-        width: 805
-        height: 1225
+        x: 5152
+        y: 7136
+        width: 800
+        height: 1216
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,10 +170,10 @@ TextureImporter:
       name: Kirei_idle_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 669
-        y: 4891
-        width: 805
-        height: 1225
+        x: 672
+        y: 4896
+        width: 800
+        height: 1216
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,10 +191,10 @@ TextureImporter:
       name: Kirei_idle_spritesheet_4
       rect:
         serializedVersion: 2
-        x: 2909
-        y: 4891
-        width: 805
-        height: 1225
+        x: 2912
+        y: 4896
+        width: 800
+        height: 1216
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,10 +212,10 @@ TextureImporter:
       name: Kirei_idle_spritesheet_5
       rect:
         serializedVersion: 2
-        x: 5149
-        y: 4891
-        width: 871
-        height: 1160
+        x: 5152
+        y: 4896
+        width: 864
+        height: 1152
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -233,10 +233,10 @@ TextureImporter:
       name: Kirei_idle_spritesheet_6
       rect:
         serializedVersion: 2
-        x: 669
-        y: 2651
-        width: 840
-        height: 1160
+        x: 672
+        y: 2656
+        width: 832
+        height: 1152
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,10 +254,10 @@ TextureImporter:
       name: Kirei_idle_spritesheet_7
       rect:
         serializedVersion: 2
-        x: 2909
-        y: 2651
-        width: 805
-        height: 1160
+        x: 2912
+        y: 2656
+        width: 800
+        height: 1152
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,10 +275,10 @@ TextureImporter:
       name: Kirei_idle_spritesheet_8
       rect:
         serializedVersion: 2
-        x: 5149
-        y: 2651
-        width: 805
-        height: 1160
+        x: 5152
+        y: 2656
+        width: 800
+        height: 1152
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -296,10 +296,10 @@ TextureImporter:
       name: Kirei_idle_spritesheet_9
       rect:
         serializedVersion: 2
-        x: 669
-        y: 411
-        width: 805
-        height: 1160
+        x: 672
+        y: 416
+        width: 800
+        height: 1152
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

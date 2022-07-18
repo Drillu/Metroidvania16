@@ -19,6 +19,7 @@ public class BunnyAI : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private bool stillPassive = true;
     [SerializeField] private float timeRequiered = 80f;
+    [SerializeField] private float detectionRange = 36f;
     private float timer = 80f;
     private bool isAbleToJump = true;
     private bool isFacingRight = false;
@@ -37,7 +38,7 @@ public class BunnyAI : MonoBehaviour
     private void FixedUpdate()
     {
         //Detection range
-        if(Vector2.Distance(player.transform.position,transform.position)<=8f)
+        if(Vector2.Distance(player.transform.position,transform.position)<=detectionRange)
         {
             stillPassive = false;
         }

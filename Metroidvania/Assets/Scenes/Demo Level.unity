@@ -1299,6 +1299,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1416973466834869423, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
+      propertyPath: jumpForce
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863556009383917949, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863556009383917949, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 22.195122
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863556009383917949, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 15.853659
+      objectReference: {fileID: 0}
     - target: {fileID: 8644924719342154837, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
       propertyPath: m_Name
       value: Sludge Bunny (1)
@@ -1309,11 +1325,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8644924719342154839, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -168.2
+      value: -170.56
       objectReference: {fileID: 0}
     - target: {fileID: 8644924719342154839, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -30.59
+      value: -24.56
       objectReference: {fileID: 0}
     - target: {fileID: 8644924719342154839, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
       propertyPath: m_LocalPosition.z

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d1db98305cbd1d341bfc31c56d57c8b1
+guid: 11650cee71903324d91a71c11bb03e5d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 164
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,169 +104,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: new_bunny_windup_0
+      name: bunny_idle_spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 7800
-        width: 3640
-        height: 2600
+        y: 4800
+        width: 2900
+        height: 2400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e40296a19e459d04494b365d58abf555
-      internalID: -743533602
+      spriteID: bb6ff99bd1ff56346954d37238687924
+      internalID: -1521702273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_bunny_windup_1
+      name: bunny_idle_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 3640
-        y: 7800
-        width: 3640
-        height: 2600
+        x: 2900
+        y: 4800
+        width: 2900
+        height: 2400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5a80d1875e2258439a2ece64eafba8d
-      internalID: -1625678049
+      spriteID: 8b7168ca160a5de44b00f7d65c2ea2a7
+      internalID: -1414887720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_bunny_windup_2
+      name: bunny_idle_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 38
-        y: 5200
-        width: 3640
-        height: 2600
+        x: 5800
+        y: 4800
+        width: 2900
+        height: 2400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23185332e2b8b2343b87dfaa38e47cf9
-      internalID: -113007688
+      spriteID: 20c645ebb3417824eab6d19bd2395e1e
+      internalID: 415273738
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_bunny_windup_3
-      rect:
-        serializedVersion: 2
-        x: 3640
-        y: 5200
-        width: 3640
-        height: 2600
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea681db28d070ce4cb2d57d279ab1fe9
-      internalID: 1393694485
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: new_bunny_windup_4
+      name: bunny_idle_spritesheet_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 2600
-        width: 3640
-        height: 2600
+        y: 2400
+        width: 2900
+        height: 2400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d0264837cb1ac042abd897ab10f1971
-      internalID: 1906906525
+      spriteID: 514ab750256b7974b8803cb25a945c14
+      internalID: 540877913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_bunny_windup_5
+      name: bunny_idle_spritesheet_4
       rect:
         serializedVersion: 2
-        x: 3640
-        y: 2600
-        width: 3640
-        height: 2600
+        x: 2900
+        y: 2400
+        width: 2900
+        height: 2400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08fc64ac33fbd424f92b7258b063c722
-      internalID: -1240035485
+      spriteID: c0a21f4f813253f4bb6727e5e74632e6
+      internalID: -131219395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_bunny_windup_6
+      name: bunny_idle_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 5800
+        y: 2400
+        width: 2900
+        height: 2400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e26598afac05fa5499ac5dbf5f3e68cc
+      internalID: 1517313668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny_idle_spritesheet_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3640
-        height: 2600
+        width: 2900
+        height: 2400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95613bfbd9a06464aa01990de6ee42b6
-      internalID: -1930124668
+      spriteID: 46120c82b5c73234db1252f912b2e56b
+      internalID: -2103658489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_bunny_windup_7
+      name: bunny_idle_spritesheet_7
       rect:
         serializedVersion: 2
-        x: 3640
+        x: 2900
         y: 0
-        width: 3640
-        height: 2600
+        width: 2900
+        height: 2400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbf1b1e71c05c9346b43688d6150d2ce
-      internalID: 1774400453
+      spriteID: 4ec9b904ea584e64c84a28b3f8a472eb
+      internalID: 1218408169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny_idle_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 5800
+        y: 0
+        width: 2900
+        height: 2400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce1a257cfe49e349a58729a0804a86f
+      internalID: 301098534
       vertices: []
       indices: 
       edges: []
@@ -282,14 +303,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      new_bunny_windup_5: -1240035485
-      new_bunny_windup_6: -1930124668
-      new_bunny_windup_3: 1393694485
-      new_bunny_windup_7: 1774400453
-      new_bunny_windup_4: 1906906525
-      new_bunny_windup_1: -1625678049
-      new_bunny_windup_2: -113007688
-      new_bunny_windup_0: -743533602
+      bunny_idle_spritesheet_6: -2103658489
+      bunny_idle_spritesheet_2: 415273738
+      bunny_idle_spritesheet_3: 540877913
+      bunny_idle_spritesheet_7: 1218408169
+      bunny_idle_spritesheet_4: -131219395
+      bunny_idle_spritesheet_8: 301098534
+      bunny_idle_spritesheet_0: -1521702273
+      bunny_idle_spritesheet_1: -1414887720
+      bunny_idle_spritesheet_5: 1517313668
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

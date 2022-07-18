@@ -21,13 +21,17 @@ public class BunnyAI : MonoBehaviour
     [SerializeField] private float timeRequiered = 80f;
     private float timer = 80f;
     private bool isAbleToJump = true;
-    private bool isFacingRight = true;
+    private bool isFacingRight = false;
+
+    private Animator animator;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         movement.x = movementSpeed;
         player = GameObject.FindGameObjectWithTag("Player");
+        animator = GetComponent<Animator>();
+        
     }
 
     private void FixedUpdate()
@@ -48,6 +52,7 @@ public class BunnyAI : MonoBehaviour
         }
         else
         {
+            GetComponentInChildren<CapsuleCollider2D>().enabled = true;
 
             if (player.transform.position.x > transform.position.x && !isFacingRight)
                 Flip();
@@ -61,6 +66,7 @@ public class BunnyAI : MonoBehaviour
                     //Jump
                     rb.AddForce(new Vector2(movementSpeed,jumpForce), ForceMode2D.Impulse);
                     isAbleToJump = false;
+                    animator.Play("bunny_jumping");
                 }
                 
 
@@ -70,6 +76,7 @@ public class BunnyAI : MonoBehaviour
                 rb.velocity = new Vector2(0, rb.velocity.y);
                 //Go timer down
                 timer -= 0.2f;
+                animator.Play("bunny_windup");
             }
         }
         
@@ -77,11 +84,12 @@ public class BunnyAI : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //Lands
         if(collision.CompareTag("Ground"))
         {
             isAbleToJump = true;
             timer = timeRequiered;
-            
+            animator.Play("bunny_windup");
         }
     }
 

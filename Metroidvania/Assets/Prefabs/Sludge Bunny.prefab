@@ -108,8 +108,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1454696163
+  m_SortingLayer: 3
   m_SortingOrder: 5
   m_Sprite: {fileID: -1521702273, guid: 11650cee71903324d91a71c11bb03e5d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -163,9 +163,10 @@ MonoBehaviour:
     m_Bits: 64
   wallBool: 0
   edgeBool: 1
-  jumpForce: 7.14
+  jumpForce: 12
   stillPassive: 1
   timeRequiered: 20
+  detectionRange: 36
 --- !u!95 &5631521903391320931
 Animator:
   serializedVersion: 4

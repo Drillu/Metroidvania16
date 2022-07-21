@@ -43,3 +43,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2639282969
+    locked: 0
+  - name: Road
+    uniqueID: 993528183
+    locked: 0
+  - name: Cars
+    uniqueID: 1410752903
+    locked: 0
+  - name: Enemies
+    uniqueID: 2840271133
+    locked: 0
+  - name: Player
+    uniqueID: 274827941
+    locked: 0

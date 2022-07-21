@@ -30,6 +30,11 @@ public class PlayerMovement : MonoBehaviour
     private bool _isDashing;
     private bool _canDash = true;
 
+    #region Audio Paths
+    const string KireiJump = "event:/SFX/KireiJump";
+
+    #endregion
+
 
     private void Start()
     {
@@ -51,11 +56,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
-            //jumpingSoundFX.Play();
+            FMODUnity.RuntimeManager.PlayOneShot(KireiJump);
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
         }
         UpdateAnimations();
-
+        
         var dashInput = Input.GetButtonDown("Dash");
         
         if (dashInput && _canDash)

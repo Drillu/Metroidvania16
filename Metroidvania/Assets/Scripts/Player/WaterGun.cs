@@ -6,14 +6,15 @@ public class WaterGun : MonoBehaviour
 {
     private Vector3 mousePos;
 
-    
     [SerializeField] private Transform gunCenter;
     [SerializeField] private Animator gunAnimator;
     [SerializeField] private SpriteRenderer gunSprite;
+
     
-    void Start()
+
+    private void Awake()
     {
-       
+        
     }
 
     private void Update()
@@ -31,13 +32,18 @@ public class WaterGun : MonoBehaviour
         }
             
 
+        
+
         if (Input.GetMouseButton(0))
         {
+           
             gunAnimator.SetBool("StillShooting", true);
+          
         }
         else
         {
             gunAnimator.SetBool("StillShooting", false);
+          
         }
     }
 

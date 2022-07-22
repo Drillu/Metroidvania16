@@ -24,11 +24,11 @@ public class WaterGun : MonoBehaviour
        //Debug.Log(gunCenter.rotation.eulerAngles.z);
         if (gunCenter.rotation.eulerAngles.z > 90f && gunCenter.rotation.eulerAngles.z < 270f)
         {
-            gunSprite.flipY = true;
+            gunCenter.localScale = new Vector3(1, -1, 1);
         }
         else
         {
-            gunSprite.flipY = false;
+            gunCenter.localScale = new Vector3(1, 1, 1);
         }
             
 

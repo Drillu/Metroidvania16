@@ -30,8 +30,16 @@ public class PlayerMovement : MonoBehaviour
     private bool _isDashing;
     private bool _canDash = true;
 
-    #region Audio Paths
+    #region Audio
+    //Paths
     const string KireiJump = "event:/SFX/KireiJump";
+    const string JumpRoad = "event:/SFX/JumpRoad";
+    const string JumpCar = "event:/SFX/JumpCar";
+    const string LandRoad = "event:/SFX/LandRoad";
+    const string LandCar = "event:/SFX/LandCar";
+
+    //Other
+
 
     #endregion
 
@@ -43,6 +51,8 @@ public class PlayerMovement : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         _trailRenderer = GetComponent<TrailRenderer>();
+
+       
     }
 
     private void Update()
@@ -149,4 +159,27 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("Road"))
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(LandRoad);
+        }
+        else if(other.CompareTag("Car"))
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(LandCar);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.CompareTag("Road"))
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(JumpRoad);
+        }
+        else if(other.CompareTag("Car"))
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(JumpCar);
+        }
+    }
 }

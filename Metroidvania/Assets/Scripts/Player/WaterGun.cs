@@ -34,15 +34,16 @@ public class WaterGun : MonoBehaviour
 
         
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
-           
-            gunAnimator.SetBool("StillShooting", true);
+
+            StartCoroutine(StartSpraying());
           
         }
-        else
-        {
-            gunAnimator.SetBool("StillShooting", false);
+        else if (Input.GetMouseButtonUp(0))
+        { 
+            StopAllCoroutines();
+            gunAnimator.Play("waterSprayEmpty");
           
         }
     }
@@ -60,5 +61,12 @@ public class WaterGun : MonoBehaviour
         {
             Debug.Log("shooting enenmy");
         }
+    }
+
+    private IEnumerator StartSpraying()
+    {
+        gunAnimator.Play("waterSprayStart");
+        yield return new WaitForSeconds(1f);
+        gunAnimator.Play("waterSprayContinuous");
     }
 }

@@ -1,0 +1,848 @@
+fileFormatVersion: 2
+guid: 5d36b3287f452244d9c991d5622fec11
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bunny death spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4710216367eca15468d998ec663069c6
+      internalID: -152064614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 12000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3fae6d476805974b8c75418f39500cf
+      internalID: -1808502360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 5200
+        y: 12000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf0ffe0adb695548bc73c7045d0224e
+      internalID: 2118796503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 12000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04e1070f2911f94d9e3de0933843aa4
+      internalID: -756689148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 10400
+        y: 12000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0320833719c992d429fc372315cffb5d
+      internalID: 705413026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d14a2e42edc29443aaf6633441f377c
+      internalID: -564940551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 10000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c5e7fa804059e41b2211723a5bcf41
+      internalID: -746977257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 5200
+        y: 10000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64f710d0d461104aa092cfd779e83a0
+      internalID: -1871105614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 10000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eba35016dac9624492e6e434543dc44
+      internalID: -680694794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 10400
+        y: 10000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a47146de8eeae54b963fa4585bb2840
+      internalID: 11426155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95eb68a2fd16af746821fd96358646a2
+      internalID: -143960361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 8000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8925e6423980bea47b16e59a350aaf2c
+      internalID: -579266709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 5200
+        y: 8000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b043159ac1e26474494def2717ce332d
+      internalID: 549520502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 8000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6a314dda0f1cc438192aa0bfc172ab
+      internalID: 1651549300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 10400
+        y: 8000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0578dc4a706cf5a40bbbc96cb41ee5c9
+      internalID: -536327788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d6cd1f2675bd74cbba53d10c4a9476
+      internalID: 1861187796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 6000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d1114643a106e429172bb4b24a177a
+      internalID: -1716430874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 5200
+        y: 6000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50aa14a59f8da694bb58ff7a4a91fb87
+      internalID: 293318179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 6000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3dc24e5e100a44899f5d8645f73b33
+      internalID: -271395889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 10400
+        y: 6000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ec2fa9c31cc3847b9fbc5b30ea4daf
+      internalID: -807213726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec10e4378c37244409517b401877f029
+      internalID: -88254401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 4000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad856258d15efe40b6afd99565c014c
+      internalID: 1984213102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 5200
+        y: 4000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b2385be6f0b32745bed1c97c68f4775
+      internalID: -59931521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 4000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a12649bdb5b9187428a129eed3fbb948
+      internalID: 766656438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 10400
+        y: 4000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb9cd224bcf87448b87ebb00df335f3
+      internalID: -632616434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1680197abfe3848478d8b90e968e402d
+      internalID: 17919916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 2000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2590a18860d010f4b926f95d435e4453
+      internalID: -85494577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 5200
+        y: 2000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f70fba02dd20d9499d07a6d33e79eb5
+      internalID: 1701759944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 2000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b50a08a5377ad74cbab00a47ecc5c7c
+      internalID: -85950378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 10400
+        y: 2000
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf104aecf9028f4eb34e165ddcda79e
+      internalID: 1685958680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fab22e5ada772f48a5686fcce4943f4
+      internalID: 612783706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 0
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80857d4b93ebee84babede4c5fc183b7
+      internalID: -28632245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny death spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 5200
+        y: 0
+        width: 2600
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb80f5ada643bc34d8edb366f1c163fc
+      internalID: 281966424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bunny death spritesheet_4: 705413026
+      bunny death spritesheet_0: -152064614
+      bunny death spritesheet_5: -564940551
+      bunny death spritesheet_18: -271395889
+      bunny death spritesheet_11: -579266709
+      bunny death spritesheet_10: -143960361
+      bunny death spritesheet_15: 1861187796
+      bunny death spritesheet_2: 2118796503
+      bunny death spritesheet_23: 766656438
+      bunny death spritesheet_7: -1871105614
+      bunny death spritesheet_1: -1808502360
+      bunny death spritesheet_16: -1716430874
+      bunny death spritesheet_20: -88254401
+      bunny death spritesheet_27: 1701759944
+      bunny death spritesheet_26: -85494577
+      bunny death spritesheet_28: -85950378
+      bunny death spritesheet_6: -746977257
+      bunny death spritesheet_22: -59931521
+      bunny death spritesheet_25: 17919916
+      bunny death spritesheet_9: 11426155
+      bunny death spritesheet_13: 1651549300
+      bunny death spritesheet_31: -28632245
+      bunny death spritesheet_17: 293318179
+      bunny death spritesheet_12: 549520502
+      bunny death spritesheet_19: -807213726
+      bunny death spritesheet_8: -680694794
+      bunny death spritesheet_24: -632616434
+      bunny death spritesheet_21: 1984213102
+      bunny death spritesheet_32: 281966424
+      bunny death spritesheet_30: 612783706
+      bunny death spritesheet_3: -756689148
+      bunny death spritesheet_29: 1685958680
+      bunny death spritesheet_14: -536327788
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

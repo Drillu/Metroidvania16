@@ -10,11 +10,12 @@ public class WaterGun : MonoBehaviour
     [SerializeField] private Animator gunAnimator;
     [SerializeField] private SpriteRenderer gunSprite;
 
-    
+     FMOD.Studio.EventInstance waterEvent;
+     const string sprayingSound = "event:/SFX/WaterGun";
 
     private void Awake()
     {
-        
+        waterEvent = FMODUnity.RuntimeManager.CreateInstance(sprayingSound);
     }
 
     private void Update()
@@ -32,18 +33,19 @@ public class WaterGun : MonoBehaviour
         }
             
 
-        
-
         if (Input.GetMouseButtonDown(0))
         {
 
             StartCoroutine(StartSpraying());
+            waterEvent.start();
+
           
         }
         else if (Input.GetMouseButtonUp(0))
         { 
             StopAllCoroutines();
             gunAnimator.Play("waterSprayEmpty");
+            waterEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
           
         }
     }

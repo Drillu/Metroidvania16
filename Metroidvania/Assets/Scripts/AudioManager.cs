@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    FMOD.Studio.EventInstance gameMusic;
+   
 
     private void Start()
     {
-        gameMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Music/InnerForest");
+        var gameMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Music/InnerForest");
         gameMusic.start();
         var gameAmbiance = FMODUnity.RuntimeManager.CreateInstance("event:/Ambiance/AmbianceTemp");
         gameAmbiance.start();
@@ -20,7 +20,6 @@ public class AudioManager : MonoBehaviour
         var temp = FMODUnity.RuntimeManager.CreateInstance(eventPath);
         temp.start();
     }
-    
     
     
 }

@@ -10,8 +10,8 @@ public class WaterGun : MonoBehaviour
     [SerializeField] private Animator gunAnimator;
     [SerializeField] private SpriteRenderer gunSprite;
 
-     FMOD.Studio.EventInstance waterEvent;
-     const string sprayingSound = "event:/SFX/WaterGun";
+    FMOD.Studio.EventInstance waterEvent;
+    const string sprayingSound = "event:/SFX/WaterGun";
 
     private void Awake()
     {

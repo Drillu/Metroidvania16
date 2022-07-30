@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 164
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,7 +102,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: new_bunny_windup_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7800
+        width: 3640
+        height: 2600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f90ef2c7f2359444a4b6c6a084644b7
+      internalID: 950728755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_bunny_windup_1
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 7800
+        width: 3640
+        height: 2600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee47e81c5cfb9a84b8d23e3ccb5f4963
+      internalID: -755195344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_bunny_windup_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5200
+        width: 3640
+        height: 2600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acbc1afd0be7b414d8fd35480cffc594
+      internalID: -1192679077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_bunny_windup_3
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 5200
+        width: 3640
+        height: 2600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dbe0c9c6b355fd429f555ec9b2a8c6b
+      internalID: -1223059926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_bunny_windup_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2600
+        width: 3640
+        height: 2600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911fd54799ac54446b13b4014ab237fb
+      internalID: -1178387978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_bunny_windup_5
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 2600
+        width: 3640
+        height: 2600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17792524fee0ce94a8c5c7f9b578109c
+      internalID: -108296709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_bunny_windup_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 3640
+        height: 2600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17849bee6c3e78a4eb8fd1ee6ef27372
+      internalID: -496612629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_bunny_windup_7
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 0
+        width: 3640
+        height: 2600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7a1b3462a97024a8f88b7169a587cc
+      internalID: -357720835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -113,7 +281,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      new_bunny_windup_5: -108296709
+      new_bunny_windup_6: -496612629
+      new_bunny_windup_3: -1223059926
+      new_bunny_windup_7: -357720835
+      new_bunny_windup_4: -1178387978
+      new_bunny_windup_1: -755195344
+      new_bunny_windup_2: -1192679077
+      new_bunny_windup_0: 950728755
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

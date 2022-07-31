@@ -10,22 +10,30 @@ public class BunnyAI : MonoBehaviour
     private Vector2 movement = Vector2.zero;
     [SerializeField] private Transform wallCheck;
     [SerializeField] private Transform edgeCheck;
+    [SerializeField] private CapsuleCollider2D groundTrigger;
     [SerializeField] private LayerMask groundLayer;
     public bool wallBool;
     public bool edgeBool;
-    #endregion
-
     private GameObject player;
     [SerializeField] private float jumpForce;
     [SerializeField] private bool stillPassive = true;
-    [SerializeField] private float timeRequiered = 80f;
+    [SerializeField] private float timeRequiered = 20f;
     [SerializeField] private float detectionRange = 36f;
-    private float timer = 80f;
+    private float timer = 20f;
     private bool isAbleToJump = true;
     private bool isFacingRight = false;
+    #endregion
 
+    #region Animation Variables
     private Animator animator;
+    const string bunny_idle = "bunny_idle";
+    const string bunny_jumping = "bunny_jumping";
+    const string bunny_windup = "bunny_windup";
+    const string bunny_walking = "bunny_walking";
+    const string bunny_death = "bunny_death";
+    #endregion
 
+    #region Unity Functions
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -37,10 +45,12 @@ public class BunnyAI : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //Detection range
-        if(Vector2.Distance(player.transform.position,transform.position)<=detectionRange)
+        //Detects player
+        if(stillPassive && Vector2.Distance(player.transform.position,transform.position)<=detectionRange)
         {
             stillPassive = false;
+            groundTrigger.enabled = true;
+            animator.Play(bunny_windup);
         }
 
         if(stillPassive)
@@ -53,7 +63,6 @@ public class BunnyAI : MonoBehaviour
         }
         else
         {
-            GetComponentInChildren<CapsuleCollider2D>().enabled = true;
 
             if (player.transform.position.x > transform.position.x && !isFacingRight)
                 Flip();
@@ -67,7 +76,7 @@ public class BunnyAI : MonoBehaviour
                     //Jump
                     rb.AddForce(new Vector2(movementSpeed,jumpForce), ForceMode2D.Impulse);
                     isAbleToJump = false;
-                    animator.Play("bunny_jumping");
+                    animator.Play(bunny_jumping);
                 }
                 
 
@@ -77,7 +86,8 @@ public class BunnyAI : MonoBehaviour
                 rb.velocity = new Vector2(0, rb.velocity.y);
                 //Go timer down
                 timer -= 0.2f;
-                animator.Play("bunny_windup");
+                
+                
             }
         }
         
@@ -86,14 +96,16 @@ public class BunnyAI : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Lands
-        if(collision.CompareTag("Ground"))
+        if(collision.IsTouchingLayers(groundLayer))
         {
             isAbleToJump = true;
             timer = timeRequiered;
-            animator.Play("bunny_windup");
+            animator.Play(bunny_windup);
         }
     }
+    #endregion
 
+    #region Made Fnctions
     void Flip()
     {
         Debug.Log("Flip!");
@@ -101,5 +113,5 @@ public class BunnyAI : MonoBehaviour
         isFacingRight = !isFacingRight;
         transform.Rotate(new Vector3(0, 180f, 0));
     }
-    
+    #endregion
 }

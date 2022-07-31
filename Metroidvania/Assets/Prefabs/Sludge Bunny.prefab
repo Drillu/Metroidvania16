@@ -158,6 +158,7 @@ MonoBehaviour:
   movementSpeed: -4
   wallCheck: {fileID: 8644924718369989784}
   edgeCheck: {fileID: 8644924720437880777}
+  groundTrigger: {fileID: 8644924720243808928}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64

@@ -1360,6 +1360,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1416973466834869423, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
+      propertyPath: jumpForce
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 6863556009383917949, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 16.992188
@@ -1418,7 +1422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8644924720243808928, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}

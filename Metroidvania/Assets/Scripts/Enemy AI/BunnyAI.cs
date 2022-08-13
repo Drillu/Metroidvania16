@@ -49,7 +49,7 @@ public class BunnyAI : MonoBehaviour
         if(stillPassive && Vector2.Distance(player.transform.position,transform.position)<=detectionRange)
         {
             stillPassive = false;
-            groundTrigger.enabled = true;
+            
             animator.Play(bunny_windup);
         }
 
@@ -77,6 +77,8 @@ public class BunnyAI : MonoBehaviour
                     rb.AddForce(new Vector2(movementSpeed,jumpForce), ForceMode2D.Impulse);
                     isAbleToJump = false;
                     animator.Play(bunny_jumping);
+                    if(!groundTrigger.enabled)
+                        StartCoroutine(WaitThenEnable(groundTrigger, 0.5f));
                 }
                 
 
@@ -111,6 +113,12 @@ public class BunnyAI : MonoBehaviour
         movementSpeed *= -1;
         isFacingRight = !isFacingRight;
         transform.Rotate(new Vector3(0, 180f, 0));
+    }
+
+    IEnumerator WaitThenEnable(Behaviour behaviour,float time)
+    {
+        yield return new WaitForSeconds(time);
+        behaviour.enabled = true;
     }
     #endregion
 }

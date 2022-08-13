@@ -90,22 +90,21 @@ public class BunnyAI : MonoBehaviour
                 
             }
         }
-        
-
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Lands
-        if(collision.IsTouchingLayers(groundLayer))
+        if(((1 << collision.gameObject.layer) & groundLayer) != 0)
         {
             isAbleToJump = true;
             timer = timeRequiered;
             animator.Play(bunny_windup);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/BunnyAttackRoad");
         }
     }
     #endregion
 
-    #region Made Fnctions
+    #region Made Functions
     void Flip()
     {
         Debug.Log("Flip!");

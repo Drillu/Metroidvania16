@@ -1360,18 +1360,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1416973466834869423, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
-      propertyPath: jumpForce
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 6863556009383917949, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 16.992188
-      objectReference: {fileID: 0}
-    - target: {fileID: 6863556009383917949, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 11.71875
-      objectReference: {fileID: 0}
     - target: {fileID: 8644924719342154837, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
       propertyPath: m_Name
       value: Sludge Bunny (1)
@@ -1418,10 +1406,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8644924719342154839, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8644924720243808928, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1495,7 +1479,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 788951259}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c982df82c660c9643b50a16bdf28fe62, type: 3}
   m_Name: 
@@ -2637,26 +2621,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 352289036, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.664
-      objectReference: {fileID: 0}
-    - target: {fileID: 352289036, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 352289038, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: m_SortingLayer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 352289038, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 592214807
-      objectReference: {fileID: 0}
-    - target: {fileID: 352289038, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 678217372573592731, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2703,38 +2667,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 678217372573592735, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 718916065122106620, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3199040148041038647, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5586181322427312965, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5806021568226666720, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5806021568226666720, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5806021568226666720, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5806021568226666720, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5806021568226666720, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

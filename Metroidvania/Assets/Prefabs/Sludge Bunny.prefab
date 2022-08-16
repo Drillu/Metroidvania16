@@ -44,8 +44,8 @@ GameObject:
   - component: {fileID: 8644924719342154841}
   - component: {fileID: 1416973466834869423}
   - component: {fileID: 5631521903391320931}
-  - component: {fileID: 3533869757898033996}
-  m_Layer: 0
+  - component: {fileID: 697823957}
+  m_Layer: 7
   m_Name: Sludge Bunny
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ SpriteRenderer:
   m_SortingLayerID: -1454696163
   m_SortingLayer: 4
   m_SortingOrder: 5
-  m_Sprite: {fileID: -1521702273, guid: 11650cee71903324d91a71c11bb03e5d, type: 3}
+  m_Sprite: {fileID: 535168358, guid: b042d0cd8225f104da645e37f0b7343d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -138,7 +138,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1a42038ec628d534fa4373e7433a88a0, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -156,16 +156,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: -4
-  wallCheck: {fileID: 8644924718369989784}
-  edgeCheck: {fileID: 8644924720437880777}
+  jumpForce: 18
   groundTrigger: {fileID: 8644924720243808928}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  wallCheck: {fileID: 8644924718369989784}
+  edgeCheck: {fileID: 8644924720437880777}
   wallBool: 0
   edgeBool: 1
-  jumpForce: 12
-  stillPassive: 1
   timeRequiered: 20
   detectionRange: 36
 --- !u!95 &5631521903391320931
@@ -188,8 +187,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!70 &3533869757898033996
-CapsuleCollider2D:
+--- !u!60 &697823957
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -197,13 +196,29 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 8644924719342154837}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1a42038ec628d534fa4373e7433a88a0, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.98, y: -3.29}
-  m_Size: {x: 12.39, y: 8.08}
-  m_Direction: 1
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.48, y: 0.6}
+    oldSize: {x: 22.65625, y: 15.625}
+    newSize: {x: 22.65625, y: 18.75}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -6.541667, y: -7.291667}
+      - {x: -6.875, y: -3.25}
+      - {x: -5.072917, y: -0.0625}
+      - {x: -0.6041667, y: 1.0104167}
+      - {x: 3.9583335, y: -0.2916667}
+      - {x: 5.90625, y: -3.5520835}
+      - {x: 5.4895835, y: -7.291667}
 --- !u!1 &8644924720243808958
 GameObject:
   m_ObjectHideFlags: 0

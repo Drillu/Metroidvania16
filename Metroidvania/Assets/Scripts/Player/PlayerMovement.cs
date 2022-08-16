@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     private Rigidbody2D rb;
+    [SerializeField] private LayerMask enemyLayerMask;
 
     //Function reference to make the sprites change.
     private Animator anim;
@@ -180,6 +181,14 @@ public class PlayerMovement : MonoBehaviour
         else if(other.CompareTag("Car"))
         {
             FMODUnity.RuntimeManager.PlayOneShot(JumpCar);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(((1 << other.gameObject.layer) & enemyLayerMask) != 0)
+        {
+            Debug.Log("Enemy COllided");
         }
     }
 }

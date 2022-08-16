@@ -5,23 +5,31 @@ using UnityEngine;
 public class BunnyAI : MonoBehaviour
 {
     #region Movement Variables
-    [SerializeField] private float movementSpeed = 4f;
+
+    [Header("Speed and Jump")]
+    [SerializeField] private float movementSpeed;
+    [SerializeField] private float jumpForce;
+    private float timer = 20f;
     private Rigidbody2D rb;
     private Vector2 movement = Vector2.zero;
-    [SerializeField] private Transform wallCheck;
-    [SerializeField] private Transform edgeCheck;
     [SerializeField] private CapsuleCollider2D groundTrigger;
     [SerializeField] private LayerMask groundLayer;
+
+    [Header("Left-Right Directions")]
+    [SerializeField] private Transform wallCheck;
+    [SerializeField] private Transform edgeCheck;
     public bool wallBool;
     public bool edgeBool;
-    private GameObject player;
-    [SerializeField] private float jumpForce;
-    [SerializeField] private bool stillPassive = true;
-    [SerializeField] private float timeRequiered = 20f;
-    [SerializeField] private float detectionRange = 36f;
-    private float timer = 20f;
     private bool isAbleToJump = true;
     private bool isFacingRight = false;
+
+    [Header("Detection")]
+    [SerializeField] private float timeRequiered = 20f;
+    [SerializeField] private float detectionRange = 36f;
+    private GameObject player;
+    private bool stillPassive = true;
+    
+
     #endregion
 
     #region Animation Variables
@@ -77,6 +85,7 @@ public class BunnyAI : MonoBehaviour
                     rb.AddForce(new Vector2(movementSpeed,jumpForce), ForceMode2D.Impulse);
                     isAbleToJump = false;
                     animator.Play(bunny_jumping);
+
                     if(!groundTrigger.enabled)
                         StartCoroutine(WaitThenEnable(groundTrigger, 0.5f));
                 }

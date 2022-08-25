@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 697823957}
   m_Layer: 7
   m_Name: Sludge Bunny
-  m_TagString: Enemy
+  m_TagString: SludgeBunny
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 8644924719342154837}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.3, y: -2.25, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8644924718369989784}
@@ -157,6 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: -4
   jumpForce: 18
+  timer: 16
   groundTrigger: {fileID: 8644924720243808928}
   groundLayer:
     serializedVersion: 2
@@ -165,7 +166,6 @@ MonoBehaviour:
   edgeCheck: {fileID: 8644924720437880777}
   wallBool: 0
   edgeBool: 1
-  timeRequiered: 20
   detectionRange: 36
 --- !u!95 &5631521903391320931
 Animator:
@@ -196,7 +196,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 8644924719342154837}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 1a42038ec628d534fa4373e7433a88a0, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -212,13 +212,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -6.541667, y: -7.291667}
+    - - {x: -0.3455925, y: -7.291664}
+      - {x: -6.541667, y: -7.229167}
       - {x: -6.875, y: -3.25}
       - {x: -5.072917, y: -0.0625}
       - {x: -0.6041667, y: 1.0104167}
       - {x: 3.9583335, y: -0.2916667}
       - {x: 5.90625, y: -3.5520835}
-      - {x: 5.4895835, y: -7.291667}
+      - {x: 5.53125, y: -7.25}
 --- !u!1 &8644924720243808958
 GameObject:
   m_ObjectHideFlags: 0

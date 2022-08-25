@@ -186,7 +186,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(((1 << other.gameObject.layer) & enemyLayerMask) != 0)
+        if(GeneralManager.CollisionIsTouchingLayer(other,enemyLayerMask))
         {
             Debug.Log("Enemy COllided");
         }

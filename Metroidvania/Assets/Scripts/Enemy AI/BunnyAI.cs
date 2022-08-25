@@ -9,7 +9,7 @@ public class BunnyAI : MonoBehaviour
     [Header("Speed and Jump")]
     [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpForce;
-    private float timer = 20f;
+    [SerializeField] private float timer = 20f;
     private Rigidbody2D rb;
     private Vector2 movement = Vector2.zero;
     [SerializeField] private CapsuleCollider2D groundTrigger;
@@ -24,8 +24,8 @@ public class BunnyAI : MonoBehaviour
     private bool isFacingRight = false;
 
     [Header("Detection")]
-    [SerializeField] private float timeRequiered = 20f;
     [SerializeField] private float detectionRange = 36f;
+    private float timeRequiered;
     private GameObject player;
     private bool stillPassive = true;
     
@@ -34,16 +34,16 @@ public class BunnyAI : MonoBehaviour
 
     #region Animation Variables
     private Animator animator;
-    const string bunny_idle = "bunny_idle";
     const string bunny_jumping = "bunny_jumping";
     const string bunny_windup = "bunny_windup";
-    const string bunny_walking = "bunny_walking";
     const string bunny_death = "bunny_death";
     #endregion
 
     #region Unity Functions
     private void Start()
     {
+       
+        timeRequiered = timer;
         rb = GetComponent<Rigidbody2D>();
         movement.x = movementSpeed;
         player = GameObject.FindGameObjectWithTag("Player");
@@ -51,15 +51,23 @@ public class BunnyAI : MonoBehaviour
         
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         //Detects player
-        if(stillPassive && Vector2.Distance(player.transform.position,transform.position)<=detectionRange)
+        if (stillPassive)
         {
-            stillPassive = false;
-            
-            animator.Play(bunny_windup);
+            if (Vector2.Distance(player.transform.position, transform.position) <= detectionRange)
+            {
+                stillPassive = false;
+
+                animator.Play(bunny_windup);
+            }
         }
+        
+    }
+
+    private void FixedUpdate()
+    {
 
         if(stillPassive)
         {
@@ -105,7 +113,7 @@ public class BunnyAI : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Lands
-        if(((1 << collision.gameObject.layer) & groundLayer) != 0)
+        if(GeneralManager.TriggerIsTouchingLayer(collision,groundLayer))
         {
             isAbleToJump = true;
             timer = timeRequiered;

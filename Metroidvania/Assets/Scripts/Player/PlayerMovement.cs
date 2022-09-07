@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     //Function reference to make the sprites change.
     private Animator anim;
-
+    
     float directionX = 0f;
 
 
@@ -63,13 +63,13 @@ public class PlayerMovement : MonoBehaviour
         //Changed GetAxisRaw into GetAxis to give that slippery acceleration movement - Ersan (09.06.2022)
 
         rb.velocity = new Vector2(directionX * moveSpeed, rb.velocity.y);
-
-
+       
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
             FMODUnity.RuntimeManager.PlayOneShot(KireiJump);
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
         }
+        
         UpdateAnimations();
         
         var dashInput = Input.GetButtonDown("Dash");
@@ -110,7 +110,6 @@ public class PlayerMovement : MonoBehaviour
         //}
     }
 
-    //UpdateAnimations function is unused for now
 
     private void UpdateAnimations()
     {
@@ -192,3 +191,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 }
+
+
+
+// Things that did not work as intended
+//isGrounded = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.5f), new Vector2(0.9f, 0.2f), 0f, jumpableGround);
+//public bool isGrounded;

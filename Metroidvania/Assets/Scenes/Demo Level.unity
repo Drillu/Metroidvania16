@@ -1680,7 +1680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 727879672}
   - component: {fileID: 727879671}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3338,9 +3338,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 678217372573592730, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 3d8f67e488fdc9740937c73f77e0b761, type: 2}
     - target: {fileID: 678217372573592731, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 678217372573592734, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
+      propertyPath: jumpableGround.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 678217372573592735, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
       propertyPath: m_RootOrder

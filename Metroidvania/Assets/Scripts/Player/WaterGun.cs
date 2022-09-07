@@ -22,7 +22,7 @@ public class WaterGun : MonoBehaviour
     {
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-       //Debug.Log(gunCenter.rotation.eulerAngles.z);
+       
         if (gunCenter.rotation.eulerAngles.z > 90f && gunCenter.rotation.eulerAngles.z < 270f)
         {
             gunCenter.localScale = new Vector3(1, -1, 1);
@@ -33,7 +33,7 @@ public class WaterGun : MonoBehaviour
         }
             
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)) // First press
         {
 
             StartCoroutine(StartSpraying());
@@ -41,7 +41,10 @@ public class WaterGun : MonoBehaviour
 
           
         }
-        else if (Input.GetMouseButtonUp(0))
+
+        
+
+        else if (Input.GetMouseButtonUp(0)) // release
         { 
             StopAllCoroutines();
             gunAnimator.Play("waterSprayEmpty");

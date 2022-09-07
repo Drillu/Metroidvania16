@@ -117,7 +117,7 @@ public class BunnyAI : MonoBehaviour
         {
             isAbleToJump = true;
             timer = timeRequiered;
-            animator.Play(bunny_windup);
+            PlayAnimationAndRecord(bunny_windup);
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/BunnyAttackRoad");
         }
     }
@@ -130,6 +130,13 @@ public class BunnyAI : MonoBehaviour
         movementSpeed *= -1;
         isFacingRight = !isFacingRight;
         transform.Rotate(new Vector3(0, 180f, 0));
+    }
+
+    void PlayAnimationAndRecord(string animationName)
+    {
+        animator.Play(animationName);
+        //Debug.Log("Animation "+ animator.GetCurrentAnimatorClipInfo(0).Length);
+
     }
 
     IEnumerator WaitThenEnable(Behaviour behaviour,float time)

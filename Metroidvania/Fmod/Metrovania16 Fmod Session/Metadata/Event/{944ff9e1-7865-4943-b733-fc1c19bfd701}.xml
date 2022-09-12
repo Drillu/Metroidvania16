@@ -189,7 +189,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{b3f7f619-47f7-4e0e-8fd7-5f8871a9bfa5}">
 		<property name="volume">
-			<value>-1.5</value>
+			<value>-5.5</value>
 		</property>
 		<property name="name">
 			<value>Sub</value>
@@ -243,6 +243,12 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{06480449-76d6-4aa5-9beb-0b8247f62544}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
+		<property name="triggerProbability">
+			<value>9.5</value>
+		</property>
 		<property name="start">
 			<value>0.09375</value>
 		</property>
@@ -265,7 +271,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{2a97dd72-4766-4715-bc68-2cc7bf969ae6}">
 		<property name="volume">
-			<value>-16.5</value>
+			<value>-21</value>
 		</property>
 		<property name="name">
 			<value>Glass Layer</value>
@@ -504,7 +510,7 @@
 			<value>0.99096880131362886</value>
 		</property>
 		<property name="value">
-			<value>3.81469727e-06</value>
+			<value>-6</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{efef7df3-af27-41c2-b893-c190e4a337be}">
@@ -523,7 +529,7 @@
 			<value>0.01</value>
 		</property>
 		<property name="value">
-			<value>-58</value>
+			<value>-80</value>
 		</property>
 	</object>
 </objects>

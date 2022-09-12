@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7a8c5daa-e176-4f29-b569-739384e3ba87}">
+		<property name="assetPath">
+			<value>WInd up Synth.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.5070294784580498</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{74847e29-222c-4246-8e01-ddec005aac00}</destination>
+		</relationship>
+	</object>
+</objects>

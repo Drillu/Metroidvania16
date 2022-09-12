@@ -120,7 +120,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{f6c70c96-4b10-4b12-bf4c-753e225610a3}">
 		<property name="name">
-			<value>Audio 1</value>
+			<value>Ambience</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{a20037de-ba84-4e7a-b84e-c1fe02384adb}</destination>

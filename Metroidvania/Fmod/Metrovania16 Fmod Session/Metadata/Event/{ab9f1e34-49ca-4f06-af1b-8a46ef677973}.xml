@@ -159,7 +159,7 @@
 	</object>
 	<object class="SingleSound" id="{4e8736bb-858e-48bf-a1fb-85bd311f2786}">
 		<property name="length">
-			<value>1.5</value>
+			<value>1.3125</value>
 		</property>
 		<property name="timelockedOffset">
 			<value>0.95874384236453203</value>
@@ -187,7 +187,10 @@
 	</object>
 	<object class="SingleSound" id="{734f3427-7e93-4bb1-8290-e13ccb57b46a}">
 		<property name="length">
-			<value>1.4351208314873392</value>
+			<value>1.125</value>
+		</property>
+		<property name="delayType">
+			<value>0</value>
 		</property>
 		<property name="timelockedOffset">
 			<value>0.25494671592775042</value>
@@ -209,7 +212,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{7a876632-c8b4-4b86-b9c0-b827540aca83}">
 		<property name="volume">
-			<value>1</value>
+			<value>-4</value>
 		</property>
 		<property name="name">
 			<value>Floor Crack</value>
@@ -332,7 +335,7 @@
 	<object class="MixerBusFader" id="{0359e386-6569-415c-8a6a-1ec6a532c58d}" />
 	<object class="AutomationPoint" id="{7fb1b6af-2cad-4092-9108-64068b1abb16}">
 		<property name="position">
-			<value>0.93300000000000005</value>
+			<value>0.74550000000000005</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -343,7 +346,7 @@
 	</object>
 	<object class="AutomationPoint" id="{6c6668c5-eb34-48f2-b636-52dc0e1ff05f}">
 		<property name="position">
-			<value>1.5</value>
+			<value>1.3125</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -352,7 +355,7 @@
 	<object class="MixerBusFader" id="{ec28f308-0371-4ccb-85ef-2d4b4995792d}" />
 	<object class="AutomationPoint" id="{cdb0a337-a2ac-4f61-95ec-136b15e98a4f}">
 		<property name="position">
-			<value>0.80469401409681685</value>
+			<value>0.49457318260947769</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -363,7 +366,7 @@
 	</object>
 	<object class="AutomationPoint" id="{783ff415-7d73-4a27-a113-759e6eba9ee4}">
 		<property name="position">
-			<value>1.4351208314873414</value>
+			<value>1.1250000000000022</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -375,7 +378,7 @@
 			<value>0.99343185550082103</value>
 		</property>
 		<property name="value">
-			<value>3.81469727e-06</value>
+			<value>-11</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{176054d2-8d59-4f66-a6fe-129b916f9b8b}">
@@ -383,7 +386,7 @@
 			<value>0.01</value>
 		</property>
 		<property name="value">
-			<value>-58</value>
+			<value>-80</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{f4be49f4-7917-408b-9f87-fd6655b865bc}">

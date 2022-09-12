@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{2f48c779-705a-48f2-af6e-3a7d12e27a79}">
+		<property name="assetPath">
+			<value>Bunny Hurt 3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.53720833333333329</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{74847e29-222c-4246-8e01-ddec005aac00}</destination>
+		</relationship>
+	</object>
+</objects>

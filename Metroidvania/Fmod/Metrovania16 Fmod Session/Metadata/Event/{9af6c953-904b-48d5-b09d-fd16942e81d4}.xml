@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{9af6c953-904b-48d5-b09d-fd16942e81d4}">
 		<property name="name">
-			<value>WaterGun</value>
+			<value>WaterGunOld</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -49,7 +49,7 @@
 	</object>
 	<object class="MasterTrack" id="{0e69a2d0-9fc8-4e0d-a9d6-94deafdc6c58}">
 		<relationship name="automationTracks">
-			<destination>{2e0c935d-5007-43ab-a327-6ea2392d7c37}</destination>
+			<destination>{e926869f-6afc-42a3-890d-a83394e19025}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{b00e9b79-2e3a-40f4-89ad-fd7a8f16113c}</destination>
@@ -130,7 +130,7 @@
 			<destination>{d1868ed0-e0c9-4bbb-8b13-bf2975e48cbf}</destination>
 		</relationship>
 	</object>
-	<object class="AutomationTrack" id="{2e0c935d-5007-43ab-a327-6ea2392d7c37}">
+	<object class="AutomationTrack" id="{e926869f-6afc-42a3-890d-a83394e19025}">
 		<relationship name="automator">
 			<destination>{caeae163-3d3d-453f-be74-d27afd43f564}</destination>
 		</relationship>

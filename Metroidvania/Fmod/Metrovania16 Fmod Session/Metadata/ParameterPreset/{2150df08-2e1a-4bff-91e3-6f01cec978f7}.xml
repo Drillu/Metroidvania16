@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{2150df08-2e1a-4bff-91e3-6f01cec978f7}">
+		<property name="name">
+			<value>BunnyIdle</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5625ca95-587d-41ba-ad18-b932a24580f3}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f763f1b1-0c49-4bae-ab3b-5ea0198b5885}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f763f1b1-0c49-4bae-ab3b-5ea0198b5885}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Yes</value>
+			<value>No</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

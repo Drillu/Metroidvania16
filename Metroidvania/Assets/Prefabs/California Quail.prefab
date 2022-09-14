@@ -75,7 +75,8 @@ GameObject:
   - component: {fileID: 4989475771512846152}
   - component: {fileID: 2268757857014902493}
   - component: {fileID: 7857890284765809786}
-  m_Layer: 0
+  - component: {fileID: 2133631450}
+  m_Layer: 7
   m_Name: California Quail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +92,7 @@ Transform:
   m_GameObject: {fileID: 4989475771512846154}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.16, y: -2.41, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3717043874316130229}
@@ -137,8 +138,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1454696163
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1211430961, guid: 2aacf251186671b49a5bb846dea3999d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -228,3 +229,23 @@ PolygonCollider2D:
       - {x: 2.760994, y: -3.633731}
       - {x: 2.4430466, y: -2.245922}
       - {x: 2.6964798, y: -0.11952019}
+--- !u!95 &2133631450
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4989475771512846154}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 26e7eb88c1d2b594d9da3a82bd6d5f82, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

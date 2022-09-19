@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{5166caa9-ceaa-4bc6-bf18-492e43aed29a}">
+		<property name="name">
+			<value>QuailIdle</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5625ca95-587d-41ba-ad18-b932a24580f3}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{7a7d7b23-c417-4ba8-b835-58c52d4c1849}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{7a7d7b23-c417-4ba8-b835-58c52d4c1849}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Yes</value>
+			<value>No</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

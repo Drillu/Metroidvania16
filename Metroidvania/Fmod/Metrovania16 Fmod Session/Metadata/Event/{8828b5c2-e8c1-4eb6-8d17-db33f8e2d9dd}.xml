@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{8828b5c2-e8c1-4eb6-8d17-db33f8e2d9dd}">
 		<property name="name">
-			<value>InnerForest</value>
+			<value>MainMenu</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -176,9 +176,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{7d3264d0-c1bf-404a-b152-8c9626479cbe}">
-		<property name="volume">
-			<value>6</value>
-		</property>
 		<property name="name">
 			<value>Inner Forest Music</value>
 		</property>

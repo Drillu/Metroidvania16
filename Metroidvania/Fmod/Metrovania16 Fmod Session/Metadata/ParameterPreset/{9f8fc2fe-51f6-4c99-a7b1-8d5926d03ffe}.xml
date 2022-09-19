@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{9f8fc2fe-51f6-4c99-a7b1-8d5926d03ffe}">
+		<property name="name">
+			<value>UnderGround</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5625ca95-587d-41ba-ad18-b932a24580f3}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{1aa607bb-fbf7-4179-b0dd-8df819a5c49a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{1aa607bb-fbf7-4179-b0dd-8df819a5c49a}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>No</value>
+			<value>Yes</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

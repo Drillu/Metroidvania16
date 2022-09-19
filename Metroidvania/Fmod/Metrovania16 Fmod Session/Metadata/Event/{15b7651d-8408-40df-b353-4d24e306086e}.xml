@@ -128,6 +128,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{a067f52b-44a3-4905-8903-8ba0e4bdf128}">
+		<property name="volume">
+			<value>-8.5</value>
+		</property>
 		<property name="name">
 			<value>LandRoad</value>
 		</property>
@@ -146,7 +149,7 @@
 			<value>-17.5</value>
 		</property>
 		<property name="name">
-			<value>Rubble</value>
+			<value>Valume Layer</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{32418dc9-8f96-44bb-94e7-5baab09fd1b9}</destination>
@@ -235,13 +238,13 @@
 	<object class="MixerBusFader" id="{58be1a1f-e427-4e07-ab68-29367d68e767}" />
 	<object class="AutomationPoint" id="{783ff9e5-1d3f-4f8d-9bc2-fec85b608466}">
 		<property name="position">
-			<value>0.40625</value>
+			<value>0.296875</value>
 		</property>
 		<property name="value">
 			<value>1</value>
 		</property>
 		<property name="curveShape">
-			<value>0.25471893</value>
+			<value>-0.2194812</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{21d82840-330a-4ac1-b429-1cf11a4fe042}">

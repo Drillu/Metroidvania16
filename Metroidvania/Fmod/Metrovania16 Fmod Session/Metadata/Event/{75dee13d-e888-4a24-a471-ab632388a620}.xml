@@ -130,7 +130,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{9904619c-33c7-411e-b225-9d2eec6d6285}">
 		<property name="volume">
-			<value>3</value>
+			<value>-6.5</value>
 		</property>
 		<property name="name">
 			<value>Kirei Landing on Car</value>
@@ -150,7 +150,7 @@
 			<value>-12</value>
 		</property>
 		<property name="name">
-			<value>Audio 2</value>
+			<value>Volume</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{7a50d975-b048-4270-9eb5-08c1ca35b9b5}</destination>
@@ -173,6 +173,7 @@
 	<object class="MixerBusEffectChain" id="{d1486158-9259-449a-84f4-dc526a226b7d}">
 		<relationship name="effects">
 			<destination>{a6abb81d-ed28-465c-a2da-c8bcfc2dc36a}</destination>
+			<destination>{b0c8d33a-50b5-47f6-af58-1ec15122242f}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{7d55268c-3886-4cf1-927d-6511017500f1}" />
@@ -236,6 +237,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{a6abb81d-ed28-465c-a2da-c8bcfc2dc36a}" />
+	<object class="MixerSend" id="{b0c8d33a-50b5-47f6-af58-1ec15122242f}">
+		<property name="inputFormat">
+			<value>1</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{f0ff03a0-310d-4f51-b915-8ca0a23fb86a}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{6b7b6661-3d1b-4346-8592-1fd97861f737}" />
 	<object class="MixerBusFader" id="{3e66d6be-9a0a-4d00-9694-3225a96568d1}" />
 	<object class="AutomationPoint" id="{c20892e6-eee6-4ca1-90d8-072e4b27b321}">

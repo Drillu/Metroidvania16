@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{1784d62a-8502-4a0d-b28a-6ca603c98866}">
 		<property name="name">
-			<value>AmbianceTemp</value>
+			<value>AmbianceSurfaceLevel</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -33,6 +33,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{c9d053fb-725b-43b6-af16-7c5a398f1ad6}</destination>
+			<destination>{c7ec61d6-3754-4688-9bdc-e92c825e7bcf}</destination>
 		</relationship>
 		<relationship name="banks">
 			<destination>{c12d4a02-a540-4aa1-8cf7-2fbd795301d7}</destination>
@@ -83,6 +84,11 @@
 	<object class="ParameterProxy" id="{c9d053fb-725b-43b6-af16-7c5a398f1ad6}">
 		<relationship name="preset">
 			<destination>{767f9085-2a90-47e9-92a9-fc59788116c6}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProxy" id="{c7ec61d6-3754-4688-9bdc-e92c825e7bcf}">
+		<relationship name="preset">
+			<destination>{33693f2b-7c82-42fd-af74-790be88d36df}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{615c4e73-2cfc-41e7-af83-a1ce9b11db57}">

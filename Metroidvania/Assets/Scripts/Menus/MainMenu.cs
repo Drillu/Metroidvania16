@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
@@ -14,6 +15,14 @@ public class MainMenu : MonoBehaviour
     const string Credits_Roll = "Credits_Roll";
     const string Credits_Back = "Credits_Back";
 
+    private int MusicLevel=4;
+    private int SFXLevel=6;
+    public List<Sprite> SoundLevels;
+    [SerializeField] private Image MusicSlider;
+    [SerializeField] private Image SFXSlider;
+
+    #region Other than Options
+
     public void PlayButton()
     {
         Debug.Log("Play Button CLicked");
@@ -24,16 +33,60 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Quit Button CLicked");
         Application.Quit();
     }
-
     public void PressedCredits()
     {
         StartCoroutine(LoadCredits());
     }
-
     public void BackFromCredits()
     {
         StartCoroutine(BackFromCreditsToMainMenu());
     }
+
+    #endregion
+
+    #region Slider Buttons
+
+    public void MusicPlusButton()
+    {
+        if(MusicLevel != SoundLevels.Count)
+        {
+            Debug.Log("Music Volume Up");
+            MusicLevel++;
+            MusicSlider.sprite = SoundLevels[MusicLevel - 1];
+        }
+    }
+
+    public void MusicMinusButton()
+    {
+        if (MusicLevel != 1)
+        {
+            Debug.Log("Music Volume Down");
+            MusicLevel--;
+            MusicSlider.sprite = SoundLevels[MusicLevel - 1];
+        }
+    }
+
+    public void SFXPlusButton()
+    {
+        if (SFXLevel != SoundLevels.Count)
+        {
+            Debug.Log("SFX Volume Up");
+            SFXLevel++;
+            SFXSlider.sprite = SoundLevels[SFXLevel - 1];
+        }
+    }
+
+    public void SFXMinusButton()
+    {
+        if (SFXLevel != 1)
+        {
+            Debug.Log("SFX Volume Down");
+            SFXLevel--;
+            SFXSlider.sprite = SoundLevels[SFXLevel - 1];
+        }
+    }
+
+    #endregion
 
     #region IEnumerators
     IEnumerator LoadScene(int sceneIndex)

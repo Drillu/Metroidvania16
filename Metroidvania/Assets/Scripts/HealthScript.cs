@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class HealthScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private float currentHP;
+    [SerializeField] private float maxHP;
+
+    private void Start()
     {
-        
+        currentHP = maxHP;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        
+        if(other.gameObject.CompareTag("Player"))
+        {
+            currentHP -= 2f;
+        }
     }
+    
 }

@@ -1951,7 +1951,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2554193, y: 1}
+    m_SensorSize: {x: 2.4389508, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2151,6 +2151,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
+--- !u!1 &2108308614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8644924720243808958, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
+  m_PrefabInstance: {fileID: 2068293759}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2108308618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108308614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Road
+  EventReference:
+    Guid:
+      Data1: -1415635404
+      Data2: 1325812170
+      Data3: 1183456175
+      Data4: 1937336303
+    Path: event:/SFX/BunnyAttackRoad
+  Event: 
+  PlayEvent: 5
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 100
 --- !u!1 &2141708602
 GameObject:
   m_ObjectHideFlags: 0

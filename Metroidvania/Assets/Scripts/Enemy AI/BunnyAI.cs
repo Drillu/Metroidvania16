@@ -48,19 +48,20 @@ public class BunnyAI : MonoBehaviour
         movement.x = movementSpeed;
         player = GameObject.FindGameObjectWithTag("Player");
         animator = GetComponent<Animator>();
-        
+
+
     }
 
     private void Update()
     {
-        //Detects player
+        //Detects player (Plays one time)
         if (stillPassive)
         {
             if (Vector2.Distance(player.transform.position, transform.position) <= detectionRange)
             {
                 stillPassive = false;
-
                 animator.Play(bunny_windup);
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/BunnyWindUp", transform.position);
             }
         }
         
@@ -101,7 +102,7 @@ public class BunnyAI : MonoBehaviour
 
             }
             else
-            {
+            { 
                 rb.velocity = new Vector2(0, rb.velocity.y);
                 //Go timer down
                 timer -= 0.2f;
@@ -110,6 +111,9 @@ public class BunnyAI : MonoBehaviour
             }
         }
     }
+
+    
+   
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Lands
@@ -118,7 +122,10 @@ public class BunnyAI : MonoBehaviour
             isAbleToJump = true;
             timer = timeRequiered;
             PlayAnimationAndRecord(bunny_windup);
-            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/BunnyAttackRoad");
+            Debug.Log("Play Landing Sound");
+
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/BunnyAttackRoad", transform.position);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/BunnyWindUp", transform.position);
         }
     }
     #endregion

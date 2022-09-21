@@ -45,6 +45,8 @@ GameObject:
   - component: {fileID: 1416973466834869423}
   - component: {fileID: 5631521903391320931}
   - component: {fileID: 697823957}
+  - component: {fileID: 1987079588}
+  - component: {fileID: 1987079589}
   m_Layer: 7
   m_Name: Sludge Bunny
   m_TagString: SludgeBunny
@@ -220,6 +222,66 @@ PolygonCollider2D:
       - {x: 3.9583335, y: -0.2916667}
       - {x: 5.90625, y: -3.5520835}
       - {x: 5.53125, y: -7.25}
+--- !u!114 &1987079588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8644924719342154837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1415635404
+      Data2: 1325812170
+      Data3: 1183456175
+      Data4: 1937336303
+    Path: event:/SFX/BunnyAttackRoad
+  Event: 
+  PlayEvent: 10
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 100
+--- !u!114 &1987079589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8644924719342154837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1803915171
+      Data2: 1331350222
+      Data3: 683516861
+      Data4: -964095535
+    Path: event:/SFX/BunnyMovement
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 100
 --- !u!1 &8644924720243808958
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,6 +292,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8644924720243808959}
   - component: {fileID: 8644924720243808928}
+  - component: {fileID: 2108308618}
+  - component: {fileID: 2108308619}
   m_Layer: 0
   m_Name: GroundTrigger
   m_TagString: Untagged
@@ -268,6 +332,66 @@ CapsuleCollider2D:
   m_Offset: {x: -0.7, y: -7.32}
   m_Size: {x: 13.48, y: 0.1}
   m_Direction: 1
+--- !u!114 &2108308618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8644924720243808958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Road
+  EventReference:
+    Guid:
+      Data1: -1415635404
+      Data2: 1325812170
+      Data3: 1183456175
+      Data4: 1937336303
+    Path: event:/SFX/BunnyAttackRoad
+  Event: 
+  PlayEvent: 5
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 100
+--- !u!114 &2108308619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8644924720243808958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Car
+  EventReference:
+    Guid:
+      Data1: -1806698015
+      Data2: 1229158501
+      Data3: 486290359
+      Data4: 30916377
+    Path: event:/SFX/BunnyAttackCar
+  Event: 
+  PlayEvent: 5
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 100
 --- !u!1 &8644924720437880776
 GameObject:
   m_ObjectHideFlags: 0

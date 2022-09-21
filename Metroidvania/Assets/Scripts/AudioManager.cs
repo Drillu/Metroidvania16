@@ -14,7 +14,10 @@ public class AudioManager : MonoBehaviour
         gameMusic.start();
         var gameAmbiance = FMODUnity.RuntimeManager.CreateInstance("event:/Ambiance/AmbianceSurfaceLevel");
         gameAmbiance.start();
-        
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("LevelMusic", StaticVariablesFromMenuToLevel.musicSound);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("LevelSFX", StaticVariablesFromMenuToLevel.sfxSound);
+
+
     }
 
     public static void PlaySound(string eventPath)

@@ -10,16 +10,21 @@ public class MainMenu : MonoBehaviour
     public Animator creditsAnimator;
     public CanvasGroup creditsGroup;
 
+    //Animations names
     const string Fade_End = "Fade_End";
     const string Fade_Start = "Fade_Start";
     const string Credits_Roll = "Credits_Roll";
     const string Credits_Back = "Credits_Back";
 
-    private int MusicLevel=4;
+    //Sound
+    public float musicParameter = 1f;
+    public float sfxParameter = 1f;
+    private int MusicLevel=6;
     private int SFXLevel=6;
     public List<Sprite> SoundLevels;
     [SerializeField] private Image MusicSlider;
     [SerializeField] private Image SFXSlider;
+
 
     #region Other than Options
 
@@ -27,6 +32,8 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Play Button CLicked");
         StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex + 1));
+        StaticVariablesFromMenuToLevel.musicSound = musicParameter;
+        StaticVariablesFromMenuToLevel.sfxSound = sfxParameter;
     }
     public void QuitButton()
     {
@@ -46,12 +53,19 @@ public class MainMenu : MonoBehaviour
 
     #region Slider Buttons
 
+    public void UpdateSounds()
+    {
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("LevelMusic",musicParameter);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("LevelSFX", sfxParameter);
+    }
+
     public void MusicPlusButton()
     {
         if(MusicLevel != SoundLevels.Count)
         {
             Debug.Log("Music Volume Up");
             MusicLevel++;
+            musicParameter += 0.2f;
             MusicSlider.sprite = SoundLevels[MusicLevel - 1];
         }
     }
@@ -62,6 +76,7 @@ public class MainMenu : MonoBehaviour
         {
             Debug.Log("Music Volume Down");
             MusicLevel--;
+            musicParameter -= 0.2f;
             MusicSlider.sprite = SoundLevels[MusicLevel - 1];
         }
     }
@@ -72,6 +87,7 @@ public class MainMenu : MonoBehaviour
         {
             Debug.Log("SFX Volume Up");
             SFXLevel++;
+            sfxParameter += 0.2f;
             SFXSlider.sprite = SoundLevels[SFXLevel - 1];
         }
     }
@@ -82,6 +98,7 @@ public class MainMenu : MonoBehaviour
         {
             Debug.Log("SFX Volume Down");
             SFXLevel--;
+            sfxParameter -= 0.2f;
             SFXSlider.sprite = SoundLevels[SFXLevel - 1];
         }
     }

@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c4a9566e05065b246bbc9be4f46f1836, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc24acc346680d140a6f9d8d3975d1aa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -423,7 +423,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &236420045
 RectTransform:
   m_ObjectHideFlags: 0
@@ -768,6 +768,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2035713734}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: SFXPlusButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2035713734}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: UpdateSounds
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1232,6 +1244,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2035713734}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: MusicMinusButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2035713734}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: UpdateSounds
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1790,6 +1814,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2035713734}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: UpdateSounds
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &991071486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2064,6 +2100,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2035713734}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: MusicPlusButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2035713734}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: UpdateSounds
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2651,7 +2699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1537701759
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3226,6 +3274,8 @@ MonoBehaviour:
   animator: {fileID: 1227062919}
   creditsAnimator: {fileID: 2115998710}
   creditsGroup: {fileID: 2115998709}
+  musicParameter: 1
+  sfxParameter: 1
   SoundLevels:
   - {fileID: 21300000, guid: fc876c4bfa28be845ac12df484e7a407, type: 3}
   - {fileID: 21300000, guid: 73b46a4b89502864289087fa45163306, type: 3}

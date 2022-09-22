@@ -51,7 +51,13 @@ public class MainMenu : MonoBehaviour
 
     #endregion
 
-    #region Slider Buttons
+    #region Options
+
+    public void SetFullscreen(bool isFullscreen)
+    {
+        Screen.fullScreen = isFullscreen;
+        Debug.Log("FULSCREEN: " + isFullscreen);
+    }
 
     public void UpdateSounds()
     {

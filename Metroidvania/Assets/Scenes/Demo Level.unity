@@ -406,7 +406,7 @@ TilemapRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 4
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 7.625, y: 7.625, z: 0}
+  m_ChunkCullingBounds: {x: 7.5, y: 7.5, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -443,36 +443,6 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: -16, y: -6, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -14, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 5
-      m_TileSpriteIndex: 5
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -13, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -12, y: -4, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 3
@@ -527,6 +497,36 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 1
       m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -14, y: -3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -13, y: -3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -12, y: -3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1041,11 +1041,6 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
---- !u!1 &474769829 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 678217372573592731, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-  m_PrefabInstance: {fileID: 8993176293074503561}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &511540727
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,7 +1404,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 55bd3244c998f4c49a158c9ae12e8043, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c428b26431d571c409bede1e6ebf95d2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2179,11 +2174,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8644924719342154839, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -199.5
+      value: -196.55
       objectReference: {fileID: 0}
     - target: {fileID: 8644924719342154839, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -39.8
+      value: -22.97
       objectReference: {fileID: 0}
     - target: {fileID: 8644924719342154839, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2352,29 +2347,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 678217372573592735, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
   m_PrefabInstance: {fileID: 8993176293074503561}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8477935226622110493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474769829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93e9b51882faddb4b88299f8ab699aae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBarImage: {fileID: 854906256}
-  enemiesLayerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  healthStates:
-  - {fileID: 21300000, guid: c428b26431d571c409bede1e6ebf95d2, type: 3}
-  - {fileID: 21300000, guid: 7a614d7cce41ab04e90ddd75a7a252ff, type: 3}
-  - {fileID: 21300000, guid: 2956b912a11cbb54bb681b2ef81d8d2e, type: 3}
-  - {fileID: 21300000, guid: 0d71cef55f938f9469b023a4748350d1, type: 3}
-  - {fileID: 21300000, guid: 6c9b5b4e10598fb49b4872953e62effc, type: 3}
-  - {fileID: 21300000, guid: 55bd3244c998f4c49a158c9ae12e8043, type: 3}
 --- !u!1001 &8993176293074503561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2382,17 +2354,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 678217372573592730, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 3d8f67e488fdc9740937c73f77e0b761, type: 2}
     - target: {fileID: 678217372573592731, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 678217372573592734, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: jumpableGround.m_Bits
-      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 678217372573592735, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
       propertyPath: m_RootOrder
@@ -2438,13 +2402,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3199040148041038647, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: m_SortingLayer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3199040148041038647, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 592214807
-      objectReference: {fileID: 0}
+    - target: {fileID: 8477935226622110493, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
+      propertyPath: healthBarImage
+      value: 
+      objectReference: {fileID: 854906256}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}

@@ -7,6 +7,7 @@ public class WaterGun : MonoBehaviour
     private Vector3 mousePos;
 
     [SerializeField] private Transform gunCenter;
+    [SerializeField] private PolygonCollider2D coll;
     [SerializeField] private Animator gunAnimator;
     [SerializeField] private SpriteRenderer gunSprite;
 
@@ -16,6 +17,7 @@ public class WaterGun : MonoBehaviour
     private void Awake()
     {
         waterEvent = FMODUnity.RuntimeManager.CreateInstance(sprayingSound);
+        coll = GetComponent<PolygonCollider2D>();
     }
 
     private void Update()
@@ -38,18 +40,16 @@ public class WaterGun : MonoBehaviour
 
             StartCoroutine(StartSpraying());
             waterEvent.start();
-
+            coll.enabled = true;
           
         }
-
-        
 
         else if (Input.GetMouseButtonUp(0)) // release
         { 
             StopAllCoroutines();
             gunAnimator.Play("waterSprayEmpty");
             waterEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-          
+            coll.enabled = false;
         }
     }
 
@@ -60,11 +60,17 @@ public class WaterGun : MonoBehaviour
         gunCenter.rotation = Quaternion.Euler(0f,0f,angle);
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Enemy"))
+        if(collision.CompareTag("SludgeBunny"))
         {
-            Debug.Log("shooting enenmy");
+            //FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/BunnyHurt");
+            Debug.Log("shooting bunny, playing sound");
+        }
+
+        else if (collision.CompareTag("Quail"))
+        {
+            Debug.Log("shooting quail, playing sound");
         }
     }
 

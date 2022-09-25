@@ -8,6 +8,8 @@ TagManager:
   - Road
   - Car
   - SludgeBunny
+  - Quail
+  - Gun
   layers:
   - Default
   - TransparentFX

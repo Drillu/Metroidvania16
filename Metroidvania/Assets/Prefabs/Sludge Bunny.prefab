@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 697823957}
   - component: {fileID: 1987079588}
   - component: {fileID: 1987079589}
+  - component: {fileID: 1016130439}
   m_Layer: 7
   m_Name: Sludge Bunny
   m_TagString: SludgeBunny
@@ -275,6 +276,36 @@ MonoBehaviour:
   Event: 
   PlayEvent: 1
   StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 125
+--- !u!114 &1016130439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8644924719342154837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Gun
+  EventReference:
+    Guid:
+      Data1: 1109503446
+      Data2: 1248020303
+      Data3: -505769302
+      Data4: -1953871264
+    Path: event:/SFX/BunnyHurt
+  Event: 
+  PlayEvent: 5
+  StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0

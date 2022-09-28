@@ -125,6 +125,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{f6c70c96-4b10-4b12-bf4c-753e225610a3}">
+		<property name="volume">
+			<value>-10</value>
+		</property>
 		<property name="name">
 			<value>Ambience</value>
 		</property>
@@ -161,6 +164,7 @@
 		</property>
 		<relationship name="automationCurves">
 			<destination>{4d00648f-cab7-46de-a2a1-3eaa2bee0f86}</destination>
+			<destination>{4b6b2d0a-873a-4296-8862-f4e213543f12}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{c039d937-1e25-49ad-8a25-c8284271d9e6}">
@@ -203,6 +207,16 @@
 			<destination>{ada18352-9bc4-4b08-8ff9-4f7542062377}</destination>
 		</relationship>
 	</object>
+	<object class="AutomationCurve" id="{4b6b2d0a-873a-4296-8862-f4e213543f12}">
+		<relationship name="parameter">
+			<destination>{33693f2b-7c82-42fd-af74-790be88d36df}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{a8b74d42-cbf4-4ee9-8026-c79b45bc4134}</destination>
+			<destination>{a2cb8b18-a1d7-4023-b042-53f51f49cc32}</destination>
+			<destination>{48c9004c-492e-4b08-8d60-00ad198f5b97}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{c283d5ff-ca54-4e05-9c00-1455a755ea2f}" />
 	<object class="MixerBusFader" id="{f9da2612-bfed-46e7-bc38-84a23ce2b379}" />
 	<object class="AutomationPoint" id="{8121e870-298e-4069-8dc4-6c930a1b4354}">
@@ -227,6 +241,30 @@
 		</property>
 		<property name="value">
 			<value>-26</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{a8b74d42-cbf4-4ee9-8026-c79b45bc4134}">
+		<property name="position">
+			<value>0.99425287356321834</value>
+		</property>
+		<property name="value">
+			<value>3.81469727e-06</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{a2cb8b18-a1d7-4023-b042-53f51f49cc32}">
+		<property name="position">
+			<value>0.01</value>
+		</property>
+		<property name="value">
+			<value>-15</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{48c9004c-492e-4b08-8d60-00ad198f5b97}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>-80</value>
 		</property>
 	</object>
 </objects>

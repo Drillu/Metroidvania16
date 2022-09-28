@@ -177,7 +177,7 @@
 			<value>-2.5</value>
 		</property>
 		<property name="name">
-			<value>Bunny Impacts</value>
+			<value>Metallic Impacts</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{4a34bc1f-b7a5-42a4-874c-30fc6311358f}</destination>
@@ -320,8 +320,11 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{06480449-76d6-4aa5-9beb-0b8247f62544}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
 		<property name="triggerProbability">
-			<value>50.5</value>
+			<value>16.5</value>
 		</property>
 		<property name="length">
 			<value>1.4375</value>

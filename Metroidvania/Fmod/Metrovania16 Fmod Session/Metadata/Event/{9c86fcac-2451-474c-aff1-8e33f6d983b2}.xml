@@ -188,6 +188,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{f47e2113-e56d-446c-a712-a4c489190f65}" />
 	<object class="MultiSound" id="{2529a12a-f75b-4b7f-91e9-e75cddfc27f8}">
+		<property name="isAsync">
+			<value>true</value>
+		</property>
 		<property name="length">
 			<value>0.90736961451247167</value>
 		</property>
@@ -340,6 +343,9 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{a3884b15-c571-4182-969f-be5fb86dfd65}">
+		<property name="isAsync">
+			<value>true</value>
+		</property>
 		<property name="length">
 			<value>0.75</value>
 		</property>
@@ -371,6 +377,9 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{a06b15ca-e201-4d2f-9fd5-0a7ab15d9d9b}">
+		<property name="isAsync">
+			<value>true</value>
+		</property>
 		<property name="start">
 			<value>0.75</value>
 		</property>

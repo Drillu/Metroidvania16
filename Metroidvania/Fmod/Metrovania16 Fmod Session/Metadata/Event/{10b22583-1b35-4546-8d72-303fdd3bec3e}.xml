@@ -172,6 +172,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{3d4f5230-75c4-4321-8165-434d9fc687b2}">
+		<property name="volume">
+			<value>-2.5</value>
+		</property>
 		<property name="name">
 			<value>Synth</value>
 		</property>
@@ -197,6 +200,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{49f40c0e-6565-48bd-af58-b5f0aedada93}">
+		<property name="volume">
+			<value>-11</value>
+		</property>
 		<property name="name">
 			<value>Sludge Layer</value>
 		</property>
@@ -379,7 +385,7 @@
 			<value>0.013136288998357963</value>
 		</property>
 		<property name="value">
-			<value>-60</value>
+			<value>-52</value>
 		</property>
 	</object>
 	<object class="RandomizerModulator" id="{42705a4b-2cbd-4e0b-998f-3b3c36fdbfc9}">

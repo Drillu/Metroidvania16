@@ -95,6 +95,10 @@
 		<property name="timelockedOffset">
 			<value>0.035878489326765184</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{cacebfd8-5502-4f04-9fe7-04bc523b5781}</destination>
+			<destination>{2a3bde78-ed92-41f0-a333-ab60d3d819cb}</destination>
+		</relationship>
 		<relationship name="fadeOutCurve">
 			<destination>{29355528-8924-410f-bd22-aa52f5968823}</destination>
 		</relationship>
@@ -119,10 +123,21 @@
 	<object class="MixerBusEffectChain" id="{1b29ef95-ae4a-4c21-ab42-f41a99f3e3db}">
 		<relationship name="effects">
 			<destination>{0fa60e44-25ca-416f-967b-61593e4d6caa}</destination>
+			<destination>{f980a14f-a2b8-4f42-8fa1-54855599e4c1}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{705d4004-8e8d-444b-b1ff-ff38ca95d562}" />
 	<object class="MixerBusFader" id="{29ea28e0-6ae6-43a5-add6-9cb369a6faa4}" />
+	<object class="RandomizerModulator" id="{cacebfd8-5502-4f04-9fe7-04bc523b5781}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+	</object>
+	<object class="RandomizerModulator" id="{2a3bde78-ed92-41f0-a333-ab60d3d819cb}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+	</object>
 	<object class="FadeCurve" id="{29355528-8924-410f-bd22-aa52f5968823}">
 		<relationship name="startPoint">
 			<destination>{13271fd7-cbba-4c06-a3cb-031a3806e3f5}</destination>
@@ -138,6 +153,17 @@
 	</object>
 	<object class="MixerBusPanner" id="{d4138848-b1a0-495e-b9e0-032efd67bdf9}" />
 	<object class="MixerBusFader" id="{0fa60e44-25ca-416f-967b-61593e4d6caa}" />
+	<object class="MixerSend" id="{f980a14f-a2b8-4f42-8fa1-54855599e4c1}">
+		<property name="level">
+			<value>-72</value>
+		</property>
+		<property name="inputFormat">
+			<value>1</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{f0ff03a0-310d-4f51-b915-8ca0a23fb86a}</destination>
+		</relationship>
+	</object>
 	<object class="AutomationPoint" id="{13271fd7-cbba-4c06-a3cb-031a3806e3f5}">
 		<property name="position">
 			<value>0.31249999999999956</value>

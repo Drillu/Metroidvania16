@@ -12,11 +12,16 @@ public class HealthScript : MonoBehaviour
         currentHP = maxHP;
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("PlayerBullet"))
         {
-            currentHP -= 2f;
+            Debug.Log("HIT ENEMY");
+            currentHP -= 1f;
+        }
+        if(currentHP<=0)
+        {
+            Destroy(gameObject);
         }
     }
     

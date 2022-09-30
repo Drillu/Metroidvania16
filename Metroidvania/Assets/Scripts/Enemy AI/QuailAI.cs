@@ -38,5 +38,5 @@ public class QuailAI : MonoBehaviour
         transform.Rotate(new Vector3(0, 180f, 0));
     }
 
-
+    
 }

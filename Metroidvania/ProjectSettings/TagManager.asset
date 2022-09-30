@@ -10,6 +10,7 @@ TagManager:
   - SludgeBunny
   - Quail
   - Gun
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX

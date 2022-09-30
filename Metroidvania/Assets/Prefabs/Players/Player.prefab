@@ -244,7 +244,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -460,7 +460,6 @@ GameObject:
   - component: {fileID: 5586181322427312965}
   - component: {fileID: 1753769860720951165}
   - component: {fileID: 3199040148041038647}
-  - component: {fileID: 2013361586}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Gun
@@ -496,10 +495,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed41ee02dcd6d45499b91893625f5303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 8111476325205938716, guid: e1449304de7eb9849b1d6a027820b44b, type: 3}
   gunCenter: {fileID: 5806021568226666720}
-  coll: {fileID: 0}
+  firePoint: {fileID: 352289036}
   gunAnimator: {fileID: 352289037}
   gunSprite: {fileID: 3199040148041038647}
+  fireRate: 10
 --- !u!212 &3199040148041038647
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -552,36 +553,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &2013361586
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2498053440046568889}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.125, y: 7.5}
-    newSize: {x: 7.125, y: 7.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 1}
-      - {x: -1.8764791, y: 1.4090478}
-      - {x: -1.7401986, y: -1.3153803}
-      - {x: -0.16302907, y: -1.0360075}
-      - {x: 1.0907431, y: 0.029644191}
 --- !u!1 &8993176292898010754
 GameObject:
   m_ObjectHideFlags: 0

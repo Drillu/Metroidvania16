@@ -13,17 +13,23 @@ public class Bullets : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             //Damage player
             //Destroy animation
+
             //Destroy bullet
             Destroy(gameObject);
         }
-        else if(collision.CompareTag("Ground"))
+        else if (collision.CompareTag("Ground"))
         {
             //Destroy animation
+
             //Destroy bullet
+            Destroy(gameObject);
+        }
+        else if(collision.CompareTag("Quail") || collision.CompareTag("SludgeBunny"))
+        {
             Destroy(gameObject);
         }
     }

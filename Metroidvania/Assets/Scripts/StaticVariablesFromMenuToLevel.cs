@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class StaticVariablesFromMenuToLevel
 {
-    public static float musicSound;
-    public static float sfxSound;
+    public static float musicSound = 1f;
+    public static float sfxSound= 1f;
 }

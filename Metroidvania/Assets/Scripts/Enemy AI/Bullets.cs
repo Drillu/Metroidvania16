@@ -5,6 +5,12 @@ using UnityEngine;
 public class Bullets : MonoBehaviour
 {
     private float despawn = 50f;
+
+    private void Awake()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/WaterGunShoot");
+    }
+
     private void Update()
     {
         despawn -= 0.1f;

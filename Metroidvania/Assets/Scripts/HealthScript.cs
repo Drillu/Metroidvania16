@@ -6,6 +6,8 @@ public class HealthScript : MonoBehaviour
 {
     private float currentHP;
     [SerializeField] private float maxHP;
+    [SerializeField] private AnimationClip deathAnimation;
+    [SerializeField] private GameObject enableDeath;
 
     private void Start()
     {
@@ -21,8 +23,16 @@ public class HealthScript : MonoBehaviour
         }
         if(currentHP<=0)
         {
-            Destroy(gameObject);
+            StartCoroutine(DeathAnimation());
         }
     }
     
+    IEnumerator DeathAnimation()
+    {
+        GetComponent<Animator>().Play(deathAnimation.name);
+        enableDeath.SetActive(true);
+        Destroy(GetComponentInChildren<CapsuleCollider2D>());
+        yield return new WaitForSeconds(deathAnimation.length);
+        Destroy(gameObject);
+    }
 }

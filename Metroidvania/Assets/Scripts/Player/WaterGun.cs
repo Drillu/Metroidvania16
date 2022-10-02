@@ -11,7 +11,7 @@ public class WaterGun : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private Animator gunAnimator;
     [SerializeField] private SpriteRenderer gunSprite;
-    [SerializeField] private float fireRate = 40f;
+    [SerializeField] private float fireRate = 25f;
     Vector2 lookDir;
 
     FMOD.Studio.EventInstance waterEvent;
@@ -45,7 +45,7 @@ public class WaterGun : MonoBehaviour
         {
             if (fireRate <= 0)
             {
-                fireRate = 40f;
+                fireRate = 25f;
                 Shoot();
             }
             else

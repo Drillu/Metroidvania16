@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    
+    public static FMOD.Studio.EventInstance gameMusic;
 
     private void Start()
     {
-        var gameMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Level1");
-        gameMusic.setParameterByName("UnderGround", 1);
+        gameMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Level1");
+        //gameMusic.setParameterByName("UnderGround", 1);
         gameMusic.start();
         var gameAmbiance = FMODUnity.RuntimeManager.CreateInstance("event:/Ambiance/AmbianceSurfaceLevel");
         gameAmbiance.start();

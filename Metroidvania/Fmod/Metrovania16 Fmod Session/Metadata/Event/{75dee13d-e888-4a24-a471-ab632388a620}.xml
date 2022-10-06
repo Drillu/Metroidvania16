@@ -133,7 +133,7 @@
 			<value>-6.5</value>
 		</property>
 		<property name="name">
-			<value>Kirei Landing on Car</value>
+			<value>Landing on Car</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{6a2f7ae9-0e5c-4c42-80aa-4104cac917f3}</destination>

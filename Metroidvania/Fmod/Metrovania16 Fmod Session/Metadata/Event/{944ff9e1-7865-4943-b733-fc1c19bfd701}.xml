@@ -307,7 +307,7 @@
 			<value>4.5</value>
 		</property>
 		<property name="name">
-			<value>Metalic Wobble</value>
+			<value>Metallic Wobble</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{47879274-4b7a-4091-a884-eb5bd17d6d96}</destination>

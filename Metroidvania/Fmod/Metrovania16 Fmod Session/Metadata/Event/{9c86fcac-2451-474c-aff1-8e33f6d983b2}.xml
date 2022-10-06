@@ -213,7 +213,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{ed39946a-4af4-4291-8db4-d5b86c0ff297}">
 		<property name="name">
-			<value>Impact</value>
+			<value>ImpactCar 1</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{0ce01ee2-32a3-4ada-9554-568b32b5f47b}</destination>
@@ -251,7 +251,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{dbc791d9-eb20-4489-85b4-7c7878834392}">
 		<property name="name">
-			<value>Impact 2</value>
+			<value>ImpactCar 2</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{4368d31d-544c-4d8d-87cb-1ca21439de96}</destination>

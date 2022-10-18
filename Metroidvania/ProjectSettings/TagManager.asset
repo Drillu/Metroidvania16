@@ -11,6 +11,7 @@ TagManager:
   - Quail
   - Gun
   - PlayerBullet
+  - Bullet
   layers:
   - Default
   - TransparentFX

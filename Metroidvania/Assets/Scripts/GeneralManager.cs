@@ -26,4 +26,5 @@ public class GeneralManager : MonoBehaviour
         else
             return false;
     }
+
 }

@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class HealthScript : MonoBehaviour
 {
-    private float currentHP;
+    public float currentHP;
     [SerializeField] private float maxHP;
-    [SerializeField] private AnimationClip deathAnimation;
-    [SerializeField] private GameObject enableDeath;
 
     private void Start()
     {
@@ -16,23 +14,13 @@ public class HealthScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("PlayerBullet"))
+        if(other.CompareTag("PlayerBullet"))
         {
-            Debug.Log("HIT ENEMY");
-            currentHP -= 1f;
+            currentHP--;
+            if(currentHP<=0)
+            {
+                
+            }
         }
-        if(currentHP<=0)
-        {
-            StartCoroutine(DeathAnimation());
-        }
-    }
-    
-    IEnumerator DeathAnimation()
-    {
-        GetComponent<Animator>().Play(deathAnimation.name);
-        enableDeath.SetActive(true);
-        Destroy(GetComponentInChildren<CapsuleCollider2D>());
-        yield return new WaitForSeconds(deathAnimation.length);
-        Destroy(gameObject);
     }
 }

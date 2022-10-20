@@ -139,6 +139,17 @@ public class BunnyAI : MonoBehaviour
         transform.Rotate(new Vector3(0, 180f, 0));
     }
 
+    public void Die()
+    {
+        movementSpeed = 0f;
+        jumpForce = 0f;
+        Destroy(groundTrigger);
+        isAbleToJump = false;
+        StopAllCoroutines();
+        animator.Play(bunny_death);
+        Destroy(gameObject, 7f);
+    }
+
     void PlayAnimationAndRecord(string animationName)
     {
         animator.Play(animationName);

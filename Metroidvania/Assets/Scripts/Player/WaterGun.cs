@@ -15,7 +15,7 @@ public class WaterGun : MonoBehaviour
     Vector2 lookDir;
 
     FMOD.Studio.EventInstance waterEvent;
-    const string sprayingSound = "event:/SFX/WaterGunOld";
+    const string sprayingSound = "event:/SFX/WaterGunShoot";
 
     private void Awake()
     {

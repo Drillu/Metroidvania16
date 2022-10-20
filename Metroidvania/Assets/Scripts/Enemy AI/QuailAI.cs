@@ -18,10 +18,10 @@ public class QuailAI : MonoBehaviour
     private bool edgeBool = true;
     //Animation Variables
     private Animator animator;
-    const string idle = "Quail_idle_anim";
-    const string idle2 = "Quail_idle2_anim";
-    const string running = "Quail_running_anim";
-    const string death = "Quail_death_anim";
+    const string quail_idle = "Quail_idle_anim";
+    const string quail_idle2 = "Quail_idle2_anim";
+    const string quail_running = "Quail_running_anim";
+    const string quail_death = "Quail_death_anim";
     #endregion
 
     private void Start()
@@ -29,6 +29,7 @@ public class QuailAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         movement.x = movementSpeed;
         healthScript = GetComponent<HealthScript>();
+        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -37,6 +38,7 @@ public class QuailAI : MonoBehaviour
         edgeBool = Physics2D.OverlapCircle(edgeCheck.position, 0.1f, groundLayer);
         if (!edgeBool || wallBool)
             Flip();
+
         rb.velocity = new Vector2(movementSpeed, rb.velocity.y);
     }
 
@@ -45,6 +47,15 @@ public class QuailAI : MonoBehaviour
     {
         movementSpeed *= -1;
         transform.Rotate(new Vector3(0, 180f, 0));
+    }
+
+    public void Die()
+    {
+        movementSpeed = 0f;
+        StopAllCoroutines();
+        animator.Play(quail_death);
+
+        Destroy(gameObject,6f);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

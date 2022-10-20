@@ -19,7 +19,10 @@ public class HealthScript : MonoBehaviour
             currentHP--;
             if(currentHP<=0)
             {
-                
+                if (gameObject.CompareTag("Quail"))
+                    GetComponent<QuailAI>().Die();
+                else if (gameObject.CompareTag("SludgeBunny"))
+                    GetComponent<BunnyAI>().Die();
             }
         }
     }

@@ -60,7 +60,7 @@
 			<destination>{08e23755-a1fb-48f1-8fc9-8bf71415668a}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{e2d04c4e-88ff-4b46-8477-7e7849ddb275}</destination>
+			<destination>{398046c8-adb8-4be0-8a9e-a043d40ba893}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{9238b979-b698-4bf2-b6e4-077bc801e47f}" />
@@ -315,7 +315,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{65744e09-1801-4201-bf26-b7ed6f6728fc}" />
-	<object class="SpatialiserEffect" id="{ac702a17-1d1e-43f3-9d13-c85ebed70e5b}" />
+	<object class="SpatialiserEffect" id="{ac702a17-1d1e-43f3-9d13-c85ebed70e5b}">
+		<property name="distanceRolloffType">
+			<value>2</value>
+		</property>
+	</object>
 	<object class="MixerSend" id="{90cbae01-44e9-45c1-9cb3-0185c07758a0}">
 		<property name="inputFormat">
 			<value>2</value>
@@ -369,7 +373,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>-2.5</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{94c38d4b-9569-4f87-9f50-2ed911715ec3}">
@@ -377,7 +381,7 @@
 			<value>0.01</value>
 		</property>
 		<property name="value">
-			<value>-50</value>
+			<value>-58.3333321</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{9a707a63-cf3f-4325-89e6-342f4786f96a}">

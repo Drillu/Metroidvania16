@@ -60,7 +60,7 @@
 			<destination>{f63d2f42-b798-447b-b3e4-a1e6e0a63cd9}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{e2d04c4e-88ff-4b46-8477-7e7849ddb275}</destination>
+			<destination>{398046c8-adb8-4be0-8a9e-a043d40ba893}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{57dd057f-e27e-40bc-ae43-f7910fe9122d}" />
@@ -161,7 +161,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{7d4619a3-ec41-4da5-9187-f24607bf641c}">
 		<property name="volume">
-			<value>-15</value>
+			<value>-17</value>
 		</property>
 		<property name="name">
 			<value>Jump Sub</value>

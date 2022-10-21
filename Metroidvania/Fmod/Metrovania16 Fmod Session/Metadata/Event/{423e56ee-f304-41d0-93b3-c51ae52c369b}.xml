@@ -192,6 +192,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{573578f9-7502-43e5-b986-d85f9b9e4beb}">
+		<property name="volume">
+			<value>-3.5</value>
+		</property>
 		<property name="name">
 			<value>Skate Multi 1</value>
 		</property>
@@ -233,6 +236,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{4b042bee-acb9-4690-a73f-841661c85de4}">
+		<property name="volume">
+			<value>-3.5</value>
+		</property>
 		<property name="name">
 			<value>Skate Multi 2</value>
 		</property>
@@ -272,7 +278,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{c35e7482-e542-4d83-a658-765d1109151f}">
 		<property name="volume">
-			<value>-6</value>
+			<value>-6.5</value>
 		</property>
 		<property name="name">
 			<value>Whoosh SFX</value>
@@ -310,7 +316,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{455b8491-b0a4-4986-97e6-9f327a7f4089}">
 		<property name="volume">
-			<value>-6</value>
+			<value>-6.5</value>
 		</property>
 		<property name="name">
 			<value>Whoosh SFX 2</value>
@@ -849,7 +855,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>-7</value>
+			<value>-5.5</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{4b5f0779-0d95-49d3-bfab-4a565ab6be2e}">
@@ -857,7 +863,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-70</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{451f3991-830f-4b75-8a43-03797131430c}">
@@ -865,7 +871,7 @@
 			<value>0.0082101806239737278</value>
 		</property>
 		<property name="value">
-			<value>-56</value>
+			<value>-51</value>
 		</property>
 	</object>
 	<object class="RandomizerModulator" id="{a1196683-fc27-46d4-a1b9-92eb267f67f9}">

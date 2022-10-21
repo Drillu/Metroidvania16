@@ -60,7 +60,7 @@
 			<destination>{665c0e35-7df2-41b9-a44d-ba9ea16e19c9}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{e2d04c4e-88ff-4b46-8477-7e7849ddb275}</destination>
+			<destination>{398046c8-adb8-4be0-8a9e-a043d40ba893}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{028aa1dd-34ff-4e6f-b1b3-ac7777061269}">
@@ -145,7 +145,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{71634574-bcd0-4503-a3b3-ebcb10de1bc1}">
 		<property name="volume">
-			<value>-2</value>
+			<value>-5.5</value>
 		</property>
 		<property name="name">
 			<value>Bunny Hurt</value>
@@ -180,7 +180,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{99e3a0dd-28cd-45ce-84ff-fed59231d571}">
 		<property name="volume">
-			<value>-8</value>
+			<value>-13.5</value>
 		</property>
 		<property name="name">
 			<value>Sludge Layer</value>
@@ -357,7 +357,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{9b39b39c-6052-4921-b4d6-1938cca2fd2d}" />
-	<object class="SpatialiserEffect" id="{60dd78f1-072d-4ffe-aae5-86b200d9f7ae}" />
+	<object class="SpatialiserEffect" id="{60dd78f1-072d-4ffe-aae5-86b200d9f7ae}">
+		<property name="distanceRolloffType">
+			<value>2</value>
+		</property>
+	</object>
 	<object class="MixerSend" id="{16c48484-e0e4-45f0-b5e4-5928d4d46fc8}">
 		<property name="inputFormat">
 			<value>2</value>
@@ -381,13 +385,13 @@
 	<object class="MixerBusFader" id="{51468890-933e-42ec-9b0f-16e7d157e0ed}" />
 	<object class="AutomationPoint" id="{45d34071-9264-44ac-b4c0-b2b07f1cb473}">
 		<property name="position">
-			<value>0.1088925043616585</value>
+			<value>0.09375</value>
 		</property>
 		<property name="value">
 			<value>1</value>
 		</property>
 		<property name="curveShape">
-			<value>0.25471893</value>
+			<value>-0.253610581</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{21fedceb-dd7c-470d-bfa0-ddf513e5b977}">

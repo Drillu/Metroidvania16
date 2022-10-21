@@ -65,7 +65,7 @@
 			<destination>{c235a63e-037e-4988-ac47-1ef037da5dea}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{e2d04c4e-88ff-4b46-8477-7e7849ddb275}</destination>
+			<destination>{398046c8-adb8-4be0-8a9e-a043d40ba893}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{a64599ba-f8cc-4a8e-8a33-f79a14fb7aca}" />
@@ -7057,7 +7057,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{698892e5-4982-48d5-82f2-0cbf50dcdc32}" />
-	<object class="SpatialiserEffect" id="{d09374e1-8214-4dab-86fb-99c7d7661f26}" />
+	<object class="SpatialiserEffect" id="{d09374e1-8214-4dab-86fb-99c7d7661f26}">
+		<property name="distanceRolloffType">
+			<value>2</value>
+		</property>
+	</object>
 	<object class="MixerSend" id="{5b1979d4-d01d-4865-b5d9-961fc85548ff}">
 		<property name="inputFormat">
 			<value>2</value>

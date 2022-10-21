@@ -61,7 +61,7 @@
 			<destination>{c179f22c-8fd8-4bad-90cd-19ca4022ce8a}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{e2d04c4e-88ff-4b46-8477-7e7849ddb275}</destination>
+			<destination>{398046c8-adb8-4be0-8a9e-a043d40ba893}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{b1ab021a-489b-48e3-a7a5-a0434a461a05}" />
@@ -187,6 +187,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{322b8113-24a5-447b-8c87-836542488c66}">
+		<property name="volume">
+			<value>-3</value>
+		</property>
 		<property name="name">
 			<value>Sludge Pop</value>
 		</property>
@@ -395,6 +398,7 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{bd904009-4485-47c8-94c6-707e0709dfd6}">
 		<relationship name="effects">
+			<destination>{c30c5582-31d0-42ed-b306-dc991556d216}</destination>
 			<destination>{60efa95c-2732-408c-b185-47ebb557b34f}</destination>
 		</relationship>
 	</object>
@@ -410,7 +414,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{b470a893-fbf7-4203-8f48-5062adbe0285}" />
-	<object class="SpatialiserEffect" id="{16578b08-b566-4b41-a88f-c67227af81fc}" />
+	<object class="SpatialiserEffect" id="{16578b08-b566-4b41-a88f-c67227af81fc}">
+		<property name="distanceRolloffType">
+			<value>2</value>
+		</property>
+	</object>
 	<object class="MixerSend" id="{0772f16c-bfc7-4f8e-8a99-a25297640a2b}">
 		<property name="inputFormat">
 			<value>2</value>
@@ -486,15 +494,23 @@
 			<value>0</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.348969847</value>
+			<value>0.139732152</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{48313aeb-66a2-44fa-8945-29ea9351759b}">
 		<property name="position">
-			<value>2.4000000000000004</value>
+			<value>1.375</value>
 		</property>
 		<property name="value">
 			<value>1</value>
+		</property>
+	</object>
+	<object class="ThreeEQEffect" id="{c30c5582-31d0-42ed-b306-dc991556d216}">
+		<property name="lowGain">
+			<value>-20</value>
+		</property>
+		<property name="lowCrossover">
+			<value>75</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{60efa95c-2732-408c-b185-47ebb557b34f}" />
@@ -503,7 +519,7 @@
 			<value>0.99671592775041051</value>
 		</property>
 		<property name="value">
-			<value>8.5</value>
+			<value>7.5</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{9ad89800-7a7f-4adf-b9a6-6ec28db1881b}">
@@ -522,7 +538,7 @@
 			<value>0.01</value>
 		</property>
 		<property name="value">
-			<value>-42</value>
+			<value>-44.5</value>
 		</property>
 	</object>
 </objects>

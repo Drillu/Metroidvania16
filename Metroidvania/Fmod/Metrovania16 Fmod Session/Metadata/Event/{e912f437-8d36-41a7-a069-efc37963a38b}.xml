@@ -68,7 +68,7 @@
 			<destination>{4b5ab86f-4871-4c97-a8d7-e63c84e46b9c}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{e2d04c4e-88ff-4b46-8477-7e7849ddb275}</destination>
+			<destination>{398046c8-adb8-4be0-8a9e-a043d40ba893}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{fe1eef95-ec7c-4f42-8c09-813a2c319492}">
@@ -280,6 +280,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{ab82cf9c-31f7-436e-979e-6a323a38eef7}">
+		<property name="volume">
+			<value>3</value>
+		</property>
 		<property name="name">
 			<value>Quail Voices</value>
 		</property>
@@ -973,6 +976,9 @@
 	</object>
 	<object class="MixerBusFader" id="{6bb216ae-c1ec-4683-80a3-d85475792f67}" />
 	<object class="SpatialiserEffect" id="{cda71740-d041-49d1-aee0-7d9104a25a5d}">
+		<property name="distanceRolloffType">
+			<value>2</value>
+		</property>
 		<property name="maximumDistance">
 			<value>10</value>
 		</property>

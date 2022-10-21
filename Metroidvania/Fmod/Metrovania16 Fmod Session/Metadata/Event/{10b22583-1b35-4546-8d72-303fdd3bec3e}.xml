@@ -5,7 +5,7 @@
 			<value>BunnyWindUp</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{cbb19f3b-546a-4b9f-961b-e6d9f484f8c0}</destination>
@@ -62,7 +62,7 @@
 			<destination>{7554e2ae-18d4-4f6f-b25b-36d42fc138cc}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{e2d04c4e-88ff-4b46-8477-7e7849ddb275}</destination>
+			<destination>{398046c8-adb8-4be0-8a9e-a043d40ba893}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{b2515645-8067-46cf-b819-cfc2e4a4ed8e}" />
@@ -248,6 +248,7 @@
 		<relationship name="effects">
 			<destination>{d1ce21ac-c0f9-4ec6-afd0-52c6dc4de20e}</destination>
 			<destination>{af6934a7-4457-46d3-849b-8489c0bccb46}</destination>
+			<destination>{f97869fc-1d5b-43b1-984e-69ce067f9781}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{397b3908-cdf3-4673-a3ec-48d72e03aacc}" />
@@ -313,6 +314,7 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{2eb317d4-54e6-4a4b-8574-68733e5e9433}">
 		<relationship name="effects">
+			<destination>{fec871ec-6d5c-49fe-bf18-897aeba017ef}</destination>
 			<destination>{b1013bbf-9758-4f1d-8eec-5cfe46713039}</destination>
 		</relationship>
 	</object>
@@ -356,6 +358,11 @@
 			<destination>{f0ff03a0-310d-4f51-b915-8ca0a23fb86a}</destination>
 		</relationship>
 	</object>
+	<object class="SpatialiserEffect" id="{f97869fc-1d5b-43b1-984e-69ce067f9781}">
+		<property name="distanceRolloffType">
+			<value>2</value>
+		</property>
+	</object>
 	<object class="ChorusEffect" id="{78ad6a44-aa7c-404d-8fc9-29ac671a0891}">
 		<property name="rate">
 			<value>0.519999981</value>
@@ -369,6 +376,17 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{0f47102f-b4dc-456a-930e-a8b37a5133aa}" />
+	<object class="ThreeEQEffect" id="{fec871ec-6d5c-49fe-bf18-897aeba017ef}">
+		<property name="lowGain">
+			<value>-28.5</value>
+		</property>
+		<property name="lowCrossover">
+			<value>90</value>
+		</property>
+		<property name="crossoverSlope">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{b1013bbf-9758-4f1d-8eec-5cfe46713039}" />
 	<object class="AutomationPoint" id="{de1f9923-2170-4f04-bc14-4869ffb8d2de}">
 		<property name="position">

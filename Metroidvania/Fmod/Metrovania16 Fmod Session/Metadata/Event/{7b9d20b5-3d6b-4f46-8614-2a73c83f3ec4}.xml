@@ -61,7 +61,7 @@
 			<destination>{2df8b7e8-0588-43d0-9fe3-2bf095c47fed}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{e2d04c4e-88ff-4b46-8477-7e7849ddb275}</destination>
+			<destination>{398046c8-adb8-4be0-8a9e-a043d40ba893}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{eee7f7a2-ab25-4c82-b5de-e8071937de7c}" />
@@ -406,7 +406,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{62be79f9-ed63-4dcf-b38d-3486041ab24b}" />
-	<object class="SpatialiserEffect" id="{8c2284d6-f192-4932-9c0e-cccc3cda85e8}" />
+	<object class="SpatialiserEffect" id="{8c2284d6-f192-4932-9c0e-cccc3cda85e8}">
+		<property name="distanceRolloffType">
+			<value>2</value>
+		</property>
+		<property name="soundSize">
+			<value>6.5</value>
+		</property>
+	</object>
 	<object class="MixerSend" id="{bd47b24d-7511-479d-a2d9-fcec59aab10f}">
 		<property name="inputFormat">
 			<value>2</value>
@@ -465,7 +472,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>-2</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{d21dae96-61e8-45ef-8b40-fe496be9ca30}">
@@ -473,7 +480,7 @@
 			<value>0.01</value>
 		</property>
 		<property name="value">
-			<value>-50</value>
+			<value>-56.6666679</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{65928c29-1c4f-4052-b37d-5b63af7627a9}">
@@ -481,7 +488,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-73.3333359</value>
 		</property>
 	</object>
 	<object class="RandomizerModulator" id="{fdb6d11e-b638-46d5-a933-ed224116a0f9}">

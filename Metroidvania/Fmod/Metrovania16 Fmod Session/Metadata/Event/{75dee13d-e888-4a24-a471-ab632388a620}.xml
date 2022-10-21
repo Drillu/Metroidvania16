@@ -60,7 +60,7 @@
 			<destination>{d5850c7b-2253-45b3-948e-3daf19e611c4}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{e2d04c4e-88ff-4b46-8477-7e7849ddb275}</destination>
+			<destination>{398046c8-adb8-4be0-8a9e-a043d40ba893}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{d39391b1-b468-4bef-92a7-11d54b383b33}" />
@@ -134,7 +134,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{9904619c-33c7-411e-b225-9d2eec6d6285}">
 		<property name="volume">
-			<value>-6.5</value>
+			<value>-4.5</value>
 		</property>
 		<property name="name">
 			<value>Landing on Car</value>
@@ -169,7 +169,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{1ec566c3-e5d0-4a1f-96ad-379be50955f1}">
 		<property name="volume">
-			<value>-24.5</value>
+			<value>-12</value>
 		</property>
 		<property name="name">
 			<value>Volume</value>

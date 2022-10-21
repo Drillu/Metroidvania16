@@ -63,7 +63,7 @@
 			<destination>{293bda7c-56b7-4e06-bad4-7b64254b1bdc}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{e2d04c4e-88ff-4b46-8477-7e7849ddb275}</destination>
+			<destination>{398046c8-adb8-4be0-8a9e-a043d40ba893}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{369e62fe-f3b1-45be-886b-1fcb9910697b}" />
@@ -314,6 +314,7 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{79e39eb9-8e42-4428-9648-15e82fc15ab7}">
 		<relationship name="effects">
+			<destination>{c18d4851-2a56-4458-be85-fdfdc06143d7}</destination>
 			<destination>{86c429e0-4945-4cce-89e9-819be00e5fec}</destination>
 			<destination>{bf681979-1de5-435e-80a7-3c99ad83915e}</destination>
 			<destination>{b5a3c15d-ee21-4f85-8d19-2d858e58c1e1}</destination>
@@ -446,8 +447,20 @@
 			<destination>{f4be49f4-7917-408b-9f87-fd6655b865bc}</destination>
 		</relationship>
 	</object>
+	<object class="ThreeEQEffect" id="{c18d4851-2a56-4458-be85-fdfdc06143d7}">
+		<property name="lowGain">
+			<value>-19</value>
+		</property>
+		<property name="lowCrossover">
+			<value>65</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{86c429e0-4945-4cce-89e9-819be00e5fec}" />
-	<object class="SpatialiserEffect" id="{bf681979-1de5-435e-80a7-3c99ad83915e}" />
+	<object class="SpatialiserEffect" id="{bf681979-1de5-435e-80a7-3c99ad83915e}">
+		<property name="distanceRolloffType">
+			<value>2</value>
+		</property>
+	</object>
 	<object class="MixerSend" id="{b5a3c15d-ee21-4f85-8d19-2d858e58c1e1}">
 		<property name="inputFormat">
 			<value>2</value>
@@ -459,13 +472,13 @@
 	<object class="MixerBusFader" id="{0359e386-6569-415c-8a6a-1ec6a532c58d}" />
 	<object class="AutomationPoint" id="{ce919bfb-4e53-4f12-8fda-cc9527b937bf}">
 		<property name="position">
-			<value>0.25</value>
+			<value>0.17316810344827588</value>
 		</property>
 		<property name="value">
 			<value>1</value>
 		</property>
 		<property name="curveShape">
-			<value>0.25471893</value>
+			<value>-0.170847386</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{da3c4949-bf8b-4f22-bc71-92cb352b1eda}">
@@ -480,7 +493,7 @@
 	<object class="MixerBusFader" id="{fdfc8940-1b13-42f6-a995-92c84a01cd1d}" />
 	<object class="AutomationPoint" id="{7fb1b6af-2cad-4092-9108-64068b1abb16}">
 		<property name="position">
-			<value>0.74550000000000005</value>
+			<value>0.66990732758620697</value>
 		</property>
 		<property name="value">
 			<value>1</value>

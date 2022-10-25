@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private LayerMask enemyLayerMask;
 
+    [SerializeField] private Animator camBHV;
+
     //Function reference to make the sprites change.
     private Animator anim;
     
@@ -21,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     private BoxCollider2D coll;
 
-    private enum MovementState { idle, running, jumping, falling, gliding }
+    internal enum MovementState { idle, running, jumping, falling, gliding }
    
     private SpriteRenderer sprite;
     private TrailRenderer _trailRenderer;
@@ -136,6 +138,7 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.y > .1f)
         {
             state = MovementState.jumping;
+        
         }
 
         else if (rb.velocity.y < -.1f)
@@ -164,10 +167,13 @@ public class PlayerMovement : MonoBehaviour
         if(other.CompareTag("Road"))
         {
             FMODUnity.RuntimeManager.PlayOneShot(LandRoad);
+            camBHV.Play("ZoomOut");
+            
         }
         else if(other.CompareTag("Car"))
         {
             FMODUnity.RuntimeManager.PlayOneShot(LandCar);
+            camBHV.Play("ZoomOut");
         }
     }
 
@@ -176,10 +182,12 @@ public class PlayerMovement : MonoBehaviour
         if(other.CompareTag("Road"))
         {
             FMODUnity.RuntimeManager.PlayOneShot(JumpRoad);
+            camBHV.Play("ZoomIn");
         }
         else if(other.CompareTag("Car"))
         {
             FMODUnity.RuntimeManager.PlayOneShot(JumpCar);
+            camBHV.Play("ZoomIn");
         }
     }
 

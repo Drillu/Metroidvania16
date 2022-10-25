@@ -21,22 +21,22 @@ public class Bullets : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            //Damage player
+
             //Destroy animation
 
-            //Destroy bullet
-            Destroy(gameObject);
+            
         }
-        else if (collision.CompareTag("Ground"))
+        else if (GeneralManager.TriggerIsTouchingLayer(collision,GeneralManager.groundLayerMask))
         {
             //Destroy animation
 
-            //Destroy bullet
-            Destroy(gameObject);
+            
+            
         }
         else if(collision.CompareTag("Quail") || collision.CompareTag("SludgeBunny"))
         {
-            Destroy(gameObject);
+            
         }
+        Destroy(gameObject);
     }
 }

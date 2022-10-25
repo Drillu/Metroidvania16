@@ -10,6 +10,8 @@ public class FinishLine : MonoBehaviour
         if (collision.name == ("Player"))
         {
             SceneManager.LoadScene("Main Menu");
+            AudioManager.gameMusic.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            AudioManager.gameAmbiance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         }
         
     }

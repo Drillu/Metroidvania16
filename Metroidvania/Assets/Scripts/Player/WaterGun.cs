@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class WaterGun : MonoBehaviour
 {
     private Vector3 mousePos;
@@ -13,14 +12,7 @@ public class WaterGun : MonoBehaviour
     [SerializeField] private SpriteRenderer gunSprite;
     [SerializeField] private float fireRate = 25f;
     Vector2 lookDir;
-
-    FMOD.Studio.EventInstance waterEvent;
-    const string sprayingSound = "event:/SFX/WaterGunShoot";
-
-    private void Awake()
-    {
-        waterEvent = FMODUnity.RuntimeManager.CreateInstance(sprayingSound);
-    }
+    Vector2 shotDir;
 
     private void Update()
     {
@@ -38,7 +30,6 @@ public class WaterGun : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) // First press
         {
             StartCoroutine(StartSpraying());
-            waterEvent.start();
         }
 
         if(Input.GetMouseButton(0)) //Hold
@@ -56,13 +47,13 @@ public class WaterGun : MonoBehaviour
         { 
             StopAllCoroutines();
             gunAnimator.Play("waterSprayEmpty");
-            waterEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
     }
 
     void FixedUpdate()
     {
         lookDir = mousePos - gunCenter.position;
+        shotDir = firePoint.position - gunCenter.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 180f;
         gunCenter.rotation = Quaternion.Euler(0f,0f,angle);
     }
@@ -84,7 +75,7 @@ public class WaterGun : MonoBehaviour
     void Shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.GetComponent<Rigidbody2D>().AddForce(lookDir * 2f, ForceMode2D.Impulse);
+        bullet.GetComponent<Rigidbody2D>().AddForce(shotDir * 4f, ForceMode2D.Impulse);
     }
 
     private IEnumerator StartSpraying()

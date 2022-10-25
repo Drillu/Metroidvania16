@@ -6,13 +6,13 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static FMOD.Studio.EventInstance gameMusic;
+    public static FMOD.Studio.EventInstance gameAmbiance;
 
     private void Start()
     {
         gameMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Level1");
-        //gameMusic.setParameterByName("UnderGround", 1);
         gameMusic.start();
-        var gameAmbiance = FMODUnity.RuntimeManager.CreateInstance("event:/Ambiance/AmbianceSurfaceLevel");
+        gameAmbiance = FMODUnity.RuntimeManager.CreateInstance("event:/Ambiance/AmbianceSurfaceLevel");
         gameAmbiance.start();
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("LevelMusic", StaticVariablesFromMenuToLevel.musicSound);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("LevelSFX", StaticVariablesFromMenuToLevel.sfxSound);
@@ -26,5 +26,10 @@ public class AudioManager : MonoBehaviour
         temp.start();
     }
     
+    public void CutMusic()
+    {
+        gameMusic.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        gameAmbiance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
     
 }

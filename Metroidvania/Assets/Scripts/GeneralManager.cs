@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class GeneralManager : MonoBehaviour
 {
-    public static LayerMask enemyLayerMask;
+    [HideInInspector] public static LayerMask enemyLayerMask;
+    [HideInInspector] public static LayerMask groundLayerMask;
 
     private void Start()
     {
         enemyLayerMask = LayerMask.NameToLayer("Enemies");
+        groundLayerMask = LayerMask.NameToLayer("Ground");
     }
 
     public static bool TriggerIsTouchingLayer(Collider2D collision, LayerMask givenLayer)

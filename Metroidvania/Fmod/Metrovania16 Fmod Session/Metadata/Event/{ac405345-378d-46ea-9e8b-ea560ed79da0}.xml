@@ -788,10 +788,10 @@
 	</object>
 	<object class="TransitionRegion" id="{c9740f1e-f131-4ab5-ac5e-514f340bbe76}">
 		<property name="position">
-			<value>10.5</value>
+			<value>0</value>
 		</property>
 		<property name="length">
-			<value>120</value>
+			<value>130.5</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{6f4a11bc-e5ab-47f8-b493-7a158f7ef788}</destination>
@@ -849,6 +849,9 @@
 		</relationship>
 		<relationship name="destination">
 			<destination>{a0fed58c-6422-47e8-b8c2-25b408226fa5}</destination>
+		</relationship>
+		<relationship name="triggerConditions">
+			<destination>{b39da6ec-baa5-4a8d-b488-c3c724483d9e}</destination>
 		</relationship>
 	</object>
 	<object class="Automator" id="{d812fc7e-c997-4814-b3bf-71aa6475391e}">
@@ -1216,6 +1219,17 @@
 		</property>
 		<property name="maximum">
 			<value>1</value>
+		</property>
+		<relationship name="parameter">
+			<destination>{1aa607bb-fbf7-4179-b0dd-8df819a5c49a}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterCondition" id="{b39da6ec-baa5-4a8d-b488-c3c724483d9e}">
+		<property name="minimum">
+			<value>0</value>
+		</property>
+		<property name="maximum">
+			<value>0</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{1aa607bb-fbf7-4179-b0dd-8df819a5c49a}</destination>

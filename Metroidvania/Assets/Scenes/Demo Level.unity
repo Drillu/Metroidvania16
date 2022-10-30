@@ -2654,7 +2654,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 342402876615626614, guid: 01684bf5daeeef14283672ef6c6425b0, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 342402876615626614, guid: 01684bf5daeeef14283672ef6c6425b0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2711,11 +2711,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 678217372573592735, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
   m_PrefabInstance: {fileID: 8993176293074503561}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &8477935226622110493 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 678217372573592728, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-  m_PrefabInstance: {fileID: 8993176293074503561}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8993176293074503561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2723,22 +2718,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 678217372573592728, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 678217372573592728, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 678217372573592728, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 678217372573592729, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: m_GravityScale
-      value: 2.1
-      objectReference: {fileID: 0}
     - target: {fileID: 678217372573592731, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2749,7 +2728,7 @@ PrefabInstance:
       objectReference: {fileID: 1613902971}
     - target: {fileID: 678217372573592735, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 678217372573592735, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2791,14 +2770,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1753769860720951165, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: fireRate
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8477935226622110493, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
-      propertyPath: playerSprite
-      value: 
-      objectReference: {fileID: 8477935226622110493}
     - target: {fileID: 8477935226622110493, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
       propertyPath: healthBarImage
       value: 

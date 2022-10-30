@@ -26,8 +26,9 @@ public class AudioManager : MonoBehaviour
         temp.start();
     }
     
-    public void CutMusic()
+    public static void CutMusic()
     {
+        //GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().
         gameMusic.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         gameAmbiance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }

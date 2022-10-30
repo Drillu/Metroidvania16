@@ -11,9 +11,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator camBHV;
 
     //28.10.2022 Trying to put in skates sound
-    private FMOD.Studio.EventInstance skateRoadIns;
+    static public FMOD.Studio.EventInstance skateRoadIns;
     private FMOD.Studio.EventInstance skateCarIns;
     private bool isPlayingSkates = false;
+    private bool shouldPlaySkatesRoad = false;
+    private bool shouldPlaySkatesCar = false;
     const string SkateRoad = "event:/SFX/SkateRoad";
     const string SkateCar = "event:/SFX/SkateCar";
 
@@ -64,6 +66,12 @@ public class PlayerMovement : MonoBehaviour
         skateRoadIns = FMODUnity.RuntimeManager.CreateInstance(SkateRoad);
         skateCarIns = FMODUnity.RuntimeManager.CreateInstance(SkateCar);
         skateRoadIns.setParameterByName("Move", 1f);
+        skateCarIns.setParameterByName("Move", 1f);
+    }
+
+    public static void ShutDownSounds()
+    {
+        skateRoadIns.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 
     private void Update()
@@ -73,13 +81,25 @@ public class PlayerMovement : MonoBehaviour
 
         if (directionX != 0f && !isPlayingSkates && isGrounded())
         {
-            Debug.Log("Bruh");
-            skateRoadIns.start();
+            if (shouldPlaySkatesRoad)
+            {
+                skateRoadIns.start();
+                Debug.Log("Started Road");
+
+            }
+                
+            else if (shouldPlaySkatesCar)
+            {
+                skateCarIns.start();
+                Debug.Log("Started Car");
+            }    
+
             isPlayingSkates = true;
         }
-        if (directionX == 0f && isPlayingSkates && !isGrounded())
+        if (directionX == 0f && isPlayingSkates || !isGrounded())
         {
             skateRoadIns.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            skateCarIns.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             isPlayingSkates = false;
         }
             
@@ -188,12 +208,14 @@ public class PlayerMovement : MonoBehaviour
         if(other.CompareTag("Road"))
         {
             FMODUnity.RuntimeManager.PlayOneShot(LandRoad);
+            shouldPlaySkatesRoad = true;
             camBHV.Play("ZoomOut");
             
         }
         else if(other.CompareTag("Car"))
         {
             FMODUnity.RuntimeManager.PlayOneShot(LandCar);
+            shouldPlaySkatesCar = true;
             camBHV.Play("ZoomOut");
         }
     }
@@ -203,11 +225,13 @@ public class PlayerMovement : MonoBehaviour
         if(other.CompareTag("Road"))
         {
             FMODUnity.RuntimeManager.PlayOneShot(JumpRoad);
+            shouldPlaySkatesRoad = false;
             camBHV.Play("ZoomIn");
         }
         else if(other.CompareTag("Car"))
         {
             FMODUnity.RuntimeManager.PlayOneShot(JumpCar);
+            shouldPlaySkatesCar = false;
             camBHV.Play("ZoomIn");
         }
     }

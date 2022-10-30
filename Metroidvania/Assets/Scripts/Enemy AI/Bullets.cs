@@ -29,13 +29,13 @@ public class Bullets : MonoBehaviour
         else if (GeneralManager.TriggerIsTouchingLayer(collision,GeneralManager.groundLayerMask))
         {
             //Destroy animation
+            Debug.Log("General manager G layers work");
 
-            
-            
+
         }
-        else if(collision.CompareTag("Quail") || collision.CompareTag("SludgeBunny"))
+        else if(GeneralManager.TriggerIsTouchingLayer(collision,GeneralManager.enemyLayerMask))
         {
-            
+            Debug.Log("General manager E layers work");
         }
         Destroy(gameObject);
     }

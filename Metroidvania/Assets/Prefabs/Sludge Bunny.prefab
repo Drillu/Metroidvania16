@@ -54,7 +54,7 @@ MonoBehaviour:
     Path: event:/SFX/BunnyDeath
   Event: 
   PlayEvent: 11
-  StopEvent: 0
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -234,6 +234,7 @@ MonoBehaviour:
   wallBool: 0
   edgeBool: 1
   detectionRange: 36
+  ded: {fileID: 2442996632169943114}
 --- !u!95 &5631521903391320931
 Animator:
   serializedVersion: 4
@@ -389,9 +390,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fda415131b52cd428ee276354271295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHP: 0
   maxHP: 5
-  deathAnimation: {fileID: 7400000, guid: 1d580c6b273ddc64c88b052bb0d0c589, type: 2}
-  enableDeath: {fileID: 2442996632169943114}
 --- !u!1 &8644924720243808958
 GameObject:
   m_ObjectHideFlags: 0

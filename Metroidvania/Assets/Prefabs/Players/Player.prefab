@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 352289036}
   - component: {fileID: 352289038}
-  - component: {fileID: 352289037}
   m_Layer: 0
   m_Name: firePoint
   m_TagString: Untagged
@@ -85,26 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &352289037
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 352289035}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4e574ab58a4858942bc10d9263c94e89, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &222875190103342069
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +223,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 2.1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -291,6 +270,7 @@ MonoBehaviour:
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  camBHV: {fileID: 0}
   jumpableGround:
     serializedVersion: 2
     m_Bits: 64
@@ -449,6 +429,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2956b912a11cbb54bb681b2ef81d8d2e, type: 3}
   - {fileID: 21300000, guid: 7a614d7cce41ab04e90ddd75a7a252ff, type: 3}
   - {fileID: 21300000, guid: c428b26431d571c409bede1e6ebf95d2, type: 3}
+  playerSprite: {fileID: 678217372573592728}
 --- !u!1 &2498053440046568889
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,9 +479,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8111476325205938716, guid: e1449304de7eb9849b1d6a027820b44b, type: 3}
   gunCenter: {fileID: 5806021568226666720}
   firePoint: {fileID: 352289036}
-  gunAnimator: {fileID: 352289037}
   gunSprite: {fileID: 3199040148041038647}
-  fireRate: 10
+  fireRate: 25
 --- !u!212 &3199040148041038647
 SpriteRenderer:
   m_ObjectHideFlags: 0

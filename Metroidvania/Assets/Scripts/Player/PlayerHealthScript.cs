@@ -10,20 +10,36 @@ public class PlayerHealthScript : MonoBehaviour
     public List<Sprite> healthStates;
     private int maxHealth = 5;
     private int currHealth;
+    [SerializeField] private SpriteRenderer playerSprite;
 
     // Start is called before the first frame update
     void Start()
     {
+        //playerSprite = GetComponent<SpriteRenderer>();
         currHealth = maxHealth;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
        if (GeneralManager.CollisionIsTouchingLayer(other,enemiesLayerMask))
-        {
-            Debug.Log("Player Takes damage");
-            currHealth--;
-            healthBarImage.sprite = healthStates[currHealth]; //Error right now cuz the game doesn't end
-        }
+       {
+            TakeDamage();
+       }
+    }
+
+    private void TakeDamage()
+    {
+        Debug.Log("Player Takes damage");
+        currHealth--;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/KireiHurt");
+        StartCoroutine(ChangeSpriteToRed());
+        healthBarImage.sprite = healthStates[currHealth]; //Error right now cuz the game doesn't end
+    }
+
+    IEnumerator ChangeSpriteToRed()
+    {
+        playerSprite.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        playerSprite.color = Color.white;
     }
 }

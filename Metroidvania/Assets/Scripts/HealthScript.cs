@@ -17,7 +17,7 @@ public class HealthScript : MonoBehaviour
         if(other.CompareTag("PlayerBullet"))
         {
             currentHP--;
-            if(currentHP<=0)
+            if(currentHP==0)
             {
                 if (gameObject.CompareTag("Quail"))
                     GetComponent<QuailAI>().Die();

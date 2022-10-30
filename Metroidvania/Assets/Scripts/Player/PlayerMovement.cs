@@ -8,6 +8,15 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private LayerMask enemyLayerMask;
 
+    [SerializeField] private Animator camBHV;
+
+    //28.10.2022 Trying to put in skates sound
+    private FMOD.Studio.EventInstance skateRoadIns;
+    private FMOD.Studio.EventInstance skateCarIns;
+    private bool isPlayingSkates = false;
+    const string SkateRoad = "event:/SFX/SkateRoad";
+    const string SkateCar = "event:/SFX/SkateCar";
+
     //Function reference to make the sprites change.
     private Animator anim;
     
@@ -21,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
     private BoxCollider2D coll;
 
-    private enum MovementState { idle, running, jumping, falling, gliding }
+    internal enum MovementState { idle, running, jumping, falling, gliding }
    
     private SpriteRenderer sprite;
     private TrailRenderer _trailRenderer;
@@ -52,14 +61,28 @@ public class PlayerMovement : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         _trailRenderer = GetComponent<TrailRenderer>();
-
-       
+        skateRoadIns = FMODUnity.RuntimeManager.CreateInstance(SkateRoad);
+        skateCarIns = FMODUnity.RuntimeManager.CreateInstance(SkateCar);
+        skateRoadIns.setParameterByName("Move", 1f);
     }
 
     private void Update()
     {
-     
         directionX = Input.GetAxis("Horizontal");
+        // 28.10.2022 Trying to put in skates sound
+
+        if (directionX != 0f && !isPlayingSkates && isGrounded())
+        {
+            Debug.Log("Bruh");
+            skateRoadIns.start();
+            isPlayingSkates = true;
+        }
+        if (directionX == 0f && isPlayingSkates && !isGrounded())
+        {
+            skateRoadIns.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            isPlayingSkates = false;
+        }
+            
         //Changed GetAxisRaw into GetAxis to give that slippery acceleration movement - Ersan (09.06.2022)
 
         rb.velocity = new Vector2(directionX * moveSpeed, rb.velocity.y);
@@ -136,6 +159,7 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.y > .1f)
         {
             state = MovementState.jumping;
+        
         }
 
         else if (rb.velocity.y < -.1f)
@@ -164,10 +188,13 @@ public class PlayerMovement : MonoBehaviour
         if(other.CompareTag("Road"))
         {
             FMODUnity.RuntimeManager.PlayOneShot(LandRoad);
+            camBHV.Play("ZoomOut");
+            
         }
         else if(other.CompareTag("Car"))
         {
             FMODUnity.RuntimeManager.PlayOneShot(LandCar);
+            camBHV.Play("ZoomOut");
         }
     }
 
@@ -176,10 +203,12 @@ public class PlayerMovement : MonoBehaviour
         if(other.CompareTag("Road"))
         {
             FMODUnity.RuntimeManager.PlayOneShot(JumpRoad);
+            camBHV.Play("ZoomIn");
         }
         else if(other.CompareTag("Car"))
         {
             FMODUnity.RuntimeManager.PlayOneShot(JumpCar);
+            camBHV.Play("ZoomIn");
         }
     }
 

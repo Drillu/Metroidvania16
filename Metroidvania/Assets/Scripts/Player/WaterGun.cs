@@ -8,9 +8,8 @@ public class WaterGun : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform gunCenter;
     [SerializeField] private Transform firePoint;
-    [SerializeField] private Animator gunAnimator;
     [SerializeField] private SpriteRenderer gunSprite;
-    [SerializeField] private float fireRate = 25f;
+    [SerializeField] private float fireRate = 15f;
     Vector2 lookDir;
     Vector2 shotDir;
 
@@ -27,27 +26,20 @@ public class WaterGun : MonoBehaviour
             gunCenter.localScale = new Vector3(1, 1, 1);
         }
             
-        if (Input.GetMouseButtonDown(0)) // First press
-        {
-            StartCoroutine(StartSpraying());
-        }
+     
 
         if(Input.GetMouseButton(0)) //Hold
         {
             if (fireRate <= 0)
             {
-                fireRate = 25f;
+                fireRate = 15f;
                 Shoot();
             }
             else
                 fireRate -= 0.1f;
         }
 
-        else if (Input.GetMouseButtonUp(0)) // release
-        { 
-            StopAllCoroutines();
-            gunAnimator.Play("waterSprayEmpty");
-        }
+        
     }
 
     void FixedUpdate()
@@ -58,30 +50,11 @@ public class WaterGun : MonoBehaviour
         gunCenter.rotation = Quaternion.Euler(0f,0f,angle);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.CompareTag("SludgeBunny"))
-        {
-            
-            Debug.Log("shooting bunny, playing sound");
-        }
-
-        else if (collision.CompareTag("Quail"))
-        {
-            Debug.Log("shooting quail, playing sound");
-        }
-    }
-
     void Shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(shotDir * 4f, ForceMode2D.Impulse);
     }
 
-    private IEnumerator StartSpraying()
-    {
-        gunAnimator.Play("waterSprayStart");
-        yield return new WaitForSeconds(1f);
-        gunAnimator.Play("waterSprayContinuous");
-    }
+    
 }

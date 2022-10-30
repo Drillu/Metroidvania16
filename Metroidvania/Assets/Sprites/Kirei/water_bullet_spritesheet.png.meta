@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 284ed7555b70c9045a19f44485eb8de7
+guid: d0afd896b6e0ad24ab0e92b4a4ee3caa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: waterSpray4_0
+      name: water_bullet_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 228
-        height: 240
+        x: 110
+        y: 340
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e001209606514e64490d586ca0637c13
-      internalID: 1814075336
+      spriteID: 797f4ed7653305e4aa35292ed2740132
+      internalID: -741680774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waterSpray4_1
+      name: water_bullet_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 228
-        y: 0
-        width: 228
-        height: 240
+        x: 400
+        y: 350
+        width: 90
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f03667281bdb3c4da1bf6f096d13697
-      internalID: 747091917
+      spriteID: 0c5a8b37e53db6b43975873ad957ee57
+      internalID: 501466508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waterSpray4_2
+      name: water_bullet_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 456
-        y: 0
-        width: 228
-        height: 240
+        x: 110
+        y: 80
+        width: 60
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,50 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5939a830d27363b44807a841a63b075c
-      internalID: -2114707582
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: waterSpray4_3
-      rect:
-        serializedVersion: 2
-        x: 684
-        y: 0
-        width: 228
-        height: 240
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3971ddc4f8cee17478e5ffd64553e653
-      internalID: 2114317767
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: waterSpray4_4
-      rect:
-        serializedVersion: 2
-        x: 912
-        y: 0
-        width: 228
-        height: 240
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61ddcdaea74bfa2408bdd8f8210d563f
-      internalID: 2135971478
+      spriteID: b1993a5bd44e8e0469ad3b2c1b149e51
+      internalID: 314043773
       vertices: []
       indices: 
       edges: []
@@ -219,11 +177,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      waterSpray4_3: 2114317767
-      waterSpray4_4: 2135971478
-      waterSpray4_2: -2114707582
-      waterSpray4_0: 1814075336
-      waterSpray4_1: 747091917
+      water_bullet_spritesheet_2: 314043773
+      water_bullet_spritesheet_1: 501466508
+      water_bullet_spritesheet_0: -741680774
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

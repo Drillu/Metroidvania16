@@ -10,6 +10,13 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Animator camBHV;
 
+    //28.10.2022 Trying to put in skates sound
+    private FMOD.Studio.EventInstance skateRoadIns;
+    private FMOD.Studio.EventInstance skateCarIns;
+    private bool isPlayingSkates = false;
+    const string SkateRoad = "event:/SFX/SkateRoad";
+    const string SkateCar = "event:/SFX/SkateCar";
+
     //Function reference to make the sprites change.
     private Animator anim;
     
@@ -54,14 +61,28 @@ public class PlayerMovement : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         _trailRenderer = GetComponent<TrailRenderer>();
-
-       
+        skateRoadIns = FMODUnity.RuntimeManager.CreateInstance(SkateRoad);
+        skateCarIns = FMODUnity.RuntimeManager.CreateInstance(SkateCar);
+        skateRoadIns.setParameterByName("Move", 1f);
     }
 
     private void Update()
     {
-     
         directionX = Input.GetAxis("Horizontal");
+        // 28.10.2022 Trying to put in skates sound
+
+        if (directionX != 0f && !isPlayingSkates && isGrounded())
+        {
+            Debug.Log("Bruh");
+            skateRoadIns.start();
+            isPlayingSkates = true;
+        }
+        if (directionX == 0f && isPlayingSkates && !isGrounded())
+        {
+            skateRoadIns.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            isPlayingSkates = false;
+        }
+            
         //Changed GetAxisRaw into GetAxis to give that slippery acceleration movement - Ersan (09.06.2022)
 
         rb.velocity = new Vector2(directionX * moveSpeed, rb.velocity.y);

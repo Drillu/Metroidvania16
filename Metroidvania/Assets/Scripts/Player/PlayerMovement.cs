@@ -11,8 +11,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator camBHV;
 
     //28.10.2022 Trying to put in skates sound
-    private FMOD.Studio.EventInstance skateRoadIns;
-    private FMOD.Studio.EventInstance skateCarIns;
+    static public FMOD.Studio.EventInstance skateRoadIns;
+    //private FMOD.Studio.EventInstance skateCarIns;
     private bool isPlayingSkates = false;
     const string SkateRoad = "event:/SFX/SkateRoad";
     const string SkateCar = "event:/SFX/SkateCar";
@@ -62,8 +62,13 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         _trailRenderer = GetComponent<TrailRenderer>();
         skateRoadIns = FMODUnity.RuntimeManager.CreateInstance(SkateRoad);
-        skateCarIns = FMODUnity.RuntimeManager.CreateInstance(SkateCar);
+       // skateCarIns = FMODUnity.RuntimeManager.CreateInstance(SkateCar);
         skateRoadIns.setParameterByName("Move", 1f);
+    }
+
+    public static void ShutDownSounds()
+    {
+        skateRoadIns.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 
     private void Update()
@@ -77,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
             skateRoadIns.start();
             isPlayingSkates = true;
         }
-        if (directionX == 0f && isPlayingSkates && !isGrounded())
+        if (directionX == 0f && isPlayingSkates || !isGrounded())
         {
             skateRoadIns.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             isPlayingSkates = false;

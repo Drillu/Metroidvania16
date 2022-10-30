@@ -85,7 +85,7 @@ MonoBehaviour:
     Path: event:/SFX/QuailDeath
   Event: 
   PlayEvent: 11
-  StopEvent: 0
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -124,6 +124,70 @@ Transform:
   m_Father: {fileID: 4989475771512846150}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3391951402335129248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1498825552754569272}
+  - component: {fileID: 9034361515514073394}
+  m_Layer: 7
+  m_Name: DisableMoving
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1498825552754569272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3391951402335129248}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4989475771512846150}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9034361515514073394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3391951402335129248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -384633801
+      Data2: 1101499702
+      Data3: -1007720032
+      Data4: -1952226439
+    Path: event:/SFX/QuailMovement
+  Event: 
+  PlayEvent: 1
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: QuailIdle
+    Value: 1
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 75
 --- !u!1 &4989475771512846154
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +202,6 @@ GameObject:
   - component: {fileID: 2268757857014902493}
   - component: {fileID: 7857890284765809786}
   - component: {fileID: 2133631450}
-  - component: {fileID: 9000825207445588434}
   - component: {fileID: 2863321168020903873}
   - component: {fileID: 1540510534}
   m_Layer: 7
@@ -163,6 +226,7 @@ Transform:
   - {fileID: 3717043874316130229}
   - {fileID: 2794336954424217285}
   - {fileID: 3905002036779917537}
+  - {fileID: 1498825552754569272}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -254,11 +318,11 @@ MonoBehaviour:
   movementSpeed: 4
   wallCheck: {fileID: 2794336954424217285}
   edgeCheck: {fileID: 3717043874316130229}
+  movingChild: {fileID: 3391951402335129248}
+  ded: {fileID: 569891066967184169}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  wallBool: 0
-  edgeBool: 1
 --- !u!60 &7857890284765809786
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -315,38 +379,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &9000825207445588434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4989475771512846154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -384633801
-      Data2: 1101499702
-      Data3: -1007720032
-      Data4: -1952226439
-    Path: event:/SFX/QuailMovement
-  Event: 
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params:
-  - Name: QuailIdle
-    Value: 1
-  OverrideAttenuation: 1
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 75
 --- !u!114 &2863321168020903873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,9 +391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fda415131b52cd428ee276354271295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHP: 0
   maxHP: 3
-  deathAnimation: {fileID: 7400000, guid: 22fe0160edc29574bb36daeacddf078c, type: 2}
-  enableDeath: {fileID: 569891066967184169}
 --- !u!114 &1540510534
 MonoBehaviour:
   m_ObjectHideFlags: 0

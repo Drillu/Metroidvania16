@@ -13,6 +13,8 @@ public class QuailAI : MonoBehaviour
     [SerializeField] private float movementSpeed = 4f;
     [SerializeField] private Transform wallCheck;
     [SerializeField] private Transform edgeCheck;
+    [SerializeField] private GameObject movingChild;
+    [SerializeField] private GameObject ded;
     [SerializeField] private LayerMask groundLayer;
     private bool wallBool = false;
     private bool edgeBool = true;
@@ -53,8 +55,10 @@ public class QuailAI : MonoBehaviour
     {
         movementSpeed = 0f;
         StopAllCoroutines();
+        movingChild.SetActive(false);
+        ded.SetActive(true);
         animator.Play(quail_death);
-
+       
         Destroy(gameObject,6f);
     }
 

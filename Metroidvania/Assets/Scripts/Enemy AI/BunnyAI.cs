@@ -28,6 +28,7 @@ public class BunnyAI : MonoBehaviour
     private float timeRequiered;
     private GameObject player;
     private bool stillPassive = true;
+    [SerializeField] private GameObject ded;
     
 
     #endregion
@@ -147,6 +148,7 @@ public class BunnyAI : MonoBehaviour
         isAbleToJump = false;
         StopAllCoroutines();
         animator.Play(bunny_death);
+        ded.SetActive(true);
         Destroy(gameObject, 7f);
     }
 

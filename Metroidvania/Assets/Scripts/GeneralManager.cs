@@ -9,8 +9,8 @@ public class GeneralManager : MonoBehaviour
 
     private void Start()
     {
-        enemyLayerMask = LayerMask.NameToLayer("Enemies");
-        groundLayerMask = LayerMask.NameToLayer("Ground");
+        enemyLayerMask = LayerMask.GetMask("Enemies");
+        groundLayerMask = LayerMask.GetMask("Ground");
     }
 
     public static bool TriggerIsTouchingLayer(Collider2D collision, LayerMask givenLayer)

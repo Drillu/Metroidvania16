@@ -407,9 +407,6 @@
 	</object>
 	<object class="MixerBusFader" id="{62be79f9-ed63-4dcf-b38d-3486041ab24b}" />
 	<object class="SpatialiserEffect" id="{8c2284d6-f192-4932-9c0e-cccc3cda85e8}">
-		<property name="distanceRolloffType">
-			<value>2</value>
-		</property>
 		<property name="soundSize">
 			<value>6.5</value>
 		</property>

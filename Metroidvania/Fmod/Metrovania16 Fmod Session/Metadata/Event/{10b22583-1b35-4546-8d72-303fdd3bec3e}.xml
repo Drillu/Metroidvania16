@@ -358,11 +358,7 @@
 			<destination>{f0ff03a0-310d-4f51-b915-8ca0a23fb86a}</destination>
 		</relationship>
 	</object>
-	<object class="SpatialiserEffect" id="{f97869fc-1d5b-43b1-984e-69ce067f9781}">
-		<property name="distanceRolloffType">
-			<value>2</value>
-		</property>
-	</object>
+	<object class="SpatialiserEffect" id="{f97869fc-1d5b-43b1-984e-69ce067f9781}" />
 	<object class="ChorusEffect" id="{78ad6a44-aa7c-404d-8fc9-29ac671a0891}">
 		<property name="rate">
 			<value>0.519999981</value>

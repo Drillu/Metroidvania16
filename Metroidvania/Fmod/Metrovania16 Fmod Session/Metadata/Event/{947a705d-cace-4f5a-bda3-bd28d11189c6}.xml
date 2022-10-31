@@ -7057,11 +7057,7 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{698892e5-4982-48d5-82f2-0cbf50dcdc32}" />
-	<object class="SpatialiserEffect" id="{d09374e1-8214-4dab-86fb-99c7d7661f26}">
-		<property name="distanceRolloffType">
-			<value>2</value>
-		</property>
-	</object>
+	<object class="SpatialiserEffect" id="{d09374e1-8214-4dab-86fb-99c7d7661f26}" />
 	<object class="MixerSend" id="{5b1979d4-d01d-4865-b5d9-961fc85548ff}">
 		<property name="inputFormat">
 			<value>2</value>
@@ -7628,7 +7624,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-70</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{9f2f25f0-5466-48f4-92a4-0bafd893894f}">
@@ -7636,7 +7632,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>1.5</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{75486c5c-3e04-4d14-8102-721963e21f2c}">
@@ -7644,7 +7640,7 @@
 			<value>0.01</value>
 		</property>
 		<property name="value">
-			<value>-43.9999962</value>
+			<value>-40.2499962</value>
 		</property>
 	</object>
 	<object class="RandomizerModulator" id="{c3f0b1d8-41e6-4f76-9ac6-4694a895c347}">

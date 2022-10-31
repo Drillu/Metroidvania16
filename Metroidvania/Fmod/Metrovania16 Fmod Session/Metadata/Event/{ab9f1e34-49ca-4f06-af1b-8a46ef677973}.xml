@@ -320,7 +320,14 @@
 			<destination>{b5a3c15d-ee21-4f85-8d19-2d858e58c1e1}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{ac4b6bfd-1a85-42d2-9e48-e0a436969e1a}" />
+	<object class="MixerBusPanner" id="{ac4b6bfd-1a85-42d2-9e48-e0a436969e1a}">
+		<property name="surroundPanDirection">
+			<value>-147.72435</value>
+		</property>
+		<property name="surroundPanExtent">
+			<value>299.108704</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{76702ccc-4538-495f-bb23-2e3352d1ee66}" />
 	<object class="RandomizerModulator" id="{e9042641-237a-4219-9fae-e36194e5a2ea}">
 		<property name="nameOfPropertyBeingModulated">
@@ -456,11 +463,7 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{86c429e0-4945-4cce-89e9-819be00e5fec}" />
-	<object class="SpatialiserEffect" id="{bf681979-1de5-435e-80a7-3c99ad83915e}">
-		<property name="distanceRolloffType">
-			<value>2</value>
-		</property>
-	</object>
+	<object class="SpatialiserEffect" id="{bf681979-1de5-435e-80a7-3c99ad83915e}" />
 	<object class="MixerSend" id="{b5a3c15d-ee21-4f85-8d19-2d858e58c1e1}">
 		<property name="inputFormat">
 			<value>2</value>

@@ -1151,6 +1151,11 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &257111781 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5010598684960573123, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
+  m_PrefabInstance: {fileID: 2068293759}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &316060147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2471,6 +2476,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1987079589, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
+      propertyPath: StopEvent
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987079589, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
+      propertyPath: CollisionTag
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987079589, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
+      propertyPath: Params.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987079589, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987079589, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
+      propertyPath: Params.Array.data[0].Name
+      value: BunnyIdle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987079589, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
+      propertyPath: Params.Array.data[0].Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416973466834869423, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
+      propertyPath: windup
+      value: 
+      objectReference: {fileID: 257111781}
     - target: {fileID: 8644924719342154837, guid: c6ccbda1940dfc24096c0c1100cf4230, type: 3}
       propertyPath: m_Name
       value: Sludge Bunny

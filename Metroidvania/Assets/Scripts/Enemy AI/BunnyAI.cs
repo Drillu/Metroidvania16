@@ -29,6 +29,7 @@ public class BunnyAI : MonoBehaviour
     private GameObject player;
     private bool stillPassive = true;
     [SerializeField] private GameObject ded;
+    [SerializeField] private GameObject windup;
     
 
     #endregion
@@ -123,10 +124,18 @@ public class BunnyAI : MonoBehaviour
             isAbleToJump = true;
             timer = timeRequiered;
             PlayAnimationAndRecord(bunny_windup);
+            windup.SetActive(true);
             Debug.Log("Play Landing Sound");
 
-            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/BunnyAttackRoad", transform.position);
+            //FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/BunnyAttackRoad", transform.position);
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/BunnyWindUp", transform.position);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (GeneralManager.TriggerIsTouchingLayer(collision, groundLayer))
+        {
+            windup.SetActive(false);
         }
     }
     #endregion

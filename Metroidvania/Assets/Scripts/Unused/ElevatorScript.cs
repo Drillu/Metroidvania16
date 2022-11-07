@@ -10,7 +10,7 @@ public class ElevatorScript : MonoBehaviour
     [SerializeField] private Transform currentDestination;
     [SerializeField] private Transform upperDestination;
     [SerializeField] private Transform lowerDestination;
-
+    
     
 
     private Rigidbody2D rb;

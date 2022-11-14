@@ -21,6 +21,9 @@ public class PlayerMovement : MonoBehaviour
 
     //Function reference to make the sprites change.
     private Animator anim;
+    private float NTime;
+    bool animatonFinished;
+    AnimatorStateInfo camStateInfo;
     
     float directionX = 0f;
 
@@ -58,6 +61,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        camStateInfo = camBHV.GetCurrentAnimatorStateInfo(0);
+        NTime = camStateInfo.normalizedTime;
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
@@ -153,7 +158,10 @@ public class PlayerMovement : MonoBehaviour
         //}
     }
 
+    void animationFinished()
+    {
 
+    }
     private void UpdateAnimations()
     {
         MovementState state;
@@ -205,19 +213,25 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Road"))
+        if (other.CompareTag("Road"))
         {
             FMODUnity.RuntimeManager.PlayOneShot(LandRoad);
             shouldPlaySkatesRoad = true;
-            camBHV.Play("ZoomOut");
-            
+            camBHV.SetBool("Zoom", true);
+
+
         }
         else if(other.CompareTag("Car"))
         {
             FMODUnity.RuntimeManager.PlayOneShot(LandCar);
             shouldPlaySkatesCar = true;
-            camBHV.Play("ZoomOut");
+            camBHV.SetBool("Zoom", true);
+            if ((other.CompareTag("Road") && camBHV.GetBool("Zoom") == false) || camBHV.GetBool("Zoom") ==  false)
+            {
+                camBHV.SetBool("Zoom", true);
+            }
         }
+        
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -226,13 +240,16 @@ public class PlayerMovement : MonoBehaviour
         {
             FMODUnity.RuntimeManager.PlayOneShot(JumpRoad);
             shouldPlaySkatesRoad = false;
-            camBHV.Play("ZoomIn");
+            camBHV.SetBool("Zoom", false);
         }
         else if(other.CompareTag("Car"))
         {
             FMODUnity.RuntimeManager.PlayOneShot(JumpCar);
             shouldPlaySkatesCar = false;
-            camBHV.Play("ZoomIn");
+            if(camBHV.GetBool("Zoom") == true)
+            {
+                camBHV.SetBool("Zoom", true);
+            }
         }
     }
 
@@ -240,7 +257,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(GeneralManager.CollisionIsTouchingLayer(other,enemyLayerMask))
         {
-            Debug.Log("Enemy COllided");
+            Debug.Log("Enemy Collided");
         }
     }
 }

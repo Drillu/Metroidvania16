@@ -3213,6 +3213,10 @@ PrefabInstance:
       propertyPath: camBHV
       value: 
       objectReference: {fileID: 1613902971}
+    - target: {fileID: 678217372573592734, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
+      propertyPath: addedVelocityX_max
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 678217372573592735, guid: b2a9724fc9f1bf445a823c26bb50081f, type: 3}
       propertyPath: m_RootOrder
       value: 10

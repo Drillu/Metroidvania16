@@ -198,7 +198,11 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            state = MovementState.idle;
+            // check if supposed to be gliding or idle
+            if (Mathf.Abs(rb.velocity.x) > 0.3f)
+                state = MovementState.gliding;
+            else
+                state = MovementState.idle;
         }
 
         if (rb.velocity.y > .1f)

@@ -26,13 +26,14 @@ public class PlayerMovement : MonoBehaviour
     bool animatonFinished;
     AnimatorStateInfo camStateInfo;
     
-    float directionX = 0f;
 
-
+    // Movement
+    float directionX = 0f; // for getting input
     [SerializeField] private LayerMask jumpableGround;
-
-    [SerializeField] private float moveSpeed = 7f;
-    [SerializeField] private float jumpHeight = 14f;
+    [SerializeField] private float moveSpeed = 4f;
+    [SerializeField] private float jumpHeightMax = 40.0f;
+    [SerializeField] private float jumpHeightMin = 15.0f;
+    [SerializeField] private float airMoveSpeed = 10.0f;
 
     private BoxCollider2D coll;
 
@@ -57,7 +58,6 @@ public class PlayerMovement : MonoBehaviour
     //Other
 
     private float addedVelocityX = 0; // x velocity to add for every frame
-    [SerializeField] private float addedVelocityX_max = 5; // the maximum for it.
 
     #endregion
 
@@ -114,17 +114,31 @@ public class PlayerMovement : MonoBehaviour
         //Changed GetAxisRaw into GetAxis to give that slippery acceleration movement - Ersan (09.06.2022)
 
         // Added a multiplication by either 1 or 0 to the velocity accourding to weather or not the animation frame is correct
-        addedVelocityX += directionX * moveSpeed * (IsOnSkateFrame()?1.0f:0);
-        if (Mathf.Abs(addedVelocityX) >= addedVelocityX_max){ // checks if the limit of added velocity reached.
-            // limit "addedVelocityX" since it's above the limmit
+        if (isGrounded()) addedVelocityX += directionX * moveSpeed * (IsOnSkateFrame()?Time.deltaTime:0);
+        else{
+            // is the x speed too fast?
+            if (Mathf.Abs(rb.velocity.x) > airMoveSpeed)
+                rb.velocity = new Vector2((rb.velocity.x > 0)?airMoveSpeed:-1*airMoveSpeed, rb.velocity.y);
+            // if the player want's to go a different direction, move.
+            else if ((rb.velocity.x * directionX) < 0){
+                addedVelocityX += directionX * airMoveSpeed * Time.deltaTime;
+            }
+
+        }
+        if (Mathf.Abs(addedVelocityX) >= moveSpeed){ // checks if the limit of added velocity reached.
+            // limit "addedVelocityX" since it's above the limit
             Debug.Log("limited: " + addedVelocityX);
-            if (addedVelocityX < 0) addedVelocityX = -1.0f * addedVelocityX_max;
-            else                    addedVelocityX = addedVelocityX_max;
+            if (addedVelocityX < 0) addedVelocityX = -1.0f * moveSpeed;
+            else                    addedVelocityX = moveSpeed;
         }
         rb.velocity = new Vector2(rb.velocity.x + addedVelocityX, rb.velocity.y);
+        Debug.ClearDeveloperConsole();
+        Debug.Log("added " + addedVelocityX);
        
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
+            // calculate jump height accourding to speed
+            float jumpHeight = jumpHeightMin + ((Mathf.Abs(rb.velocity.x)/jumpHeightMax)*(jumpHeightMax-jumpHeightMin));
             FMODUnity.RuntimeManager.PlayOneShot(KireiJump);
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
         }

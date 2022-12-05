@@ -114,7 +114,11 @@ public class PlayerMovement : MonoBehaviour
         //Changed GetAxisRaw into GetAxis to give that slippery acceleration movement - Ersan (09.06.2022)
 
         // Added a multiplication by either 1 or 0 to the velocity accourding to weather or not the animation frame is correct
-        if (isGrounded()) addedVelocityX += directionX * moveSpeed * (IsOnSkateFrame()?Time.deltaTime:0);
+        if (isGrounded()){
+            if (Mathf.Abs(rb.velocity.x) < 10.5f) // not moving! give a push
+                rb.velocity += new Vector2(((moveSpeed*directionX)/2) * Time.deltaTime, 0);
+            addedVelocityX += directionX * moveSpeed * (IsOnSkateFrame()?Time.deltaTime:0);
+        }
         else{
             // is the x speed too fast?
             if (Mathf.Abs(rb.velocity.x) > airMoveSpeed)

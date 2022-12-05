@@ -275,8 +275,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   moveSpeed: 200
-  jumpHeightMax: 15
-  jumpHeightMin: 10
+  jumpHeightMax: 25
+  jumpHeightMin: 20
   airMoveSpeed: 25
   _dashingVelocity: 20
   _dashingTime: 0.5

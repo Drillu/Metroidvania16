@@ -100,8 +100,8 @@ MonoBehaviour:
     m_Bits: 64
   moveSpeed: 200
   maxMoveSpeed: 50
-  jumpHeightMax: 2000
-  jumpHeightMin: 1000
+  jumpHeightMax: 1000
+  jumpHeightMin: 500
   airMoveSpeed: 30
 --- !u!95 &741148805154892390 stripped
 Animator:

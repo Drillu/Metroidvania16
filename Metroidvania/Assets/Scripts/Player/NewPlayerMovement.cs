@@ -15,6 +15,9 @@ public class NewPlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Collider2D footCollider;
 
+    internal float directionX = 0.0f;
+    internal bool jump = false;
+
     // animation
     internal enum MovementState { idle, running, jumping, falling, gliding }
     private SpriteRenderer spriteRenderer;
@@ -28,17 +31,17 @@ public class NewPlayerMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
-
     /// This function is called every fixed framerate frame, if the MonoBehaviour is enabled.
     void FixedUpdate()
     {
-        rb.AddForce(HandleMovement()); // Handle movements
+        rb.AddForce(HandleMovement());
     }
+
     // Update is called once per frame
     void Update()
     {
         float directionX = Input.GetAxis("Horizontal");
-
+        HandleInputs();
         HandleAnimations();
     }
 
@@ -65,26 +68,27 @@ public class NewPlayerMovement : MonoBehaviour
     }
 
     // handle movement inputs etc...
+    private void HandleInputs(){
+        directionX = Input.GetAxis("Horizontal"); // Horizontal input
+        jump = Input.GetButton("Jump"); // is "jump" pressed this frame?
+    }
+
     // returns a 2d vector of force added
     private Vector2 HandleMovement(){
         float velX = 0; // return value (x)
         float velY = 0; // return value (y)
-        float directionX = Input.GetAxis("Horizontal"); // Horizontal input
-        bool jump = Input.GetButtonDown("Jump"); // is "jump" pressed this frame?
 
         if (IsOnGround()){
-            Debug.Log("Player on ground");
             // Horizontal movement
             if (IsOnSkatePushFrame() && Mathf.Abs(rb.velocity.x) < maxMoveSpeed) velX += directionX * moveSpeed;
 
             // Jump if pressed and calculate jump height accourding to speed
-            if (jump) velY += jumpHeightMin + ((jumpHeightMax-jumpHeightMin)*(Mathf.Abs(rb.velocity.x)/maxMoveSpeed));
+            if (jump) velY = jumpHeightMin + ((jumpHeightMax-jumpHeightMin)*(Mathf.Abs(rb.velocity.x)/maxMoveSpeed));
 
         } else{
             if (Mathf.Abs(rb.velocity.x) < maxMoveSpeed) velX += airMoveSpeed * directionX;
         }
 
-        Debug.Log("Adding [" + velX + ", " + velY + "] to velocity.");
         return new Vector2(velX, velY);
     }
 
@@ -95,14 +99,11 @@ public class NewPlayerMovement : MonoBehaviour
 
         if (IsOnGround()){ // ground
             if (directionX == 0){ // no horizotal input
-                if (Mathf.Abs(rb.velocity.x) < moveSpeed/10.0f) // speed less than 10% of move speed, stand.
+                if (Mathf.Abs(rb.velocity.x) < maxMoveSpeed/10.0f) // speed less than 10% of move speed, stand.
                     state = MovementState.idle;
                 else // if not, then glide.
                     state = MovementState.gliding;
             } else{ // has input, play skate animation
-                // handle flipping
-                if (directionX < 0) spriteRenderer.flipX = false; 
-                else                spriteRenderer.flipX = true;
                 state = MovementState.running;
             }
         } else{ // not on ground
@@ -111,6 +112,9 @@ public class NewPlayerMovement : MonoBehaviour
             else
                 state = MovementState.falling;
         }
+        // handle flipping
+        if (directionX < 0)                     spriteRenderer.flipX = false; 
+        else if (directionX > 0)                spriteRenderer.flipX = true;
 
         
         animator.SetInteger("State", (int)state);

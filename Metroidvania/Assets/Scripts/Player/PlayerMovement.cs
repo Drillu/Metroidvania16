@@ -119,9 +119,9 @@ public class PlayerMovement : MonoBehaviour
             // is the x speed too fast?
             if (Mathf.Abs(rb.velocity.x) > airMoveSpeed)
                 rb.velocity = new Vector2((rb.velocity.x > 0)?airMoveSpeed:-1*airMoveSpeed, rb.velocity.y);
-            // if the player want's to go a different direction, move.
-            else if ((rb.velocity.x * directionX) < 0){
-                addedVelocityX += directionX * airMoveSpeed * Time.deltaTime;
+            // if the player wants to go a different direction, move.
+            else{
+                addedVelocityX = directionX * airMoveSpeed * Time.deltaTime;
             }
 
         }

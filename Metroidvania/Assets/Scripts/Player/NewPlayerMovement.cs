@@ -29,7 +29,7 @@ public class NewPlayerMovement : MonoBehaviour
     internal bool jump = false;
 
     // dash
-    private float dashDelay = 0;
+    public float dashDelay = 0;
     private float dashTimeStart;
     private float dashTimeEnd;
     private Vector3 dashStartPos;
@@ -60,6 +60,17 @@ public class NewPlayerMovement : MonoBehaviour
         float directionX = Input.GetAxis("Horizontal");
         if (controllable) HandleInputs();
         if (playAnimations) HandleAnimations();
+    }
+
+    // Collisions
+    /// Sent each frame where a collider on another object is touching
+    /// this object's collider (2D physics only).
+    void OnCollisionStay2D(Collision2D other)
+    {
+        Collider2D hitbox = GetComponent<Collider2D>();
+
+        // End dashing if touching ground
+        if (hitbox.IsTouchingLayers(jumpableGround)) dashTimeEnd = 0.0f;
     }
 
 
@@ -96,13 +107,8 @@ public class NewPlayerMovement : MonoBehaviour
         Debug.Log(dashDelay);
         // dash
         if (dashDelay > 0) dashDelay -= Time.deltaTime;
-        if (dashEnabled && Input.GetButton("Dash") && dashDelay <= 0.0f){
-            dashDelay = dashChargeSeconds; 
-
-            dashTimeStart = Time.time;
-            dashTimeEnd = dashTimeStart + dashTimeSeconds;
-            dashStartPos = this.transform.position;
-            dashingRight = spriteRenderer.flipX;
+        if (dashEnabled && !IsOnGround() && Input.GetButton("Dash") && dashDelay <= 0.0f){
+            Dash();
         }
     }
 
@@ -123,11 +129,11 @@ public class NewPlayerMovement : MonoBehaviour
         }
 
         // dash
-        float dashEndTime = dashTimeStart + dashTimeSeconds;
-        if (Time.time < dashTimeEnd){
+        bool isDashing = Time.time < dashTimeEnd;
+        if (isDashing){
             rb.constraints = RigidbodyConstraints2D.FreezePositionY;
             rb.velocity = new Vector2(0, 0);
-            Dash();
+            this.transform.position += new Vector3(dashPower*(dashingRight?1.0f:-1.0f), 0, 0);
         } else{
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
@@ -141,6 +147,7 @@ public class NewPlayerMovement : MonoBehaviour
 
         MovementState state;
         float directionX = Input.GetAxis("Horizontal");
+        animator.speed = 1.0f;
 
         if (IsOnGround()){ // ground
             if (directionX == 0){ // no horizotal input
@@ -150,6 +157,7 @@ public class NewPlayerMovement : MonoBehaviour
                     state = MovementState.gliding;
             } else{ // has input, play skate animation
                 state = MovementState.running;
+                animator.speed = 2.0f;
             }
         } else{ // not on ground
             if (rb.velocity.y > 0) // going up
@@ -168,8 +176,12 @@ public class NewPlayerMovement : MonoBehaviour
 
     // dash
     private void Dash(){
-        this.transform.position += new Vector3(dashPower*(dashingRight?1.0f:-1.0f), 0, 0);
-        Debug.Log("Dashing");
-        Debug.Log(this.transform.position);
+        // basically triggers the dash and sets the dash variables
+        dashDelay = dashChargeSeconds;
+        dashTimeStart = Time.time;
+        dashTimeEnd = dashTimeStart + dashTimeSeconds;
+        dashStartPos = this.transform.position;
+        dashingRight = spriteRenderer.flipX;
    }
+   public float GetDashDelayTime() {return dashChargeSeconds;}
 }

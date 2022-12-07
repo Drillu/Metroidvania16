@@ -1255,6 +1255,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NewMovement Player
       objectReference: {fileID: 0}
+    - target: {fileID: 741148805154892387, guid: bd0c512003372c5449a6a67f69eccf5c, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 741148805154892389, guid: bd0c512003372c5449a6a67f69eccf5c, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1487,7 +1491,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2088976, y: 1}
+    m_SensorSize: {x: 1.860735, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

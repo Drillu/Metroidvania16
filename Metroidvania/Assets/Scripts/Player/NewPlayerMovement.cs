@@ -31,7 +31,9 @@ public class NewPlayerMovement : MonoBehaviour
     // dash
     private float dashDelay = 0;
     private float dashTimeStart;
+    private float dashTimeEnd;
     private Vector3 dashStartPos;
+    private bool dashingRight = true;
 
     // animation
     internal enum MovementState { idle, running, jumping, falling, gliding }
@@ -91,11 +93,16 @@ public class NewPlayerMovement : MonoBehaviour
     private void HandleInputs(){
         directionX = Input.GetAxis("Horizontal"); // Horizontal input
         jump = Input.GetButton("Jump"); // is "jump" pressed this frame?
-        if (Input.GetButton("Dash") && dashDelay <= 0){ // dash
+        Debug.Log(dashDelay);
+        // dash
+        if (dashDelay > 0) dashDelay -= Time.deltaTime;
+        if (dashEnabled && Input.GetButton("Dash") && dashDelay <= 0.0f){
             dashDelay = dashChargeSeconds; 
 
             dashTimeStart = Time.time;
+            dashTimeEnd = dashTimeStart + dashTimeSeconds;
             dashStartPos = this.transform.position;
+            dashingRight = spriteRenderer.flipX;
         }
     }
 
@@ -117,12 +124,12 @@ public class NewPlayerMovement : MonoBehaviour
 
         // dash
         float dashEndTime = dashTimeStart + dashTimeSeconds;
-        if (dashTimeStart + (Time.time-dashTimeStart) < dashEndTime){
+        if (Time.time < dashTimeEnd){
             rb.constraints = RigidbodyConstraints2D.FreezePositionY;
             rb.velocity = new Vector2(0, 0);
             Dash();
         } else{
-            rb.constraints = RigidbodyConstraints2D.None;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
 
 
@@ -161,7 +168,8 @@ public class NewPlayerMovement : MonoBehaviour
 
     // dash
     private void Dash(){
-        rb.velocity.Set(dashPower, 0);
-        dashDelay -= Time.deltaTime;
+        this.transform.position += new Vector3(dashPower*(dashingRight?1.0f:-1.0f), 0, 0);
+        Debug.Log("Dashing");
+        Debug.Log(this.transform.position);
    }
 }

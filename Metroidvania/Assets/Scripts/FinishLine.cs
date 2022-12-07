@@ -11,7 +11,6 @@ public class FinishLine : MonoBehaviour
         {
             SceneManager.LoadScene("Main Menu");
             AudioManager.CutMusic();
-            PlayerMovement.ShutDownSounds();
         }
     }
 }

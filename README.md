@@ -3,5 +3,8 @@
 
 ### Branch descriptions:
  -main - the main branch <br />
- -coolermovement - A more stable attempt of revamping the movement mechanics <br />
+ -coolermovement - A branch for revamping the movement mechanics <br />
  -coolermovement/dash - adding a dash mechanic
+ 
+ ### Unity version
+ - 2021.3.1f1

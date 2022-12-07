@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isPlayingSkates = false;
     private bool shouldPlaySkatesRoad = false;
     private bool shouldPlaySkatesCar = false;
+
     const string SkateRoad = "event:/SFX/SkateRoad";
     const string SkateCar = "event:/SFX/SkateCar";
 
@@ -25,13 +26,14 @@ public class PlayerMovement : MonoBehaviour
     bool animatonFinished;
     AnimatorStateInfo camStateInfo;
     
-    float directionX = 0f;
 
-
+    // Movement
+    float directionX = 0f; // for getting input
     [SerializeField] private LayerMask jumpableGround;
-
-    [SerializeField] private float moveSpeed = 7f;
-    [SerializeField] private float jumpHeight = 14f;
+    [SerializeField] private float moveSpeed = 4f;
+    [SerializeField] private float jumpHeightMax = 40.0f;
+    [SerializeField] private float jumpHeightMin = 15.0f;
+    [SerializeField] private float airMoveSpeed = 10.0f;
 
     private BoxCollider2D coll;
 
@@ -55,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
 
     //Other
 
+    private float addedVelocityX = 0; // x velocity to add for every frame
 
     #endregion
 
@@ -110,10 +113,36 @@ public class PlayerMovement : MonoBehaviour
             
         //Changed GetAxisRaw into GetAxis to give that slippery acceleration movement - Ersan (09.06.2022)
 
-        rb.velocity = new Vector2(directionX * moveSpeed, rb.velocity.y);
+        // Added a multiplication by either 1 or 0 to the velocity accourding to weather or not the animation frame is correct
+        if (isGrounded()){
+            if (Mathf.Abs(rb.velocity.x) < 10.5f) // not moving! give a push
+                rb.velocity += new Vector2(((moveSpeed*directionX)/2) * Time.deltaTime, 0);
+            addedVelocityX += directionX * moveSpeed * (IsOnSkateFrame()?Time.deltaTime:0);
+        }
+        else{
+            // is the x speed too fast?
+            if (Mathf.Abs(rb.velocity.x) > airMoveSpeed)
+                rb.velocity = new Vector2((rb.velocity.x > 0)?airMoveSpeed:-1*airMoveSpeed, rb.velocity.y);
+            // if the player wants to go a different direction, move.
+            else{
+                addedVelocityX = directionX * airMoveSpeed * Time.deltaTime;
+            }
+
+        }
+        if (Mathf.Abs(addedVelocityX) >= moveSpeed){ // checks if the limit of added velocity reached.
+            // limit "addedVelocityX" since it's above the limit
+            Debug.Log("limited: " + addedVelocityX);
+            if (addedVelocityX < 0) addedVelocityX = -1.0f * moveSpeed;
+            else                    addedVelocityX = moveSpeed;
+        }
+        rb.velocity = new Vector2(rb.velocity.x + addedVelocityX, rb.velocity.y);
+        Debug.ClearDeveloperConsole();
+        Debug.Log("added " + addedVelocityX);
        
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
+            // calculate jump height accourding to speed
+            float jumpHeight = jumpHeightMin + ((Mathf.Abs(rb.velocity.x)/jumpHeightMax)*(jumpHeightMax-jumpHeightMin));
             FMODUnity.RuntimeManager.PlayOneShot(KireiJump);
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
         }
@@ -149,6 +178,9 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded())
         {
             _canDash = true;
+
+            // I know it's for the dashing, but pleaseeeee
+            addedVelocityX *= 0.5f * Time.deltaTime;
         }
         //Uncomment the part below if they want the player to not be able to dash mid air
 
@@ -171,17 +203,24 @@ public class PlayerMovement : MonoBehaviour
 
             state = MovementState.running;
 
+            if (!sprite.flipX) addedVelocityX = 0; // when the direction changes, cancels the slippery effect.
             sprite.flipX = true;
         }
         else if (directionX < 0f)
         {
             state = MovementState.running;
+
+            if (sprite.flipX) addedVelocityX = 0; // same
             sprite.flipX = false;
 
         }
         else
         {
-            state = MovementState.idle;
+            // check if supposed to be gliding or idle
+            if (Mathf.Abs(rb.velocity.x) > 0.3f)
+                state = MovementState.gliding;
+            else
+                state = MovementState.idle;
         }
 
         if (rb.velocity.y > .1f)
@@ -260,7 +299,26 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Enemy Collided");
         }
     }
+
+    // Checks if on a valid skate frame (pushing)
+    private bool IsOnSkateFrame(){
+        string spritename = sprite.sprite.name;
+
+        if (!spritename.Contains("skating"))
+            return false; // maybe not(?)
+
+        string spritenumber = spritename.Replace("Kirei_skating_spritesheet_", string.Empty);
+        int currentFrame = int.Parse(spritenumber);
+
+        int[] validFrames = {0, 6}; // valid frames
+        foreach (int frame in validFrames)
+            if (frame == currentFrame) return true;
+        
+        // not a valid frame
+        return false;
+    }
 }
+
 
 
 

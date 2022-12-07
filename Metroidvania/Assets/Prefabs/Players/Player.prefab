@@ -270,12 +270,14 @@ MonoBehaviour:
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  camBHV: {fileID: 0}
+  camBHV: {fileID: 678217372573592732}
   jumpableGround:
     serializedVersion: 2
     m_Bits: 64
-  moveSpeed: 25
-  jumpHeight: 27
+  moveSpeed: 200
+  jumpHeightMax: 25
+  jumpHeightMin: 20
+  airMoveSpeed: 25
   _dashingVelocity: 20
   _dashingTime: 0.5
 --- !u!96 &678217372573592733

@@ -1,7 +1,7 @@
 # Our MetroidVania style game :)
-## This is the main branch of our game!
+## This is the movement branch of our game!
 
-### Branch description (movement):
+### Branch description:
  - A branch for revamping the movement mechanics <br />
  
  ### Unity version

@@ -23,6 +23,7 @@ public class NewPlayerMovement : MonoBehaviour
     // Movement properties
     private Rigidbody2D rb;
     private Collider2D footCollider;
+    private Collider2D stuckCollider;
 
         // inputs
     internal float directionX = 0.0f;
@@ -34,6 +35,7 @@ public class NewPlayerMovement : MonoBehaviour
     private float dashTimeEnd;
     private Vector3 dashStartPos;
     private bool dashingRight = true;
+    private Vector3 lastDashPosition; // if dash was interupted, the location to set to (to avoid dash glitches)
 
     // animation
     internal enum MovementState { idle, running, jumping, falling, gliding }
@@ -44,9 +46,13 @@ public class NewPlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        footCollider = GetComponentInChildren<Collider2D>();
+        footCollider = GetComponentsInChildren<Collider2D>()[1];
+        stuckCollider = GetComponentsInChildren<Collider2D>()[2];
+        Debug.Log(footCollider.name);
+        Debug.Log(stuckCollider.name);
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        lastDashPosition = this.transform.position;
     }
     /// This function is called every fixed framerate frame, if the MonoBehaviour is enabled.
     void FixedUpdate()
@@ -69,8 +75,11 @@ public class NewPlayerMovement : MonoBehaviour
     {
         Collider2D hitbox = GetComponent<Collider2D>();
 
-        // End dashing if touching ground
-        if (hitbox.IsTouchingLayers(jumpableGround)) dashTimeEnd = 0.0f;
+        // End dashing if touching ground and return to last non interuputed location while dashed to avoid glitches
+        if (IsCurrentlyDashing() && hitbox.IsTouchingLayers(jumpableGround)){
+            dashTimeEnd = 0.0f;
+            this.transform.position = lastDashPosition;
+        }
     }
 
 
@@ -104,11 +113,10 @@ public class NewPlayerMovement : MonoBehaviour
     private void HandleInputs(){
         directionX = Input.GetAxis("Horizontal"); // Horizontal input
         jump = Input.GetButton("Jump"); // is "jump" pressed this frame?
-        Debug.Log(dashDelay);
         // dash
         if (dashDelay > 0) dashDelay -= Time.deltaTime;
         if (dashEnabled && !IsOnGround() && Input.GetButton("Dash") && dashDelay <= 0.0f){
-            Dash();
+            TriggerDash();
         }
     }
 
@@ -129,16 +137,13 @@ public class NewPlayerMovement : MonoBehaviour
         }
 
         // dash
-        bool isDashing = Time.time < dashTimeEnd;
-        if (isDashing){
-            rb.constraints = RigidbodyConstraints2D.FreezePositionY;
-            rb.velocity = new Vector2(0, 0);
-            this.transform.position += new Vector3(dashPower*(dashingRight?1.0f:-1.0f), 0, 0);
-        } else{
-            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        }
+        if (IsCurrentlyDashing())
+            Dash();
+        else
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation; // importent in order to free the player from the dash
 
-
+        // for getting stuck inside walls
+        if (IsStuck()) Unstuck();
 
         return new Vector2(velX, velY);
     }
@@ -175,7 +180,7 @@ public class NewPlayerMovement : MonoBehaviour
     }
 
     // dash
-    private void Dash(){
+    private void TriggerDash(){
         // basically triggers the dash and sets the dash variables
         dashDelay = dashChargeSeconds;
         dashTimeStart = Time.time;
@@ -183,5 +188,23 @@ public class NewPlayerMovement : MonoBehaviour
         dashStartPos = this.transform.position;
         dashingRight = spriteRenderer.flipX;
    }
-   public float GetDashDelayTime() {return dashChargeSeconds;}
+    private void Dash(){
+        rb.constraints = RigidbodyConstraints2D.FreezePositionY ^ RigidbodyConstraints2D.FreezeRotation; // Added bitwise OR to  prevent rotation
+        rb.velocity = new Vector2(0, 0);
+        this.transform.position += new Vector3(dashPower*(dashingRight?1.0f:-1.0f), 0, 0);
+        lastDashPosition = this.transform.position;
+   }
+    public bool IsCurrentlyDashing(){ return Time.time < dashTimeEnd; }
+    public float GetDashDelayTime() {return dashChargeSeconds;}
+    
+    // unstuck - when the player gets stuck inside walls
+    private bool IsStuck(){
+        return stuckCollider.IsTouchingLayers(jumpableGround);
+    }
+    private void Unstuck(){
+        Debug.Log("Player stuck");
+        Debug.Log("Unsticking");
+        this.transform.position = lastDashPosition;
+    }
+
 }

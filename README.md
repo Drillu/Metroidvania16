@@ -3,5 +3,5 @@
 
 ### Branch descriptions:
  -main - the main branch <br />
- -exp_movement - A total revamp of the movement mechanics <br />
- -coolermovement - A more stable attempt of revamping the movement mechanics
+ -coolermovement - A more stable attempt of revamping the movement mechanics <br />
+ -coolermovement/dash - adding a dash mechanic

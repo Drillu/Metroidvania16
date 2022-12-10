@@ -23,7 +23,6 @@ public class NewPlayerMovement : MonoBehaviour
     // Movement properties
     private Rigidbody2D rb;
     private Collider2D footCollider;
-    private Collider2D stuckCollider;
 
         // inputs
     internal float directionX = 0.0f;
@@ -47,9 +46,6 @@ public class NewPlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         footCollider = GetComponentsInChildren<Collider2D>()[1];
-        stuckCollider = GetComponentsInChildren<Collider2D>()[2];
-        Debug.Log(footCollider.name);
-        Debug.Log(stuckCollider.name);
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         lastDashPosition = this.transform.position;
@@ -137,13 +133,11 @@ public class NewPlayerMovement : MonoBehaviour
         }
 
         // dash
-        if (IsCurrentlyDashing())
+        if (IsCurrentlyDashing() && !IsOnGround())
             Dash();
         else
             rb.constraints = RigidbodyConstraints2D.FreezeRotation; // importent in order to free the player from the dash
 
-        // for getting stuck inside walls
-        if (IsStuck()) Unstuck();
 
         return new Vector2(velX, velY);
     }
@@ -197,14 +191,4 @@ public class NewPlayerMovement : MonoBehaviour
     public bool IsCurrentlyDashing(){ return Time.time < dashTimeEnd; }
     public float GetDashDelayTime() {return dashChargeSeconds;}
     
-    // unstuck - when the player gets stuck inside walls
-    private bool IsStuck(){
-        return stuckCollider.IsTouchingLayers(jumpableGround);
-    }
-    private void Unstuck(){
-        Debug.Log("Player stuck");
-        Debug.Log("Unsticking");
-        this.transform.position = lastDashPosition;
-    }
-
 }

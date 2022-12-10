@@ -1,4 +1,5 @@
 # Our MetroidVania style game :)
+<<<<<<< HEAD
 ## This is the movement branch of our game!
 
 ### Branch description:

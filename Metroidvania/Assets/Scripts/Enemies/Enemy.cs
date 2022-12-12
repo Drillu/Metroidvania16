@@ -7,7 +7,7 @@ abstract class Enemy : MonoBehaviour
 {
     // SerializeField
     [SerializeField] protected GameObject target;
-    [SerializeField] protected float detectionDistance;
+    [SerializeField] protected float targetDetectionDistance;
     [SerializeField] protected bool isActive = true;
 
     public float hp;
@@ -38,6 +38,14 @@ abstract class Enemy : MonoBehaviour
         float b = Mathf.Max(curPos.y, targetPos.y) - Mathf.Min(curPos.y, targetPos.y);
         float distance = Mathf.Sqrt(Mathf.Pow(a, 2) + Mathf.Pow(b, 2));
         return distance;
+    }
+    // Face target (x)
+    protected void FaceTarget(){
+        Vector2 curPos = this.transform.position;
+        Vector2 targetPos = target.transform.position;
+        sprite.flipX = (curPos.x < targetPos.x);
+
+        Debug.Log("Flip state: " + sprite.flipX);
     }
     // Movement
     abstract public void Follow(GameObject target);

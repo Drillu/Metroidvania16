@@ -18,6 +18,12 @@ class Ladybug : Enemy
 
     private float speedMultiplier = 1.0f;
 
+    // animations
+    internal enum LadybugAnimation {
+            fly,
+            shoot
+    }
+
     // projectiles
     private float shotChargeTimePassed = 0.0f;
     internal Vector3 projectileSpawnPosition; // initial local spawn position for the projectile spawn
@@ -49,13 +55,34 @@ class Ladybug : Enemy
                 projectileSpawnPosition.y,
                 projectileSpawnPosition.z
             );
+
+            // Handle animations
+            HandleAnimations();
         }
     }
 
-//////////////////////
-        // Functions//
-//////////////////////
-    
+    //////////////////////
+    // Functions//
+    //////////////////////
+
+    // Handles animations
+    override protected void HandleAnimations()
+    {
+        if      (currentAnimation == (int)LadybugAnimation.fly){
+            shotChargeTimePassed = 0.0f;
+            animator.speed = 1.0f;
+            animator.Play("Ladybug_fly");
+        }
+        else if (currentAnimation == (int)LadybugAnimation.shoot){
+
+            float shotAnimationTime = 1.5f;
+            float speedRate = shotAnimationTime/shotChargeTimeDelay;
+            animator.speed = speedRate;
+            animator.Play("Ladybug_shoot");
+        }
+
+    }
+
     // Hovers in the air
     private void Hover(){
         rb.AddForce(new Vector2(0, Mathf.Cos(Time.time))*2);
@@ -67,7 +94,7 @@ class Ladybug : Enemy
         if (Helper.GetLinearVelocity(rb) <= baseSpeed){
             Helper.PushTowards2D(rb, this.transform.position, newTargetPosition, baseSpeed/5);
         } 
-        animator.Play("Ladybug_fly");
+        currentAnimation = (int)LadybugAnimation.fly;
     } 
     // checks the charge status
     private bool IsShotCharged(){ return (shotChargeTimePassed >= shotChargeTimeDelay); }
@@ -91,7 +118,8 @@ class Ladybug : Enemy
 
             shotChargeTimePassed = 0.0f; // reset timer
             return;
-        }
+        } else // sync charge animation
+            currentAnimation = (int)LadybugAnimation.shoot;
         
         shotChargeTimePassed += Time.deltaTime; // shot not charged, charge shot
     }

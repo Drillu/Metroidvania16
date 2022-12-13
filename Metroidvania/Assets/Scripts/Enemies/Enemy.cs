@@ -15,6 +15,7 @@ abstract class Enemy : MonoBehaviour
 
     // animations
     protected Animator animator;
+    protected int currentAnimation;
     protected SpriteRenderer sprite;
 
     // Start is called before the first frame update
@@ -51,5 +52,7 @@ abstract class Enemy : MonoBehaviour
     abstract public void Follow(GameObject target);
     // Combat
     abstract public void Attack();
+    // Animation
+    abstract protected void HandleAnimations();
     
 }

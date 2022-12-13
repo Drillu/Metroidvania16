@@ -1,10 +1,7 @@
 # Our MetroidVania style game :)
-## This is the main branch of our game!
 
 ### Branch descriptions:
- -main - the main branch <br />
- -movement - A branch for revamping the movement mechanics <br />
- -movement_dash - adding a dash mechanic
+ - A branch for implementing a ladybug enemy! <br />
  
  ### Unity version
  - 2021.3.1f1

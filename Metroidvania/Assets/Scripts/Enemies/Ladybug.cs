@@ -15,9 +15,6 @@ class Ladybug : Enemy
     [SerializeField] private float shotChargeTimeDelay = 2.0f;
     [SerializeField] private float shootDistance = 20.0f;
 
-
-    private float speedMultiplier = 1.0f;
-
     // animations
     internal enum LadybugAnimation {
             fly,
@@ -69,16 +66,19 @@ class Ladybug : Enemy
     override protected void HandleAnimations()
     {
         if      (currentAnimation == (int)LadybugAnimation.fly){
+            animator.Play("Ladybug_fly");
+
             shotChargeTimePassed = 0.0f;
             animator.speed = 1.0f;
-            animator.Play("Ladybug_fly");
         }
         else if (currentAnimation == (int)LadybugAnimation.shoot){
 
-            float shotAnimationTime = 1.5f;
+            animator.Play("Ladybug_shoot");
+
+            float shotAnimationTime = 1.51f; // accourding to the time of "Ladybug_shoot" animation
             float speedRate = shotAnimationTime/shotChargeTimeDelay;
             animator.speed = speedRate;
-            animator.Play("Ladybug_shoot");
+            Debug.Log("Animation time: " + shotAnimationTime);
         }
 
     }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 class Ladybug : Enemy
@@ -62,9 +63,8 @@ class Ladybug : Enemy
     // Functions//
     //////////////////////
 
-    // Handles animations
-    override protected void HandleAnimations()
-    {
+    override protected void HandleAnimations() {
+        // Handles animations
         if      (currentAnimation == (int)LadybugAnimation.fly){
             animator.Play("Ladybug_fly");
 
@@ -84,13 +84,11 @@ class Ladybug : Enemy
     }
 
     // Hovers in the air
-    private void Hover(){
-        rb.AddForce(new Vector2(0, Mathf.Cos(Time.time))*2);
-    }
+    private void Hover(){ rb.AddForce(new Vector2(0, Mathf.Cos(Time.time))*2); }
 
-    // Moves the ladybug towards the target
     override public void Follow(GameObject target){
-        Vector2 newTargetPosition = target.transform.position + new Vector3(0, shootDistance/1.3f, 0); // actually follows above the target
+        // Moves the ladybug towards the target
+        Vector2 newTargetPosition = target.transform.position + new Vector3(0, shootDistance/1.8f, 0); // actually follows above the target
         if (Helper.GetLinearVelocity(rb) <= baseSpeed){
             Helper.PushTowards2D(rb, this.transform.position, newTargetPosition, baseSpeed/5);
         } 
@@ -99,28 +97,48 @@ class Ladybug : Enemy
     // checks the charge status
     private bool IsShotCharged(){ return (shotChargeTimePassed >= shotChargeTimeDelay); }
 
-    // Attack
+    private void Shoot(){
+        // shoot a projectile
+        Vector3 spawnPos = GetComponentsInChildren<Transform>()[1].position;
+        GameObject p = Instantiate(projectile, spawnPos, Quaternion.identity);
+        // point it to target and shoot
+        Helper.PushTowards2D(
+            p.GetComponent<Rigidbody2D>(),
+            p.transform.position,
+            target.transform.position,
+            projectileSpeed
+        );
+        // destruction properties
+        Destroy(p, projectileExistenceTime);
+
+    }
+    private void ShootOnFrame(){
+        // shoots a projectile on the correct frame
+        int correctFrame = 9;
+        int currentFrame = -1;
+
+        string name = sprite.sprite.name; // current sprite name
+        if (name.Contains("shoot")){
+            // get current frame
+            while (name.Contains("_")) name = name.Remove(0, 1);
+            currentFrame = int.Parse(name);
+
+            // shoot when it's time
+            if (currentFrame == correctFrame){
+                Shoot();
+                shotChargeTimePassed = 0.0f; // reset timer
+            }
+        }
+    }
     override public void Attack(){
+        // Attack
         if (IsShotCharged()){
-
-            // shoot projectile
-            Vector3 spawnPos = GetComponentsInChildren<Transform>()[1].position;
-            GameObject p = Instantiate(projectile, spawnPos, Quaternion.identity);
-            // point it to target and shoot
-            Helper.PushTowards2D(
-                p.GetComponent<Rigidbody2D>(),
-                p.transform.position,
-                target.transform.position,
-                projectileSpeed
-            );
-            // destruction properties
-            Destroy(p, projectileExistenceTime);
-
-            shotChargeTimePassed = 0.0f; // reset timer
-            return;
-        } else // sync charge animation
+            ShootOnFrame();
+        } else {
+            // sync charge animation
             currentAnimation = (int)LadybugAnimation.shoot;
-        
-        shotChargeTimePassed += Time.deltaTime; // shot not charged, charge shot
+            // shot not charged, charge shot
+            shotChargeTimePassed += Time.deltaTime; 
+        }
     }
 }

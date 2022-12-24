@@ -1,5 +1,4 @@
 # Our MetroidVania style game :)
-## This is the main branch of our game!
 
 ### Branch descriptions:
  - main - the main branch <br />

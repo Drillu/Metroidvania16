@@ -128,9 +128,7 @@ public class NewPlayerMovement : MonoBehaviour
             // Jump if pressed and calculate jump height accourding to speed
             if (jump) velY = jumpHeightMin + ((jumpHeightMax-jumpHeightMin)*(Mathf.Abs(rb.velocity.x)/maxMoveSpeed));
 
-        } else{
-            if (Mathf.Abs(rb.velocity.x) < maxMoveSpeed) velX += airMoveSpeed * directionX;
-        }
+        } else velX += airMoveSpeed * directionX;
 
         // dash
         if (IsCurrentlyDashing() && !IsOnGround())

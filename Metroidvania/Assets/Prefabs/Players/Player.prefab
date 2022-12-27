@@ -543,10 +543,10 @@ MonoBehaviour:
     m_Bits: 64
   controllable: 1
   playAnimations: 1
-  moveSpeed: 200
+  moveSpeed: 480
   maxMoveSpeed: 50
-  jumpHeightMax: 1000
-  jumpHeightMin: 500
+  jumpHeightMax: 500
+  jumpHeightMin: 200
   airMoveSpeed: 70
   dashEnabled: 1
   dashChargeSeconds: 1

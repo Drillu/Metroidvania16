@@ -83,7 +83,7 @@ public class NewPlayerMovement : MonoBehaviour
         // Functions///
 ///////////////////////
 
-    private bool IsOnGround(){
+    public bool IsOnGround(){
         return footCollider.IsTouchingLayers(jumpableGround);
     }
 
@@ -190,5 +190,6 @@ public class NewPlayerMovement : MonoBehaviour
    }
     public bool IsCurrentlyDashing(){ return Time.time < dashTimeEnd; }
     public float GetDashDelayTime() {return dashChargeSeconds;}
+    public float GetMaxMoveSpeed() { return maxMoveSpeed; }
     
 }

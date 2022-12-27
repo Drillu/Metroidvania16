@@ -547,7 +547,7 @@ MonoBehaviour:
   maxMoveSpeed: 50
   jumpHeightMax: 1000
   jumpHeightMin: 500
-  airMoveSpeed: 30
+  airMoveSpeed: 70
   dashEnabled: 1
   dashChargeSeconds: 1
   dashTimeSeconds: 0.2

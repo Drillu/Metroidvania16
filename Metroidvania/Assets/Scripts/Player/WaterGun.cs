@@ -20,7 +20,7 @@ public class WaterGun : MonoBehaviour
 
     }
     private void Update()
-    {
+    { 
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
        
         // position

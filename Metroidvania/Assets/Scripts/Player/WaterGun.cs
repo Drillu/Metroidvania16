@@ -23,27 +23,12 @@ public class WaterGun : MonoBehaviour
     { 
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
        
-        // position
-        if (player != null){
-            this.transform.position = player.transform.position;
-        }
 
-        this.transform.position = player.transform.position;
-        // place watergun on a cirlce around the player
         
-
-        // rotation
-        if (this.transform.rotation.eulerAngles.z > 90f && this.transform.rotation.eulerAngles.z < 270f) {
-            this.transform.localScale = new Vector3(1, -1, 1);
-        } else {
-            this.transform.localScale = new Vector3(1, 1, 1);
-        }
-            
-     
 
         if(Input.GetMouseButton(0)) //Hold
         {
-            // Keep shooting synchronized accourding to the fire
+            // Keep shooting in a synchronized rate accourding to the fire
             if (fireRate <= 0)
             {
                 fireRate = 15f;
@@ -58,10 +43,25 @@ public class WaterGun : MonoBehaviour
 
     void FixedUpdate()
     {
-        lookDir = mousePos - this.transform.position;
-        shotDir = this.transform.position - this.transform.position;
+        // rotation
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 180f;
         this.transform.rotation = Quaternion.Euler(0f,0f,angle);
+
+        // position
+        if (player != null){
+            this.transform.position = player.transform.position;
+
+            // place watergun on a cirlce around the player
+            this.transform.position -= new Vector3(
+                Mathf.Cos(Helper.DegreesToRads(angle)) * radius, // x
+                Mathf.Sin(Helper.DegreesToRads(angle)) * radius, // y
+                0
+            );
+        }
+
+        lookDir = mousePos - this.transform.position;
+        shotDir = this.transform.position - this.transform.position;
+
     }
 
     void Shoot()

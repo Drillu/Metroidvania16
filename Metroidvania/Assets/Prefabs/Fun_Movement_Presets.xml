@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<presets>
+    <preset>
+        <name>Fun Preset 1</name>
+        <move_speed>480</move_speed>
+        <max_move_speed>50</max_move_speed>
+        <jump_height_max>500</jump_height_max>
+        <jump_height_min>200</jump_height_min>
+        <air_move_speed>30</air_move_speed>
+    </preset>
+</presets>

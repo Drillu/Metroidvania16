@@ -32,4 +32,12 @@ static class Helper
         float distance = Mathf.Sqrt(Mathf.Pow(x, 2) + Mathf.Pow(y, 2));
         return distance;
     }
+
+    /// <summary>
+    /// Converts degrees to radians
+    /// </summary>
+    public static float DegreesToRads(float degrees){
+        float rads = (degrees/360.0f) * (Mathf.PI * 2);
+        return rads;
+    }
 }

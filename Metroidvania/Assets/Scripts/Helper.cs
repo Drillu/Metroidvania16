@@ -23,4 +23,20 @@ static class Helper
         float velocity = Mathf.Sqrt(aSq + bSq);
         return velocity;
     }
+    /// <summary>
+    /// returns the distance between two positions (2d)
+    /// </summary>
+    public static float Distance2D(Vector2 t1, Vector2 t2){
+        float x = t1.x - t2.x;
+        float y = t1.y - t2.y;
+        float distance = Mathf.Sqrt(Mathf.Pow(x, 2) + Mathf.Pow(y, 2));
+        return distance;
+    }
+    /// <summary>
+    /// Converts degrees to radians
+    /// </summary>
+    public static float DegreesToRads(float degrees){
+        float rads = (degrees/360.0f) * (Mathf.PI * 2);
+        return rads;
+    }
 }

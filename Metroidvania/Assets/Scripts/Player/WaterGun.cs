@@ -10,10 +10,12 @@ public class WaterGun : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private SpriteRenderer gunSprite;
     [SerializeField] private float fireRate = 15f;
+    [SerializeField] private float fireForce = 1000.0f;
     Vector2 lookDir;
     Vector2 shotDir;
 
     private float radius = 8.0f;
+    private float shotSpeedCounter = 0;
 
     void Start()
     {
@@ -28,14 +30,12 @@ public class WaterGun : MonoBehaviour
 
         if(Input.GetMouseButton(0)) //Hold
         {
-            // Keep shooting in a synchronized rate accourding to the fire
-            if (fireRate <= 0)
+            // only be able to shoot if the fire rate interval is reached
+            if (shotSpeedCounter >= fireRate) 
             {
-                fireRate = 15f;
+                shotSpeedCounter = 0; // reset counter
                 Shoot();
             }
-            else
-                fireRate -= 0.1f;
         }
 
         
@@ -62,12 +62,21 @@ public class WaterGun : MonoBehaviour
         lookDir = mousePos - this.transform.position;
         shotDir = this.transform.position - this.transform.position;
 
+        // fire rate counter stuff
+        if (shotSpeedCounter < fireRate) shotSpeedCounter += Time.deltaTime;
+
     }
 
     void Shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, this.transform.position, this.transform.rotation);
-        bullet.GetComponent<Rigidbody2D>().AddForce(shotDir * 4f, ForceMode2D.Impulse);
+        //bullet.GetComponent<Rigidbody2D>().AddForce(shotDir * 4f, ForceMode2D.Impulse);
+        Helper.PushTowards2D(
+            bullet.GetComponent<Rigidbody2D>(),
+            bullet.transform.position,
+            mousePos,
+            fireForce
+        );
     }
 
     

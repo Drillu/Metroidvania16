@@ -12,7 +12,13 @@ static class Helper
     public static void PushTowards2D(Rigidbody2D rb, Vector2 originPos, Vector2 targetPos, float force){
         Vector2 wantedPos = Vector2.MoveTowards(originPos, targetPos, force);
         Vector2 addForce = new Vector2(wantedPos.x - originPos.x, wantedPos.y - originPos.y);
-        rb.AddForce(addForce * force);
+        // match the force of the push to the provided force
+        float currentForce = Mathf.Sqrt(Mathf.Pow(addForce.x, 2) + Mathf.Pow(addForce.y, 2));
+        if (currentForce != force){
+            float ratio = force/currentForce;
+            addForce = new Vector2(addForce.x * ratio, addForce.y * ratio);
+        }
+        rb.AddForce(addForce);
     }
     /// <summary>
     /// Gets a rigidbody's current linear velocity

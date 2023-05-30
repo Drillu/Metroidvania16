@@ -1353,10 +1353,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.01
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 7
+  m_GravityScale: 15
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1516,33 +1516,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6667726253854099196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6667726253854099197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5598b5a5bf9b8341ad28ef94bdba286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpableGround:
-    serializedVersion: 2
-    m_Bits: 64
-  controllable: 1
-  playAnimations: 1
-  moveSpeed: 480
-  maxMoveSpeed: 50
-  jumpHeightMax: 1000
-  jumpHeightMin: 400
-  airMoveSpeed: 70
-  dashEnabled: 1
-  dashChargeSeconds: 1
-  dashTimeSeconds: 0.2
-  dashPower: 3
-  dashDelay: 0
 --- !u!1 &6667726253854099197
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,7 +1530,7 @@ GameObject:
   - component: {fileID: 6667726253854099192}
   - component: {fileID: 6667726253854099193}
   - component: {fileID: 6667726253854099194}
-  - component: {fileID: 6667726253854099196}
+  - component: {fileID: 6667726253854099198}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1565,3 +1538,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6667726253854099198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6667726253854099197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd17bf2510e76347b48790bd8acdf5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllable: 1
+  playAnimations: 1
+  ableToDash: 1
+  dashDelaySeconds: 0.2
+  dashDurationSeconds: 0.5
+  dashPower: 2
+  jumpableGround:
+    serializedVersion: 2
+    m_Bits: 64
+  movementType: 0
+  movementSpeed: 10
+  jumpForce: 20
+  weapon: 0
